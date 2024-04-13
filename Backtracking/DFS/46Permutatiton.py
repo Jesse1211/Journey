@@ -2,6 +2,9 @@
 # 在当前level时, 它包括了所有leaf的结果, 也就是所有可能的排列
 # 所以再回到上一层时, 只需要加上当时删掉的数字即可
 
+from typing import List
+
+
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         if len(nums) == 0: return [[]]

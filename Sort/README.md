@@ -1,4 +1,5 @@
 ### Notes in Sorting
+note: 如果是在整个list里面找规律, 那么会用到这一section的方法. 但是如果只是generate新的list, 也就是说每一个element都可以视作root, 那么要从DFS入手
 
 Structure部分分为两种: LinkedList和List, 但是逻辑是大致相同的
 
@@ -84,30 +85,35 @@ Structure部分分为两种: LinkedList和List, 但是逻辑是大致相同的
 
 
 #### 自定义Sort
-可以用任何sort, 只不过在比较element的时候call一下helper function
-- Example
-    ``` # 179LargestNumber
-        def customSort(a, b):
-                return str(a) + str(b) > str(b) + str(a)
+    可以用任何sort, 只不过在比较element的时候call一下helper function
+    - Example
+        - 
+        ``` # 179LargestNumber
+            def customSort(a, b):
+                    return str(a) + str(b) > str(b) + str(a)
 
-            for i in range(len(nums)):
-                for j in range(i, len(nums)):
-                    if not customSort(nums[i], nums[j]):
-                        nums[j], nums[i] = nums[i], nums[j]
-    ```
+                for i in range(len(nums)):
+                    for j in range(i, len(nums)):
+                        if not customSort(nums[i], nums[j]):
+                            nums[j], nums[i] = nums[i], nums[j]
+        ```
+        - sort map的时候, 需要灵活运用lambda表达式
+        ```# 767 ReorganizeString
+            sorted_chars = sorted(map.keys(), key= lambda x: map[x], reverse=True)
+        ```
 
 #### 查找
-很快的就是用heap, 因为minium heap会把最小的放在最前面, 那么就是说可以找到第k个最大/小值
-- Example
-    ```
-    def 215KthLargest(self, nums: List[int], k: int) -> int:
-            heap = nums[:k]
-            heapq.heapify(heap)
+    很快的就是用heap, 因为minium heap会把最小的放在最前面, 那么就是说可以找到第k个最大/小值
+    - Example
+        ```
+        def 215KthLargest(self, nums: List[int], k: int) -> int:
+                heap = nums[:k]
+                heapq.heapify(heap)
 
-            for i in range(k, len(nums)):
-                if nums[i] > heap[0]:
-                    heapq.heappop(heap)
-                    heapq.heappush(heap, nums[i])
-            
-            return heap[0]
-    ```
+                for i in range(k, len(nums)):
+                    if nums[i] > heap[0]:
+                        heapq.heappop(heap)
+                        heapq.heappush(heap, nums[i])
+                
+                return heap[0]
+        ```

@@ -15,10 +15,11 @@ Structure: BFS & DFS
         nums = [i for i in range(1, n+1)]
 
         def dfs(nums, i):
-            if n+1 == i: 
+            if n+1 == i: # Base Case
                 self.res += 1
                 return
 
+            # Inductive step
             for j, num in enumerate(nums):
                 if (num % i == 0) or (i % num == 0):
                     dfs(nums[:j] + nums[j+1:], i+1)

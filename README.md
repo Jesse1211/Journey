@@ -10,3 +10,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day2 4/13/2024
 - [x] Day3 4/15/2024
 - [x] Day4 4/16/2024
+- [x] Day5 4/17/2024

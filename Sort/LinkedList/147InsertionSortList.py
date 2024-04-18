@@ -3,6 +3,9 @@
 # 然后把快指针插入到已经sort好的排序中
 # 然后用慢指针来更新快指针(快 = 慢.next)
 
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

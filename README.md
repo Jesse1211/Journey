@@ -15,7 +15,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day7 5/22/2024 复习Sort & Backtracking
 - [x] Day8 5/23/2024 复习BFS & DFS + 学习binary search
 
-- Sort
+# Sort
 1. 快慢指针
 2. kth largest: 
 	- 用HashMap找frequency
@@ -28,13 +28,13 @@ id 刷题 === 早日上岸: why don't you start right now?
 		        - **Comparator Result < 0**: Conversely, if `b[1]` is less than `a[1]`, the result is negative, positioning `a` before `b`, effectively demoting smaller values.
 	- 遍历Queue来找到多个element
 		- `while (!pq.isEmpty()) {...}`
-- LinkedList
+### LinkedList
 	- 需要快慢指针
 	- 需要比较快和慢的值
 	- 然后把快指针插入到已经sort好的排序中
 	- 然后用慢指针来更新快指针(快 = 慢.next)
 
-- BFS:
+# BFS:
 	- Recursion
 		```
 		class Solution {
@@ -92,7 +92,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 			}
 		}
 		```
-- DFS (for loop里面加了之后, recursive call之后别忘了删掉):
+# DFS (for loop里面加了之后, recursive call之后别忘了删掉):
 	- case w/o SET:
 		```	
 		public List<List<Integer>> permute(int[] nums) {
@@ -128,4 +128,23 @@ id 刷题 === 早日上岸: why don't you start right now?
 		```
 
 
-TODO: Tries
+# Binary Search
+
+- Binary Search
+	- 拿到左右两边, evaluate & 更新 中间值
+	```
+	public int firstBadVersion(int n) {
+		int low = 1;
+		int high = n;
+		while(low<=high){
+			int mid = low + (high-low)/2;
+			if(isBadVersion(mid)){
+				high = mid - 1;
+			}
+			else {
+				low = mid + 1;
+			}
+		}
+		return low;
+	}
+	```

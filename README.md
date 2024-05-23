@@ -129,22 +129,47 @@ id 刷题 === 早日上岸: why don't you start right now?
 
 
 # Binary Search
-
-- Binary Search
-	- 拿到左右两边, evaluate & 更新 中间值
-	```
-	public int firstBadVersion(int n) {
-		int low = 1;
-		int high = n;
-		while(low<=high){
-			int mid = low + (high-low)/2;
-			if(isBadVersion(mid)){
-				high = mid - 1;
+- 拿到左右两边, evaluate & 更新 中间值
+- 重点: 
+	- `while (left < right)` OR `while (left <= right)`, 取决于如何更新 `left` 和 `right`, 以及如何定义搜索的结束条件。两者的选择影响了循环何时结束，以及如何确定最终结果
+	- `while (left <= right)` (精确匹配并可能返回索引)
+		- 当 `left` 和 `right` 重合: `left == right` . 仍然会进行一次检查。这种情况适用于需要确保在区间内部查找且可能直接返回匹配的索引的场景。
+		- **更新方法**：通常在这种情况下，如果中间元素不是目标值，你会将 `left` 更新为 `mid + 1`，将 `right` 更新为 `mid - 1`。
+		- **适用场景**：当你需要查找的元素确实存在于数组中，并且你需要直接返回找到的元素的索引时。
+		```
+		public int firstBadVersion(int n) {
+			int low = 1;
+			int high = n;
+			while(low<=high){
+				int mid = low + (high-low)/2;
+				if(isBadVersion(mid)){
+					high = mid - 1;
+				}
+				else {
+					low = mid + 1;
+				}
 			}
-			else {
-				low = mid + 1;
-			}
+			return low;
 		}
-		return low;
-	}
-	```
+		```
+	- `while (left < right)` (在区间中查找边界或条件)
+		- 即将重合时结束，即不包括 `left == right` 
+		- 这种方法常用于需要在区间中查找但不需要返回确切索引的情况，例如寻找上界或下界。
+		- **更新方法**：在这种情况下，通常会根据具体的查找目标调整 `left` 或 `right` 的更新方式，以防止无限循环。比如，`left` 可能会更新为 `mid` 或 `mid + 1`，而 `right` 则可能更新为 `mid` 或 `mid - 1`。
+		- **适用场景**：适用于需要找到满足某些条件的边界值，如寻找最左侧或最右侧的满足条件的元素。
+		```
+			public int peakIndexInMountainArray(int[] arr) {
+				int left = 0;
+				int right = arr.length - 1;
+					while (left < right) {
+						int mid = left + (right - left) / 2;
+						if (arr[mid] < arr[mid+1]) {
+							left = mid + 1;
+						}
+						else {
+							right = mid;
+						}
+					}
+				return right;
+			}
+		```

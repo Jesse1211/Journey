@@ -21,7 +21,7 @@ class Solution:
         for i in range(len(board)):
             for j in range(len(board[i])):
                 if board[i][j] == word[0]:
-                    if bfs(i, j, 0):
+                    if dfs(i, j, 0):
                         return True
         return False
 

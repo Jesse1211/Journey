@@ -1,4 +1,4 @@
-# 用i来track当前num应该被放在的index上, 
+# 用i来track当前num应该被放在的index上,
 # base case: 只有length合适的时候才会+1, 也就是i == n+1的时候
 # 每个recursive call都是在找下一个num应该放在的index, 所以index+=1
 # 假设当前number是可以被采用的, 那么就要把他删掉, 以免重复使用

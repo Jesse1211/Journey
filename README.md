@@ -15,7 +15,24 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day7 5/22/2024 复习Sort & Backtracking
 - [x] Day8 5/23/2024 复习BFS & DFS + 学习binary search
 
-
+- Sort
+1. 快慢指针
+2. kth largest: 
+	- 用HashMap找frequency
+		- `Map<Integer, Integer> map = new HashMap<>();`
+		- `map.put(barcode, map.getOrDefault(barcode, 0) + 1);`
+	- 万能使用PriorityQueue
+		- `PriorityQueue<Integer> pq = new PriorityQueue<>((a,b) -> a - b);`
+	        - 注意: 
+		        - **Comparator Result > 0**: The comparison `b[1] - a[1]` results in a positive value when `b[1]` is greater than `a[1]`. This tells the priority queue that `b` should come before `a`, pushing larger values to the front.
+		        - **Comparator Result < 0**: Conversely, if `b[1]` is less than `a[1]`, the result is negative, positioning `a` before `b`, effectively demoting smaller values.
+	- 遍历Queue来找到多个element
+		- `while (!pq.isEmpty()) {...}`
+- LinkedList
+	- 需要快慢指针
+	- 需要比较快和慢的值
+	- 然后把快指针插入到已经sort好的排序中
+	- 然后用慢指针来更新快指针(快 = 慢.next)
 
 - BFS:
 	- Recursion

@@ -14,6 +14,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day6 4/27/2024 复习Sort & Backtracking
 - [x] Day7 5/22/2024 复习Sort & Backtracking
 - [x] Day8 5/23/2024 复习BFS & DFS + 学习binary search
+- [x] Day9 5/24/2024 学习DP经典部分
 
 # Sort
 1. 快慢指针
@@ -172,4 +173,45 @@ id 刷题 === 早日上岸: why don't you start right now?
 					}
 				return right;
 			}
+		```
+# DP
+- 经典:
+	1. 找最大 - 这个是最后要return input里面的东西, 而不是“关系”
+		- 用两个variable来track每轮loop的状态  
+		```
+		class Solution {
+			public int maxSubArray(int[] nums) {
+				int cur = nums[0];
+				int res = cur;
+				
+				for (int i = 1; i < nums.length; i++) {
+				if (nums[i] > nums[i] + cur) {
+					cur = nums[i];
+				} else {
+					cur += nums[i];
+				}
+					res = Math.max(cur, res);
+				}
+				return res;
+			}
+		}
+		```
+	2. 找关系 - 做一个新的list来存住每一个element的状态
+		```
+		class Solution {
+			public int coinChange(int[] coins, int amount) {
+				int[] res = new int[amount + 1];
+				Arrays.fill(res, Integer.MAX_VALUE);
+				res[0] = 0;
+				for (int i = 1; i <= amount; i++) {
+					for (int j = 0; j < coins.length; j++) {
+						if (i - coins[j] >= 0 && res[i - coins[j]] != Integer.MAX_VALUE) 
+						{
+							res[i] = Math.min(res[i], 1 + res[i - coins[j]]);
+						}
+					}
+				}
+				return res[amount] != Integer.MAX_VALUE ? res[amount] : -1;
+			}
+		}
 		```

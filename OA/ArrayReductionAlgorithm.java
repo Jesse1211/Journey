@@ -1,51 +1,41 @@
 package OA;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 // https://www.fastprep.io/problems/snowflake-array-reduction-algorithm
 class Solution {
 
     public int[] arrayReductionAlgorithm(int[] arr) {
-        int[] result = new int[arr.length];
-        int n = arr.length;
-        for (int i = 1; i < n; i++) {
-            if (compareArrays(findMEX(arr, i), result) == 0) {
-                result[0] = arr[i];
+        ArrayList<Integer> list = new ArrayList<>();
+        while (arr.length > 0) {
+            int bestMEX = -1;
+            int index = 0;
+            for (int k = 1; k <= arr.length; k++) {
+                int mex = findMEX(arr, k);
+                if (mex > bestMEX) {
+                    bestMEX = mex;
+                    index = k;
+                }
             }
-            // if result, findMEX(result, i));
+            System.out.println(arr.length);
+            list.add(bestMEX);
+            arr = Arrays.copyOfRange(arr, index, arr.length);
         }
-        // write your code here
+        return list.stream().mapToInt(i -> i).toArray();
     }
 
-    private int compareArrays(int[] x, int[] y) {
-        int minLength = Math.min(x.length, y.length);
-        for (int i = 0; i < minLength; i++) {
-            if (x[i] != y[i]) {
-                return Integer.compare(x[i], y[i]);
-            }
+    private int findMEX(int[] array, int k) {
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < k; i++) {
+            set.add(array[i]);
         }
-        return Integer.compare(x.length, y.length);
+        int mex = 0;
+        while (set.contains(mex)) {
+            mex++;
+        }
+        return mex;
     }
-
-    private int[] findMEX(int[] arr, int k) {
-        int[] list = new int[k];
-        int index = 0;
-        int cur = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (index >= k) {
-                break;
-            }
-            if (arr[i] != cur) {
-                list[index] = arr[i];
-            }
-            cur++;
-        }
-
-        if (index < k) {
-            int last = list[index - 1];
-            for (int i = index; i < k; i++) {
-                list[i] = ++last;
-            }
-        }
-        return list;
-    }
-
 }

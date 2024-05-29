@@ -20,6 +20,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day11 5/26/2024 学习 DP 真题
 - [x] Day12 5/27/2024 学习 DP 真题
 - [x] Day13 写了snowflake和Awardco的OA
+- [x] Day14 5/29/2024 binary search
 
 # Sort
 

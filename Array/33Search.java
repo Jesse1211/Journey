@@ -1,4 +1,4 @@
-package BinarySearch;
+package Array;
 
 class Solution {
     public int search(int[] nums, int target) {
@@ -8,11 +8,9 @@ class Solution {
             if (nums[right] != target && nums[left] != target) {
                 right--;
                 left++;
-            }
-            else if (nums[right] == target) {
+            } else if (nums[right] == target) {
                 return right;
-            }
-            else if (nums[left] == target) {
+            } else if (nums[left] == target) {
                 return left;
             }
         }

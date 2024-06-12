@@ -1,4 +1,4 @@
-package DP;
+package Array;
 
 class Solution {
     public int maxProfit(int[] prices) {

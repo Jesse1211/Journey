@@ -1,4 +1,4 @@
-package BinarySearch;
+package Array;
 
 class Solution {
     public int findMin(int[] nums) {
@@ -8,8 +8,7 @@ class Solution {
             int mid = left + (right - left) / 2;
             if (nums[mid] < nums[right]) {
                 right = mid;
-            }
-            else if (nums[mid] > nums[right]) {
+            } else if (nums[mid] > nums[right]) {
                 left = mid + 1;
             } else {
                 return nums[mid];

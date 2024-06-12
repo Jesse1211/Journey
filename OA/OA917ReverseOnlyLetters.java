@@ -1,4 +1,4 @@
-package BinarySearch;
+package OA;
 
 class Solution {
     static boolean isSpace(char ch) {

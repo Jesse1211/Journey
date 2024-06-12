@@ -1,4 +1,4 @@
-package BinarySearch;
+package Array;
 
 class Solution {
     public boolean search(int[] nums, int target) {

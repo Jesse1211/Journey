@@ -1,4 +1,4 @@
-package BinarySearch;
+package Array;
 // matrix里面找中间值, 这个case里面是右上角
 // 如果matrix[i][j] == target, return true
 // 如果matrix[i][j] < target, i++ 下一行

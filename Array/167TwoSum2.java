@@ -1,4 +1,4 @@
-package BinarySearch;
+package Array;
 
 class Solution {
     public int[] twoSum(int[] numbers, int target) {

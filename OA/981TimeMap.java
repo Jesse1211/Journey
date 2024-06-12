@@ -1,4 +1,4 @@
-package DataStructures.OA;
+package OA;
 
 import java.util.HashMap;
 import java.util.Map;

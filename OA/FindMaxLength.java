@@ -1,4 +1,4 @@
-package DP.OA;
+package OA;
 
 class Solution {
     public int findMaxLength(int[] skills, int k) {

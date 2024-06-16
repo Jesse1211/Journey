@@ -22,6 +22,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day13 写了snowflake和Awardco的OA
 - [x] Day14 5/29/2024 binary search
 - [x] Day15 6/12/2024 开始blind 75
+- [x] Day16 6/15/2024 complete Graph, Interval, LinkedList
 
 # Sort
 

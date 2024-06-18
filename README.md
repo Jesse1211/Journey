@@ -24,6 +24,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day15 6/12/2024 开始blind 75
 - [x] Day16 6/15/2024 complete Graph, Interval, LinkedList
 - [x] Day17 6/16/2024 complete Matrix, String; todo: Tree, Heap
+- [x] Day18 6/17/2024 complete Tree, Heap
 
 # Sort
 

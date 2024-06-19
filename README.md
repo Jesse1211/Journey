@@ -26,6 +26,8 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day17 6/16/2024 complete Matrix, String; todo: Tree, Heap
 - [x] Day18 6/17/2024 complete Tree, Heap; 完成blind 75
 - [x] Day19 6/18/2024 开始第二section: complete LinkedList
+- [x] Day20 6/19/2024 开始第二section: complete Queue & Stack & 系统学习linkedList
+
 
 # Sort
 

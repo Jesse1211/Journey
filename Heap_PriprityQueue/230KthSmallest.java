@@ -1,4 +1,3 @@
-package Heap_PriprityQueue;
 
 import java.util.PriorityQueue;
 

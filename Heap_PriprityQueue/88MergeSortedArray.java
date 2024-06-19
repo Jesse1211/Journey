@@ -1,4 +1,3 @@
-package Heap_PriprityQueue;
 
 import java.util.PriorityQueue;
 
@@ -12,7 +11,7 @@ class Solution {
             pq.offer(nums2[i]);
         }
         var index = 0;
-        while(!pq.isEmpty()) {
+        while (!pq.isEmpty()) {
             nums1[index++] = pq.poll();
         }
     }

@@ -27,6 +27,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day18 6/17/2024 complete Tree, Heap; 完成blind 75
 - [x] Day19 6/18/2024 开始第二section: complete LinkedList
 - [x] Day20 6/19/2024 开始第二section: complete Queue & Stack & 系统学习linkedList
+- [x] Day21 6/20/2024 开始第二section: complete Hash
 
 
 # Sort

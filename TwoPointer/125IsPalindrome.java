@@ -1,4 +1,4 @@
-package String;
+package TwoPointer;
 
 class Solution {
     public boolean isPalindrome(String s) {

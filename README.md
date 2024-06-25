@@ -30,6 +30,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day21 6/20/2024 开始第二 section: complete Hash
 - [x] Day22 6/21/2024 开始第二 section: complete Two pointer
 - [x] Day23 6/24/2024 开始第二 section: complete Two pointer
+- [x] Day24 6/25/2024 开始第二 section: complete Two pointer
 
 # Java syntax
 

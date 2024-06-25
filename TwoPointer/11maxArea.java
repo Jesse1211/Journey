@@ -1,4 +1,4 @@
-package Array;
+package TwoPointer;
 
 class Solution {
     public int maxArea(int[] height) {

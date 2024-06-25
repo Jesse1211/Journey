@@ -1,4 +1,4 @@
-package String;
+package TwoPointer;
 
 import java.util.HashSet;
 import java.util.Set;

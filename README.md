@@ -29,6 +29,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day20 6/19/2024 开始第二 section: complete Queue & Stack & 系统学习 linkedList
 - [x] Day21 6/20/2024 开始第二 section: complete Hash
 - [x] Day22 6/21/2024 开始第二 section: complete Two pointer
+- [x] Day23 6/24/2024 开始第二 section: complete Two pointer
 
 # Java syntax
 

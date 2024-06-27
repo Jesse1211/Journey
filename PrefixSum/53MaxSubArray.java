@@ -1,4 +1,4 @@
-package Array;
+package PrefixSum;
 
 class Solution {
     public int maxSubArray(int[] nums) {

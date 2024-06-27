@@ -31,6 +31,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day22 6/21/2024 开始第二 section: complete Two pointer
 - [x] Day23 6/24/2024 开始第二 section: complete Two pointer
 - [x] Day24 6/25/2024 开始第二 section: complete Two pointer
+- [x] Day25 6/26/2024 开始第二 section: complete Prefix sum, 学习Uber OA
 
 # Java syntax
 

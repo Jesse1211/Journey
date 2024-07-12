@@ -1,6 +1,6 @@
 package OA.Citadel;
 
-import java.util.List;
+import java.util.*;
 
 /*
  * The developers working on a social media network app want to analyze user behavior. 
@@ -21,8 +21,42 @@ import java.util.List;
  */
 class FindConsistentLogs {
     public static int findConsistentLogs(List<Integer> userEvent) {
-        // map + sliding window
-        int res = 0;
-        return res;
+        // Step 1: Find the minimum frequency in the whole array
+        Map<Integer, Integer> totalFrequency = new HashMap<>();
+        for (int userId : userEvent) {
+            totalFrequency.put(userId, totalFrequency.getOrDefault(userId, 0) + 1);
+        }
+        int minFrequency = Collections.min(totalFrequency.values());
+
+        // Step 2: Use sliding window to find the maximum length of consistent logs
+        Map<Integer, Integer> windowFrequency = new HashMap<>();
+        int maxLength = 0;
+        int left = 0;
+
+        for (int right = 0; right < userEvent.size(); right++) {
+            int userId = userEvent.get(right);
+            windowFrequency.put(userId, windowFrequency.getOrDefault(userId, 0) + 1);
+
+            // Maintain the window condition: the maximum frequency in the window should be
+            // equal to minFrequency
+            while (Collections.max(windowFrequency.values()) > minFrequency) {
+                int leftUserId = userEvent.get(left);
+                windowFrequency.put(leftUserId, windowFrequency.get(leftUserId) - 1);
+                if (windowFrequency.get(leftUserId) == 0) {
+                    windowFrequency.remove(leftUserId);
+                }
+                left++;
+            }
+
+            // Calculate the length of the current valid window
+            maxLength = Math.max(maxLength, right - left + 1);
+        }
+
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> userEvent = new ArrayList<>(Arrays.asList(1, 2, 1, 3, 4, 2, 4, 3, 3, 4));
+        System.out.println(findConsistentLogs(userEvent));
     }
 }

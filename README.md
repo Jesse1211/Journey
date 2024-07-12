@@ -34,6 +34,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day25 6/26/2024 开始第二 section: complete Prefix sum, 学习Uber OA
 - [x] Day26 6/28/2024 开始第二 section: complete Trie, 学习Uber OA
 - [x] Day27 7/01/2024 开始第二 section: 学习Uber OA
+- [x] Day28 7/11/2024 开始第二 section: 学习Citadel OA
 
 # Java syntax
 

@@ -18,13 +18,36 @@ package OA.Citadel;
 class CountableStableSegments {
     public static int countableStableSegments(int n, int[] capacity) {
         int res = 0;
-        for (int i = 0; i < n - 2; i++) {
-            int sum = capacity[i] + capacity[i + 2];
-            if (sum % 2 == 0 && sum / 2 == capacity[i + 1]) {
-                res++;
+
+        int start = 0;
+        while (start < n - 2) {
+            int left = capacity[start];
+            int sum = 0;
+
+            int end = start + 1;
+            while (end < n) {
+                int right = capacity[end];
+
+                if (start + 1 < end) {
+                    sum += capacity[end - 1];
+                    if (left == right && left == sum) {
+                        res++;
+                    }
+                }
+
+                end++;
             }
+
+            start++;
         }
+
         return res;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int[] capacity = { 9, 3, 3, 3, 9 };
+        System.out.println(countableStableSegments(n, capacity));
     }
 
 }

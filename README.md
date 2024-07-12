@@ -31,10 +31,10 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day22 6/21/2024 开始第二 section: complete Two pointer
 - [x] Day23 6/24/2024 开始第二 section: complete Two pointer
 - [x] Day24 6/25/2024 开始第二 section: complete Two pointer
-- [x] Day25 6/26/2024 开始第二 section: complete Prefix sum, 学习Uber OA
-- [x] Day26 6/28/2024 开始第二 section: complete Trie, 学习Uber OA
-- [x] Day27 7/01/2024 开始第二 section: 学习Uber OA
-- [x] Day28 7/11/2024 开始第二 section: 学习Citadel OA
+- [x] Day25 6/26/2024 开始第二 section: complete Prefix sum, 学习 Uber OA
+- [x] Day26 6/28/2024 开始第二 section: complete Trie, 学习 Uber OA
+- [x] Day27 7/01/2024 开始第二 section: 学习 Uber OA
+- [x] Day28 7/11/2024 开始第二 section: 学习 Citadel OA & 开始复习 BFS
 
 # Java syntax
 
@@ -57,6 +57,7 @@ id 刷题 === 早日上岸: why don't you start right now?
   - `sb.setCharAt(index, cur);`
 
 #### Integer
+
 - char to int
   - `Character.getNumericValue(s.charAt(i - 1));`
 - string to int

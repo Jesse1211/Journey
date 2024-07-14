@@ -1,4 +1,4 @@
-package OA;
+package TwoPointer;
 
 class Solution {
     static boolean isSpace(char ch) {

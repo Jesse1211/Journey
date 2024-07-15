@@ -37,3 +37,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day28 7/11/2024 开始第二 section: 学习 Citadel OA & 开始复习 BFS
 - [x] Day29 7/12/2024 第三 section: 学习 BFS
 - [x] Day30 7/13/2024 第三 section: 完成 BFS
+- [x] Day31 7/14/2024 第三 section: 完成 DFS

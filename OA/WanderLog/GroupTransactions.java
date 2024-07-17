@@ -1,10 +1,10 @@
-import java.io.*;
-import java.util.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+package OA.WanderLog;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-class Result {
+class GroupTransactions {
 
     /*
      * Complete the 'groupTransactions' function below.
@@ -49,32 +49,4 @@ class Result {
         return result;
     }
 
-}
-
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        int transactionsCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-        List<String> transactions = IntStream.range(0, transactionsCount).mapToObj(i -> {
-            try {
-                return bufferedReader.readLine();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        })
-                .collect(toList());
-
-        List<String> result = Result.groupTransactions(transactions);
-
-        bufferedWriter.write(
-                result.stream()
-                        .collect(joining("\n"))
-                        + "\n");
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
 }

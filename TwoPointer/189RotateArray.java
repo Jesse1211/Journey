@@ -1,0 +1,27 @@
+package TwoPointer;
+
+class Solution {
+    // [1,2,3,4,5,6,7]
+
+    // 7 6 5 4 3 2 1
+
+    // 567 4321
+
+    // 567 1234
+    public void rotate(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    private void reverse(int[] nums, int i, int j) {
+        while (i < j) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }
+    }
+}

@@ -39,4 +39,5 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day30 7/13/2024 第三 section: 完成 BFS
 - [x] Day31 7/14/2024 第三 section: 完成 DFS
 - [x] Day32 7/18/2024 第三 section: 开始 TWO POINTER
-- [x] Day33 7/19/2024 第三 section: 马上完成 TWO POINTER; 开始看看sliding window
+- [x] Day33 7/19/2024 第三 section: 马上完成 TWO POINTER; 开始看看 sliding window
+- [x] Day34 7/24/2024 第三 section: 完成 TWO POINTER; sliding window 好难撒

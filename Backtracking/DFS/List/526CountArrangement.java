@@ -1,3 +1,5 @@
+package List;
+
 class Solution {
     public int countArrangement(int n) {
         int[] nums = new int[n + 1];

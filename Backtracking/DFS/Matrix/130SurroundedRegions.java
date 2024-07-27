@@ -1,3 +1,5 @@
+package Matrix;
+
 class Solution {
     public void solve(char[][] board) {
         if (board.length == 0 || board[0].length == 0)

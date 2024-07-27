@@ -1,3 +1,5 @@
+package Matrix;
+
 class Solution {
     public int numIslands(char[][] grid) {
         int row = grid.length;

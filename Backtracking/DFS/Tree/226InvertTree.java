@@ -1,3 +1,5 @@
+package Tree;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -18,13 +20,16 @@ class TreeNode {
 }
 
 class Solution {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null || q == null) {
-            return q == null && p == null;
-        } else if (q.val == p.val) {
-            return isSameTree(p.right, q.right) && isSameTree(p.left, q.left);
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) {
+            return root;
         } else {
-            return false;
+            TreeNode temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+            invertTree(root.right);
+            invertTree(root.left);
+            return root;
         }
     }
 }

@@ -1,6 +1,19 @@
+package List;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+/*
+ * 1. 判定dfs的parameters: candidates, target, res, cur, index
+ *      当前candidates取决于index
+ *      层层更新cur, 最终加到res中
+ * 2. dfs 何时停止: 没有candidates, target < 0
+ * 3. dfs 如何更新: cur + candidate,
+ *      需要避免重复, 如果当前candidate和上一个相同, 则跳过, 因为上一个已经把所有的情况都考虑了
+ *      用forloop来遍历所有的candidates
+ * 
+ */
 
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {

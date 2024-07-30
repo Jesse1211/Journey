@@ -1,4 +1,4 @@
-package Backtracking.BFS;
+package Backtracking.BFS.Tree;
 
 // 有两种解法, 哪种更好? 对于可以BFS的题, 我觉得都行hhhh
 // 1. 用递归DFS解法(需要控制level): basecase就是当cur为空时return; inductive case就是append当前node的值到res[level]里面，然后递归左右子树，level+1

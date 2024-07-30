@@ -2,13 +2,13 @@ package Tree;
 
 /*
  * 1. 判定dfs的parameters: root
- *      (这里只是invert, 所以不需要res)
- *      当前candidates取决于root.left, root.right
- *      层层invert root.left, root.right
+*      (这里只是invert, 所以不需要res)
+*      当前candidates取决于root.left, root.right
+*      层层invert root.left, root.right
  * 2. dfs 何时停止: root == null
  * 3. dfs 如何更新: 
- *      先把当前root的left和right交换, 然后再dfs
- *      invertTree(root.left), invertTree(root.right)
+*      先把当前root的left和right交换, 然后再dfs
+*      invertTree(root.left), invertTree(root.right)
  * 
  */
 

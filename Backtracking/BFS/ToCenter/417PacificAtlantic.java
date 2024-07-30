@@ -1,4 +1,4 @@
-package Backtracking.BFS;
+package Backtracking.BFS.ToCenter;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

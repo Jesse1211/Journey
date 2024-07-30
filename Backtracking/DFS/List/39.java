@@ -5,11 +5,11 @@ import java.util.List;
 
 /*
  * 1. 判定dfs的parameters: candidates, target, res, cur, index
- *      当前candidates取决于candidates & index
- *      层层更新cur, 最终加到res中
+*      当前candidates取决于candidates & index
+*      层层更新cur, 最终加到res中
  * 2. dfs 何时停止: 满足目标 target == 0
  * 3. dfs 如何更新: cur + candidate,
- *      从index开始, 用forloop来遍历所有的candidates 
+*      从index开始, 用forloop来遍历所有的candidates 
  */
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {

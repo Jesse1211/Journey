@@ -1,4 +1,4 @@
-package Backtracking.BFS;
+package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -26,14 +26,13 @@ class TreeNode {
 }
 
 class Solution {
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         Queue<TreeNode> q = new ArrayDeque<>();
         if (root == null) {
             return res;
         }
 
-        Boolean leftToRight = false;
         q.offer(root);
         while (!q.isEmpty()) {
             List<Integer> curLevel = new ArrayList<Integer>();
@@ -41,20 +40,18 @@ class Solution {
             for (int i = 0; i < level; i++) {
                 var cur = q.poll();
                 curLevel.add(cur.val);
-                if (cur.right != null) {
-                    q.offer(cur.right);
-                }
+
                 if (cur.left != null) {
                     q.offer(cur.left);
                 }
+                if (cur.right != null) {
+                    q.offer(cur.right);
+                }
             }
 
-            if (!leftToRight) {
-                Collections.reverse(curLevel);
-            }
             res.add(curLevel);
-            leftToRight = !leftToRight;
         }
+        Collections.reverse(res);
         return res;
     }
 }

@@ -1,4 +1,4 @@
-package Backtracking.BFS;
+package Backtracking.BFS.FromCenter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,6 +18,17 @@ class TreeNode {
         val = x;
     }
 }
+
+/*
+ * 1. 判定bfs的逻辑: 
+*      从target出发, 遍历所有的node(parent & children) 
+ * 2. 用Map&queue保存信息: 
+*      map支持寻找parent: {child : parent}
+*      queue: 保存将要访问的node
+ * 3. 用queue更新信息:
+*      遍历当前node的children, 把children 或者 parent 加入queue
+*      为了防止重复访问, 用set保存已经访问过的node
+ */
 
 class Solution {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {

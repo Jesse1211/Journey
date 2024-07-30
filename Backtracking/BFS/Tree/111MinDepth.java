@@ -1,8 +1,6 @@
-package Backtracking.BFS;
+package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Queue;
 
 class TreeNode {
@@ -25,8 +23,8 @@ class TreeNode {
 }
 
 class Solution {
-    public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
+    public int minDepth(TreeNode root) {
+        int res = 0;
         Queue<TreeNode> q = new ArrayDeque<>();
         if (root == null) {
             return res;
@@ -34,30 +32,24 @@ class Solution {
 
         q.offer(root);
         while (!q.isEmpty()) {
-
+            res++;
             int level = q.size();
-            for (int i = 0; i < level - 1; i++) {
+            for (int i = 0; i < level; i++) {
                 var cur = q.poll();
 
-                if (cur.left != null) {
-                    q.offer(cur.left);
-                }
                 if (cur.right != null) {
                     q.offer(cur.right);
                 }
+                if (cur.left != null) {
+                    q.offer(cur.left);
+                }
+                if (cur.left == null && cur.right == null) {
+                    return res;
+                }
             }
-
-            var rightMost = q.poll();
-
-            if (rightMost.left != null) {
-                q.offer(rightMost.left);
-            }
-            if (rightMost.right != null) {
-                q.offer(rightMost.right);
-            }
-            res.add(rightMost.val);
         }
-
         return res;
+
     }
+
 }

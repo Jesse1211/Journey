@@ -1,4 +1,4 @@
-package Backtracking.BFS;
+package Backtracking.BFS.ToCenter;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 class Solution {
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-        List<Integer>[] preq = new List[numCourses];
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        List<Integer>[] preq = new ArrayList[numCourses];
         int[] degrees = new int[numCourses];
 
         for (int[] i : prerequisites) {
@@ -45,17 +45,9 @@ class Solution {
                     q.offer(sec);
                 }
             }
+
         }
 
-        if (ans.size() != numCourses) {
-            return new int[0];
-        }
-
-        int[] res = new int[numCourses];
-        for (int i = 0; i < numCourses; i++) {
-            res[i] = ans.get(i);
-        }
-        return res;
-
+        return ans.size() == numCourses;
     }
 }

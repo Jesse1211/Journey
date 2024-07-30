@@ -1,9 +1,6 @@
-package Backtracking.BFS;
+package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Queue;
 
 class TreeNode {
@@ -26,20 +23,22 @@ class TreeNode {
 }
 
 class Solution {
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-        Queue<TreeNode> q = new ArrayDeque<>();
+    public int findBottomLeftValue(TreeNode root) {
         if (root == null) {
-            return res;
+            return root.val;
         }
 
+        int res = root.val;
+        Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         while (!q.isEmpty()) {
-            List<Integer> curLevel = new ArrayList<Integer>();
             int level = q.size();
             for (int i = 0; i < level; i++) {
-                var cur = q.poll();
-                curLevel.add(cur.val);
+                TreeNode cur = q.poll();
+
+                if (i == 0) {
+                    res = cur.val;
+                }
 
                 if (cur.left != null) {
                     q.offer(cur.left);
@@ -49,9 +48,7 @@ class Solution {
                 }
             }
 
-            res.add(curLevel);
         }
-        Collections.reverse(res);
         return res;
     }
 }

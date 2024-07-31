@@ -6,6 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
+/*
+ * 1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历, 因为是matrix, 需要boolean[][] visited防止重复访问
+ * 2. 用queue保存信息:
+ *      保存将要访问的点
+ * 3. 用queue更新信息:
+ *      遍历所有相邻的点, 把符合条件的点加入queue并且改变在visited中的数值, 因为res是根据visited来的
+ */
+
 class Solution {
     int[][] dirs = new int[][] { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
 

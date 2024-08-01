@@ -2,8 +2,13 @@ package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
+
+/*
+ * 和102很像, 把最后的答案reverse一下
+ */
 
 class TreeNode {
     int val;
@@ -25,22 +30,20 @@ class TreeNode {
 }
 
 class Solution {
-    public List<Integer> largestValues(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        Queue<TreeNode> q = new ArrayDeque<>();
         if (root == null) {
             return res;
         }
 
-        Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         while (!q.isEmpty()) {
+            List<Integer> curLevel = new ArrayList<Integer>();
             int level = q.size();
-            int max = Integer.MIN_VALUE;
             for (int i = 0; i < level; i++) {
-                TreeNode cur = q.poll();
-
-                max = Math.max(max, cur.val);
+                var cur = q.poll();
+                curLevel.add(cur.val);
 
                 if (cur.left != null) {
                     q.offer(cur.left);
@@ -49,9 +52,10 @@ class Solution {
                     q.offer(cur.right);
                 }
             }
-            res.add(max);
 
+            res.add(curLevel);
         }
+        Collections.reverse(res);
         return res;
     }
 }

@@ -3,6 +3,12 @@ package Backtracking.BFS.Tree;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/*
+ * 和102题的区别: 
+ *      用variable res来记录当前的层数
+ *      如果当前node没有children, 直接return
+ */
+
 class TreeNode {
     int val;
     TreeNode left;

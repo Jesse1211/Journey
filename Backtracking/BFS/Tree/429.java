@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+/*
+ * 和102的区别: 这个是chilren, 需要一个for loop来把每个children加到queue
+ */
+
 class Node {
     public int val;
     public List<Node> children;

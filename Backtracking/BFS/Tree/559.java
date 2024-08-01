@@ -4,6 +4,11 @@ import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Queue;
 
+/*
+ * 和102的区别: track一共走了多少个level
+ *      如果queue是空的, 那就说明没有下一层了, 返回res
+ */
+
 class Node {
     public int val;
     public List<Node> children;

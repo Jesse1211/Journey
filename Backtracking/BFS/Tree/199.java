@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+/*
+ * 和102的区别:
+ *     每一层的for loop中, 除了最后一个元素, 都把当前元素的左右子树加入queue
+ *      最后一个元素代表当前level的最右侧, 加入res, 然后再把左右子树加入queue
+ */
+
 class TreeNode {
     int val;
     TreeNode left;

@@ -44,3 +44,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day35 7/25/2024 第三 section: 复习 DFS + 每个题写逻辑
 - [x] Day36 7/28/2024 第三 section: 复习 DFS + 每个题写逻辑
 - [x] Day37 7/30/2024 第三 section: 复习 DFS + 每个题写逻辑
+- [x] Day38 7/31/2024 第三 section: 完成 DFS + 每个题写逻辑

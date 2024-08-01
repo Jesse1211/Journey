@@ -1,7 +1,13 @@
 package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
+
+/*
+ * 和102的区别: 每层需要找到最大值并且加入res
+ */
 
 class TreeNode {
     int val;
@@ -23,26 +29,32 @@ class TreeNode {
 }
 
 class Solution {
-    public int maxDepth(TreeNode root) {
+    public List<Integer> largestValues(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+
         if (root == null) {
-            return 0;
+            return res;
         }
-        int res = 0;
+
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         while (!q.isEmpty()) {
-            res++;
-            int len = q.size();
-            for (int i = 0; i < len; i++) {
+            int level = q.size();
+            int max = Integer.MIN_VALUE;
+            for (int i = 0; i < level; i++) {
                 TreeNode cur = q.poll();
-                if (cur.right != null) {
-                    q.offer(cur.right);
-                }
+
+                max = Math.max(max, cur.val);
+
                 if (cur.left != null) {
                     q.offer(cur.left);
                 }
-
+                if (cur.right != null) {
+                    q.offer(cur.right);
+                }
             }
+            res.add(max);
+
         }
         return res;
     }

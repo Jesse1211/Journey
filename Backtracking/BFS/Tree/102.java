@@ -1,8 +1,14 @@
 package Backtracking.BFS.Tree;
 
-// 有两种解法, 哪种更好? 对于可以BFS的题, 我觉得都行hhhh
-// 1. 用递归DFS解法(需要控制level): basecase就是当cur为空时return; inductive case就是append当前node的值到res[level]里面，然后递归左右子树，level+1
-// 在这里需要level是因为要把每一个level的node放到一个element里面，所以需要一个level来区分
+/*
+ * 1. 判断bfs逻辑:
+ *      先从root开始, 层层遍历
+ * 2. 用queue & list保存信息:
+ *      queue: 保存将要访问的点
+ *      List: 保存每一层的点
+ * 3. 用queue更新信息:
+ *      从root开始, 遍历所有相邻的点, 把符合条件的点加入queue
+ */
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -3,6 +3,10 @@ package Backtracking.BFS.Tree;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/*
+ * 和102很像, 每层不需要存到res里, 只需要increment by 1
+ */
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -23,31 +27,26 @@ class TreeNode {
 }
 
 class Solution {
-    public int findBottomLeftValue(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
-            return root.val;
+            return 0;
         }
-
-        int res = root.val;
+        int res = 0;
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         while (!q.isEmpty()) {
-            int level = q.size();
-            for (int i = 0; i < level; i++) {
+            res++;
+            int len = q.size();
+            for (int i = 0; i < len; i++) {
                 TreeNode cur = q.poll();
-
-                if (i == 0) {
-                    res = cur.val;
-                }
-
-                if (cur.left != null) {
-                    q.offer(cur.left);
-                }
                 if (cur.right != null) {
                     q.offer(cur.right);
                 }
-            }
+                if (cur.left != null) {
+                    q.offer(cur.left);
+                }
 
+            }
         }
         return res;
     }

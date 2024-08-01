@@ -1,10 +1,17 @@
 package Backtracking.BFS.Tree;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Queue;
+
+/* highlight: 这个是tree里面最难的了...
+ * 1. 判断bfs逻辑:
+ *      先从root开始, 层层遍历
+ * 2. 用queue & int保存信息:
+ *      queue: 保存将要访问的点
+ *      int: 保存每一层的最左侧的点
+ * 3. 用queue更新信息:
+ *      从root开始, 遍历所有相邻的点, 把符合条件的点加入queue
+ */
 
 class TreeNode {
     int val;
@@ -26,34 +33,31 @@ class TreeNode {
 }
 
 class Solution {
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-        Queue<TreeNode> q = new ArrayDeque<>();
+    public int findBottomLeftValue(TreeNode root) {
         if (root == null) {
-            return res;
+            return -1;
         }
 
-        Boolean leftToRight = false;
+        int res = root.val;
+        Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         while (!q.isEmpty()) {
-            List<Integer> curLevel = new ArrayList<Integer>();
             int level = q.size();
             for (int i = 0; i < level; i++) {
-                var cur = q.poll();
-                curLevel.add(cur.val);
-                if (cur.right != null) {
-                    q.offer(cur.right);
+                TreeNode cur = q.poll();
+
+                if (i == 0) {
+                    res = cur.val;
                 }
+
                 if (cur.left != null) {
                     q.offer(cur.left);
                 }
+                if (cur.right != null) {
+                    q.offer(cur.right);
+                }
             }
 
-            if (!leftToRight) {
-                Collections.reverse(curLevel);
-            }
-            res.add(curLevel);
-            leftToRight = !leftToRight;
         }
         return res;
     }

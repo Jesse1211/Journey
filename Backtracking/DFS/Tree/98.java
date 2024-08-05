@@ -1,3 +1,5 @@
+package Tree;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -17,17 +19,21 @@ class TreeNode {
     }
 }
 
+/*
+ * highlight: 这个max和min的保存方式很聪明
+ */
+
 class Solution {
     public boolean isValidBST(TreeNode root) {
-        return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        return dfs(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
-    private boolean helper(TreeNode root, long min, long max) {
+    private boolean dfs(TreeNode root, long min, long max) {
         if (root == null) {
             return true;
         } else if (root.val >= max || root.val <= min) {
             return false;
         }
-        return helper(root.left, min, root.val) && helper(root.right, root.val, max);
+        return dfs(root.left, min, root.val) && dfs(root.right, root.val, max);
     }
 }

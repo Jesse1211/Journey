@@ -7,6 +7,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/* 
+ * 1. 判定dfs的parameters: id, map, visited
+ *      如果map没有id, 那就说明没有需要上的课了
+ *      如果visited中有id, 直接返回false
+ *      通过id找到preq, 进一步遍历preq
+ * 2. dfs 何时停止: 
+ *      如果没有preq, 直接返回true
+ *      如果visited中有id, 直接返回false
+ * 3. dfs 如何更新: 
+ *      添加id到visited
+ *      遍历他的preq, 需要每一个preq都return true
+ *      如果当前课程可以上, 那就从map中移除
+ */
+
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> map = new HashMap<>();
@@ -31,12 +45,16 @@ class Solution {
     }
 
     private boolean dfs(int id, Map<Integer, List<Integer>> map, Set<Integer> visited) {
+        // does not have preq
         if (!map.containsKey(id)) {
             return true;
-        } // does not have preq
+        }
+
+        // visited
         if (visited.contains(id)) {
             return false;
-        } // visited
+        }
+
         visited.add(id);
         for (var preq : map.get(id)) {
             if (!dfs(preq, map, visited)) {
@@ -44,7 +62,7 @@ class Solution {
             }
         }
         visited.remove(id);
-        map.put(id, new ArrayList<>());
+        map.remove(id);
         return true;
     }
 }

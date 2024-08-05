@@ -1,4 +1,4 @@
-package PrefixSum;
+package Basic;
 
 /* 1. 确定可以用一个forloop就可以完成
  * 2. 用一个sum来记录小sum的subarrays with length n - k

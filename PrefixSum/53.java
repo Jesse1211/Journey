@@ -1,4 +1,3 @@
-package PrefixSum;
 
 /*
  * 1. 确定一个forloop就可以完成

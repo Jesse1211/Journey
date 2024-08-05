@@ -3,6 +3,15 @@ package List;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * 1. 判定dfs的parameters: i, j, visit, prev, heights
+ *      当前候选数取决于i, j
+ *      当前是否满足条件取决于prev, heights
+ *      visite防重
+ * 2. dfs 何时停止: i < 0 || i >= heights.length || j < 0 || j >= heights[0].length || heights[i][j] < prev || visit[i][j]
+ * 3. dfs 如何更新: visit[i][j] = true; dfs(i+1, j, visit, heights[i][j], heights); dfs(i, j+1, visit, heights[i][j], heights); dfs(i-1, j, visit, heights[i][j], heights); dfs(i, j-1, visit, heights[i][j], heights);
+*/
+
 class Solution {
     public List<List<Integer>> pacificAtlantic(int[][] heights) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();

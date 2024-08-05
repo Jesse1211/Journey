@@ -1,5 +1,11 @@
 package List;
 
+/*
+ * 1. 判定dfs的parameters: i, j, board, word, index, visited
+ * 2. dfs 何时停止: index == word.length() 或者i 和j 超出边界 或者已经访问过 或者board[i][j] != word.charAt(index)
+ * 3. dfs 如何更新: 上下左右四个方向
+ */
+
 class Solution {
     public boolean exist(char[][] board, String word) {
         var numRow = board.length;

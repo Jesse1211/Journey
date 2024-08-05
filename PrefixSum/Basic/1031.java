@@ -1,4 +1,4 @@
-package PrefixSum;
+package Basic;
 
 /*
  * highlight: 这个难点在于，两个区间的长度是不一样的，所以要分两种情况讨论, 并且每个情况还有点复杂

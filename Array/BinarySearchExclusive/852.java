@@ -1,5 +1,7 @@
 package Array.BinarySearchExclusive;
 
+// 观察mid和前后邻居的关系来推断哪边比较大
+
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         int left = 0;

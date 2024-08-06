@@ -1,4 +1,4 @@
-package Array;
+package Array.BinarySearchExclusive;
 
 class Solution {
     public int findMin(int[] nums) {

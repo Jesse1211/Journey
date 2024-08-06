@@ -1,4 +1,4 @@
-package Array;
+package Array.BinarySearchInclusive;
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {

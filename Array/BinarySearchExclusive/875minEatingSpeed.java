@@ -1,10 +1,10 @@
-package Array;
+package Array.BinarySearchExclusive;
 
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         int left = 1;
         int right = 0;
-        for (var pile:piles) {
+        for (var pile : piles) {
             right = Math.max(right, pile);
         }
         while (left < right) {
@@ -18,12 +18,13 @@ class Solution {
         return right;
     }
 
-    private boolean check(int piles[], int k, int h){
+    private boolean check(int piles[], int k, int h) {
         int hours = 0;
-        for(int pile : piles){
+        for (int pile : piles) {
             int div = pile / k;
             hours += div;
-            if(pile % k != 0) hours++;
+            if (pile % k != 0)
+                hours++;
         }
         return hours <= h;
     }

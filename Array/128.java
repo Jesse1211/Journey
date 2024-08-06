@@ -14,7 +14,7 @@ class Solution {
         int res = 0;
         for (var num : nums) {
             int cur = 1;
-            set.add(num);
+
             if (!set.contains(num + 1)) {
                 int ls = num;
                 while (set.contains(--ls)) {

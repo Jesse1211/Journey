@@ -1,4 +1,4 @@
-package Array;
+package Array.BinarySearchInclusive;
 
 class Solution {
     public int findPeakElement(int[] nums) {

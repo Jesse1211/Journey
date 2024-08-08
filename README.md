@@ -49,3 +49,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day40 8/5/2024 第三 section: 完全完成BFS + DFS
 - [x] Day40 8/5/2024 第三 section: 正在复习 array 并且把它分类
 - [x] Day41 8/6/2024 第三 section: 正在复习 array 并且把它分类
+- [x] Day42 8/8/2024 第三 section: 完成 array 并且把它分类

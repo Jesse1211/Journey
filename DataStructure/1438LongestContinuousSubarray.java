@@ -1,3 +1,5 @@
+package DataStructure;
+
 import java.util.PriorityQueue;
 
 class Solution {
@@ -7,7 +9,7 @@ class Solution {
         PriorityQueue<Integer> minPq = new PriorityQueue<>();
         PriorityQueue<Integer> maxPq = new PriorityQueue<>((a, b) -> b - a);
         int maxLen = 0;
-        while(fast < nums.length) {
+        while (fast < nums.length) {
             maxPq.offer(nums[fast]);
             minPq.offer(nums[fast]);
 
@@ -17,8 +19,7 @@ class Solution {
                 minPq.remove(nums[slow]);
                 slow += 1;
                 fast += 1;
-            }
-            else {
+            } else {
                 maxLen = Math.max(maxLen, fast - slow + 1);
                 fast += 1;
             }

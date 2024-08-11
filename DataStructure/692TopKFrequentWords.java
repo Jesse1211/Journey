@@ -1,3 +1,5 @@
+package DataStructure;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +10,7 @@ class Solution {
     class Pair {
         String key;
         int value;
+
         Pair(String key, int value) {
             this.key = key;
             this.value = value;
@@ -16,14 +19,13 @@ class Solution {
 
     public List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> map = new HashMap<>();
-        for (var word:words) {
+        for (var word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
 
         PriorityQueue<Pair> pq = new PriorityQueue<>(
-            (a, b) -> a.value == b.value ? b.key.compareTo(a.key) : a.value - b.value
-        );
-        for (var ent:map.entrySet()) {
+                (a, b) -> a.value == b.value ? b.key.compareTo(a.key) : a.value - b.value);
+        for (var ent : map.entrySet()) {
             pq.offer(new Pair(ent.getKey(), ent.getValue()));
             if (pq.size() > k) {
                 pq.poll();
@@ -31,7 +33,7 @@ class Solution {
         }
 
         List<String> res = new ArrayList<>();
-        while(!pq.isEmpty()) {
+        while (!pq.isEmpty()) {
             res.add(0, pq.poll().key);
         }
         return res;

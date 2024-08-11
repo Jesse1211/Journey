@@ -1,4 +1,3 @@
-package Array;
 
 class Solution {
     public int maxProduct(int[] nums) {

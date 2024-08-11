@@ -1,0 +1,24 @@
+# # 把head当作最后一个, 所以要head之后的存起来 = nextNodes, 因为都会被放到head的前面
+# # prev作为“最后一个”, 那么每一次都要把cur的next指向prev, 并且更新prev因为下一次要放在最新添加的prev前面
+# from typing import Optional
+
+
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# class Solution:
+#     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         prev = None
+#         cur = head
+
+#         while(cur):
+#             # 把prev当作cur的下一个 - cur放到末尾
+#             restNodes = cur.next
+#             cur.next = prev
+#             # next time we will put stuff before prev
+#             prev = cur
+#             # move to the rest of nodes
+#             cur = restNodes
+#         return prev
+

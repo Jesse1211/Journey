@@ -1,4 +1,4 @@
-package Trie;
+package DataStructure.Trie;
 
 class TrieNode {
     TrieNode[] children = new TrieNode[26];

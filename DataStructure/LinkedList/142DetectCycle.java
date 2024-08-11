@@ -1,3 +1,5 @@
+package DataStructure.LinkedList;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,18 +21,14 @@ class ListNode {
 }
 
 class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public ListNode detectCycle(ListNode head) {
         Set<ListNode> set = new HashSet<>();
-        while (headA != null) {
-            set.add(headA);
-            headA = headA.next;
-        }
-
-        while (headB != null) {
-            if (set.contains(headB)) {
-                return headB;
+        while (head != null) {
+            if (set.contains(head)) {
+                return head;
             }
-            headB = headB.next;
+            set.add(head);
+            head = head.next;
         }
         return null;
     }

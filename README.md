@@ -51,3 +51,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day41 8/6/2024 第三 section: 正在复习 array 并且把它分类
 - [x] Day42 8/8/2024 第三 section: 完成 array 并且把它分类
 - [x] Day43 8/11/2024 第三 section: 把two pointer加到array category中, 但是two pointer之后做, 先做data structure
+- [x] Day44 8/11/2024 第三 section: 写完two pointer & sliding window 完成Arrays!!!!!!!!!!!!!!!!

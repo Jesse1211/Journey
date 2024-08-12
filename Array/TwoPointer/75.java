@@ -1,18 +1,20 @@
 package TwoPointer;
 
+// highlight: 正向反向双指针
 class Solution {
     public void sortColors(int[] nums) {
-        int left = 0;
-        int right = nums.length - 1;
+        int zeroIndex = 0;
+        int twoIndex = nums.length - 1;
         int index = 0;
-        while (index <= right) {
+        while (index <= twoIndex) {
+
             if (nums[index] == 0) {
-                swap(nums, index, left);
-                left++;
+                swap(nums, index, zeroIndex);
+                zeroIndex++;
                 index++;
             } else if (nums[index] == 2) {
-                swap(nums, index, right);
-                right--;
+                swap(nums, index, twoIndex);
+                twoIndex--;
             } else {
                 index++;
             }

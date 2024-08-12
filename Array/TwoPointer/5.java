@@ -1,5 +1,7 @@
 package TwoPointer;
 
+// highlight: 这个在two-pointer里比较少用到
+
 class Solution {
     public String longestPalindrome(String s) {
         String res = "";

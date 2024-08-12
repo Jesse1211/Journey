@@ -1,6 +1,8 @@
-package TwoPointer;
+package TwoPointer.反向;
 
 import java.util.Arrays;
+
+// highlight: 如果要sort, 记得用一个新的array来存储index
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {

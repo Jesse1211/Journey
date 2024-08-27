@@ -20,7 +20,7 @@ class TreeNode {
 }
 
 /*
- * highlight: 基本功要会
+ * highlight: 从BST的结构入手
  */
 
 class Solution {

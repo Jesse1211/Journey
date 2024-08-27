@@ -5,7 +5,7 @@ package List;
 import java.util.ArrayList;
 import java.util.List;
 
-/* highlight:  如果找的结果是有顺序的, 每次recursive call的时候用的是for里面的i, 而不是index
+/* 如果找的结果是有顺序的, 每次recursive call的时候用的是for里面的i, 而不是index
  * 1. 判定dfs的parameters: n, k, res, cur, index
  *     当前n取决于index
  *    层层更新cur, 最终加到res中

@@ -3,7 +3,7 @@ package Backtracking.BFS.Tree;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/* highlight: 这个是tree里面最难的了...
+/* highlight: tree的bfs最难吧
  * 1. 判断bfs逻辑:
  *      先从root开始, 层层遍历
  * 2. 用queue & int保存信息:
@@ -34,10 +34,6 @@ class TreeNode {
 
 class Solution {
     public int findBottomLeftValue(TreeNode root) {
-        if (root == null) {
-            return -1;
-        }
-
         int res = root.val;
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
@@ -45,7 +41,6 @@ class Solution {
             int level = q.size();
             for (int i = 0; i < level; i++) {
                 TreeNode cur = q.poll();
-
                 if (i == 0) {
                     res = cur.val;
                 }
@@ -57,7 +52,6 @@ class Solution {
                     q.offer(cur.right);
                 }
             }
-
         }
         return res;
     }

@@ -45,10 +45,11 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day36 7/28/2024 第三 section: 复习 DFS + 每个题写逻辑
 - [x] Day37 7/30/2024 第三 section: 复习 DFS + 每个题写逻辑
 - [x] Day38 7/31/2024 第三 section: 完成 DFS + 每个题写逻辑
-- [x] Day39 8/1/2024 第三 section: 复习prefix sum + 每个题写逻辑
-- [x] Day40 8/5/2024 第三 section: 完全完成BFS + DFS
+- [x] Day39 8/1/2024 第三 section: 复习 prefix sum + 每个题写逻辑
+- [x] Day40 8/5/2024 第三 section: 完全完成 BFS + DFS
 - [x] Day40 8/5/2024 第三 section: 正在复习 array 并且把它分类
 - [x] Day41 8/6/2024 第三 section: 正在复习 array 并且把它分类
 - [x] Day42 8/8/2024 第三 section: 完成 array 并且把它分类
-- [x] Day43 8/11/2024 第三 section: 把two pointer加到array category中, 但是two pointer之后做, 先做data structure
-- [x] Day44 8/11/2024 第三 section: 写完two pointer & sliding window 完成Arrays!!!!!!!!!!!!!!!!
+- [x] Day43 8/11/2024 第三 section: 把 two pointer 加到 array category 中, 但是 two pointer 之后做, 先做 data structure
+- [x] Day44 8/11/2024 第三 section: 写完 two pointer & sliding window 完成 Arrays!!!!!!!!!!!!!!!!
+- [x] Day45 8/27/2024 第三 section: 好久没写了, 复习一下 backtrack

@@ -45,7 +45,7 @@ class Solution {
             }
         }
 
-        while (n > 2) {
+        while (n > 2) { // max is 2
             int size = leaves.size();
             n -= size;
             for (int i = 0; i < size; i++) {

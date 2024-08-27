@@ -3,7 +3,7 @@ package Backtracking.BFS.ToCenter;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/* highlight: 这个难
+/* highlight: matrix刷的还是不够
  * 1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历, 因为是matrix, 需要boolean[][] visited防止重复访问
  * 2. 用queue保存信息:
  *    保存将要访问的点

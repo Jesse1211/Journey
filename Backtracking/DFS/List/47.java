@@ -1,9 +1,9 @@
 package List;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /* highlight:  如果有重复的元素, 避免重复需要set, 但是recursive call前后要记得更新set
  *
@@ -18,36 +18,33 @@ import java.util.List;
 
 class Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-        HashMap<Integer, Boolean> visited = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            visited.put(i, false); // INDEX
-        }
-
-        dfs(nums, res, new ArrayList<>(), visited);
+        List<List<Integer>> res = new ArrayList<>();
+        Set<Integer> visited = new HashSet<>();
+        dfs(nums, visited, new ArrayList<>(), res);
         return res;
     }
 
-    public void dfs(int[] nums, List<List<Integer>> res, List<Integer> cur, HashMap<Integer, Boolean> visited) {
+    private void dfs(int[] nums, Set<Integer> visited, List<Integer> cur, List<List<Integer>> res) {
         if (nums.length == cur.size()) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
-        HashSet<Integer> set = new HashSet<>();
+        // 当前level不可以重复使用相同integer
+        Set<Integer> usedInt = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            if (visited.get(i) == false) {
-                if (set.contains(nums[i]))
-                    continue;
-                cur.add(nums[i]);
-                visited.put(i, true);
-                set.add(nums[i]);
-                dfs(nums, res, cur, visited);
-                cur.remove(cur.size() - 1);
-                visited.put(i, false);
+            if (visited.contains(i)) {
+                continue;
             }
-
+            if (usedInt.contains(nums[i])) {
+                continue;
+            }
+            usedInt.add(nums[i]);
+            visited.add(i);
+            cur.add(nums[i]);
+            dfs(nums, visited, cur, res);
+            cur.remove(cur.size() - 1);
+            visited.remove(i);
         }
     }
 }

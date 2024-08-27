@@ -3,7 +3,7 @@ package List;
 import java.util.ArrayList;
 import java.util.List;
 
-/* highlight: 如果所有element都是unique, 避免重复不需要set, 检查是否contain就好了
+/* : 如果所有element都是unique, 避免重复不需要set, 检查是否contain就好了
  * 1.  判定dfs的parameters: nums, res, cur (因为这次是无序, 所以不需要index)
 *      当前nums取决于cur是否包含
 *      层层更新cur, 最终加到res中

@@ -1,19 +1,24 @@
 package Array.BinarySearchExclusive;
 
+/*
+ * highlight: 要找规律的还是要多刷
+ */
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int lo = 0, hi = nums.length - 1;
-        while (lo < hi) {
-            int mid = (lo + hi) / 2;
-            if (mid % 2 == 1) {
-                mid--; // Ensure mid is even
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (mid % 2 != 0) {
+                mid--;
             }
+
             if (nums[mid] == nums[mid + 1]) {
-                lo = mid + 2;
+                left = mid + 2;
             } else {
-                hi = mid;
+                right = mid;
             }
         }
-        return nums[lo];
+        return nums[left];
     }
 }

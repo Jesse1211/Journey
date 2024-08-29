@@ -1,5 +1,11 @@
 package Array.BinarySearchInclusive;
 
+/*
+ * highlight: 二分查找matrix 
+ * - 可以从每行的最右边查找, 但是不够快
+ * - 从最中间找! 或者从对角线找, 但是不知道怎么写
+ */
+
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length;

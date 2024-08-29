@@ -1,5 +1,9 @@
 package Array.BinarySearchExclusive;
 
+/*
+ * highlight: binary search的helper function需要想好怎么算比较简单
+ */
+
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
         int left = 0;

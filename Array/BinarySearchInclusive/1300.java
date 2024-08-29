@@ -2,7 +2,7 @@ package Array.BinarySearchInclusive;
 
 import java.util.Arrays;
 
-// highlight: 纵向比较，找到最小的差值
+// highlight (但是感觉这个题不是很好): 纵向比较，找到最小的差值
 
 class Solution {
     public int findBestValue(int[] arr, int target) {

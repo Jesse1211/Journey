@@ -5,34 +5,47 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
         while (left <= right) {
+            while (left < right && nums[left] == nums[left + 1]) {
+                left++;
+            }
+            while (left < right && nums[right] == nums[right - 1]) {
+                right--;
+            }
+
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 return true;
             }
-
-            if (nums[left] == nums[mid]) {
-                left += 1;
-                continue;
-            }
-            if (nums[right] == nums[mid]) {
-                right -= 1;
-                continue;
-            }
-
-            else if (nums[mid] < nums[right]) { // 2,0,1
-                if (target >= nums[mid] && target <= nums[right]) { // take right
-                    left = mid + 1;
-                } else {
+            // mid is maximum
+            if (nums[mid] >= nums[right]) { // check right
+                if (target < nums[mid] && nums[right] < target) {
                     right = mid - 1;
+                } else {
+                    left = mid + 1;
                 }
-            } else if (nums[mid] > nums[left]) { // 0,1,2
-                if (target <= nums[mid] && target >= nums[left]) { // take left
+            } else if (nums[mid] >= nums[left]) { // check left
+                if (nums[left] <= target && nums[mid] > target) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
+                }
+
+                // mid is minimum
+            } else {
+                if (nums[left] != target) {
+                    left++;
+                } else {
+                    return true;
+                }
+                if (nums[right] != target) {
+                    right--;
+                } else {
+                    return true;
                 }
             }
         }
         return false;
     }
 }
+
+// [4,5,0,1,2]

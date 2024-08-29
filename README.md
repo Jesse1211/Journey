@@ -54,3 +54,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day44 8/11/2024 第三 section: 写完 two pointer & sliding window 完成 Arrays!!!!!!!!!!!!!!!!
 - [x] Day45 8/27/2024 第三 section: 好久没写了, 复习一下 backtrack
 - [x] Day46 8/28/2024 第三 section: 增加一点 backtrack 的题
+- [x] Day47 8/29/2024 第三 section: 重新复习 Array/BinarySearch

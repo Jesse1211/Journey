@@ -1,4 +1,8 @@
-package Array.BinarySearchInclusive;
+package Array.TwoPointer;
+
+/*
+ * highlight: Prefix Sum & Sliding Window
+ */
 
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {

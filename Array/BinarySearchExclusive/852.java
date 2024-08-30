@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 // 观察mid和前后邻居的关系来推断哪边比较大
 

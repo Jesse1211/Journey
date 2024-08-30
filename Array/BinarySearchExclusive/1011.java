@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 /*
  * highlight: binary search的helper function需要想好怎么算比较简单

@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 // 先抓左边, 再抓右边, 最后看有什么case没有过, 单独给结论
 

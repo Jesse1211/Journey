@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version); */

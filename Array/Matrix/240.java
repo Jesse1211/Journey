@@ -1,4 +1,4 @@
-package Array.Matrix;
+package Matrix;
 
 // highlight: matrix里面找中间值, 这个case里面是右上角
 // 如果matrix[i][j] == target, return true

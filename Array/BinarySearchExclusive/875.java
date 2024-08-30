@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 // ”纵向“ 选取mid
 //      left是最小值, right是最大值, 那就看看mid能不能吃

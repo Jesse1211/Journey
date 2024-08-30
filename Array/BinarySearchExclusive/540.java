@@ -1,4 +1,4 @@
-package Array.BinarySearchExclusive;
+package BinarySearchExclusive;
 
 /*
  * highlight: 要找规律的还是要多刷

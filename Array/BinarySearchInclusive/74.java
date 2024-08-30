@@ -1,4 +1,4 @@
-package Array.BinarySearchInclusive;
+package BinarySearchInclusive;
 
 /*
  * highlight: 二分查找matrix 

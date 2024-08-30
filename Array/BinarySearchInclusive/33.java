@@ -1,4 +1,4 @@
-package Array.BinarySearchInclusive;
+package BinarySearchInclusive;
 
 /*
  * highlight: 要有structural thinking, 先判断mid, 然后判断mid和左右点的联系

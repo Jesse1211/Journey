@@ -1,4 +1,4 @@
-package Array.BinarySearchInclusive;
+package BinarySearchInclusive;
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {

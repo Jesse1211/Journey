@@ -1,4 +1,4 @@
-package Array.BinarySearchInclusive;
+package BinarySearchInclusive;
 
 class Solution {
     public boolean search(int[] nums, int target) {

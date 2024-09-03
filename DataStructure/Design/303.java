@@ -1,4 +1,4 @@
-package Basic;
+package DataStructure.Design;
 
 class NumArray {
     int[] sums;

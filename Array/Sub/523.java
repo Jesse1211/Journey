@@ -1,9 +1,10 @@
+package Sub;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /*
- * highlight: 这个难, 找前后两个数的关系
+ * sub highlight: 这个难, 找前后两个数的关系
  * 1. 确定可以用一个forloop就可以完成
  * 2. 用一个map来记录 余数:index
  * 3. 判定逻辑: 

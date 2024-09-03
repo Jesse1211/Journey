@@ -1,7 +1,10 @@
-package Array.Sort;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/*
+ * highlight: 培养structural thinking
+ */
 
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {

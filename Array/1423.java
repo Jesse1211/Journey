@@ -1,6 +1,6 @@
-package Basic;
 
-/* 1. 确定可以用一个forloop就可以完成
+/* highlight: 用prefix sum做还挺难的, 但是用sliding window就很简单
+ * 1. 确定可以用一个forloop就可以完成
  * 2. 用一个sum来记录小sum的subarrays with length n - k
  * 3. 判定逻辑: 
  *      制作window: 从0开始，到n - k结束

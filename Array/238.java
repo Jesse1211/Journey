@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 
-// highlight: 1. 两次遍历，第一次从左到右，第二次从右到左
+// sub highlight: 1. 两次遍历，第一次从左到右，第二次从右到左
 
 class Solution {
     public int[] productExceptSelf(int[] nums) {

@@ -56,5 +56,6 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day46 8/28/2024 第三 section: 增加一点 backtrack 的题
 - [x] Day47 8/29/2024 第三 section: 重新复习 Array/BinarySearch
 - [x] Day48 8/30/2024 第三 section: BinarySearch 查漏补缺
-- [x] Day49 8/31/2024 第三 section: 重新复习 Prefix Sum + BFS一个hard
-- [x] Day50 9/1/2024 第三 section: 重新复习 ARRAY, subsequent, subarray要复习
+- [x] Day49 8/31/2024 第三 section: 重新复习 Prefix Sum + BFS 一个 hard
+- [x] Day50 9/1/2024 第三 section: 重新复习 ARRAY, subsequent, subarray 要复习
+- [x] Day51 9/3/2024 第三 section: 要学好**SUB**类型

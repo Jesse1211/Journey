@@ -1,4 +1,8 @@
 
+/*
+ * sub highlight: 有点抽象
+ */
+
 class Solution {
     public int maxProduct(int[] nums) {
         int maxPos = nums[0];

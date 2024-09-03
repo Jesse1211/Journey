@@ -2,6 +2,10 @@
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * sub highlight: 看起来很难, 通过assume当前element是sequence的起点, 然后向左找
+ */
+
 class Solution {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();

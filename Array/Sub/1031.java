@@ -1,5 +1,7 @@
 package Sub;
 
+import java.util.Arrays;
+
 /*
  * sub highlight: 这个难点在于，两个区间的长度是不一样的，所以要分两种情况讨论, 并且每个情况还有点复杂
  * 1. 不能用一个loop, 不确定谁先谁后
@@ -9,33 +11,31 @@ package Sub;
  *      2: 先secondLen, 再firstLen
  * /// 因为用的是Math.max, 不会存在两个值一定相连 / 重叠的情况
  */
-
 class Solution {
     public int maxSumTwoNoOverlap(int[] nums, int firstLen, int secondLen) {
-        int[] sum = new int[nums.length + 1];
-
-        for (int i = 1; i < nums.length + 1; i++) {
-            sum[i] = sum[i - 1] + nums[i - 1];
+        int[] sums = new int[nums.length + 1];
+        Arrays.fill(sums, 0);
+        for (int i = 0; i < nums.length; i++) {
+            sums[i + 1] = sums[i] + nums[i];
         }
 
         int res = 0;
-        int max = 0;
+        int sum1 = 0;
+        int sum2 = 0;
 
-        // 1: firstLen is before secondLen
-        for (int i = firstLen; i <= nums.length - secondLen; i++) {
-            int before = sum[i] - sum[i - firstLen];
-            int after = sum[i + secondLen] - sum[i];
-            max = Math.max(max, before);
-            res = Math.max(res, max + after);
+        // 先firstLen, 再secondLen
+        for (int i = secondLen; i < sums.length - firstLen; i++) {
+            sum2 = Math.max(sums[i] - sums[i - secondLen], sum2);
+            sum1 = sums[i + firstLen] - sums[i];
+            res = Math.max(sum1 + sum2, res);
         }
 
-        // 2: vise-versa
-        max = 0;
-        for (int i = secondLen; i <= nums.length - firstLen; i++) {
-            int before = sum[i] - sum[i - secondLen];
-            int after = sum[i + firstLen] - sum[i];
-            max = Math.max(max, before);
-            res = Math.max(res, max + after);
+        // 先secondLen, 再firstLen
+        sum1 = 0;
+        for (int i = firstLen; i < sums.length - secondLen; i++) {
+            sum1 = Math.max(sums[i] - sums[i - firstLen], sum1);
+            sum2 = sums[i + secondLen] - sums[i];
+            res = Math.max(sum1 + sum2, res);
         }
         return res;
     }

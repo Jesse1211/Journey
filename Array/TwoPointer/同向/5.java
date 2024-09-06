@@ -1,6 +1,4 @@
-package TwoPointer;
-
-// highlight: 这个在two-pointer里比较少用到
+package TwoPointer.同向;
 
 class Solution {
     public String longestPalindrome(String s) {

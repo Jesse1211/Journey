@@ -1,4 +1,18 @@
-package TwoPointer;
+
+// class Solution {
+//     public String reverseWords(String s) {
+//         StringBuilder sb = new StringBuilder();
+//         String[] sList = s.trim().split("\\s+"); // one or more whitespace characters 
+
+//         for (int i = sList.length - 1; i >= 0; i--) {
+//             sb.append(sList[i]);
+//             if (i > 0) {
+//                 sb.append(" ");
+//             }
+//         }
+//         return sb.toString();
+//     }
+// }
 
 class Solution {
 

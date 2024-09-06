@@ -1,12 +1,12 @@
-package TwoPointer;
+package TwoPointer.同向;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> set = new HashSet<>();
+    public int[] intersect(int[] nums1, int[] nums2) {
+        List<Integer> res = new ArrayList<>();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         int i = 0;
@@ -17,14 +17,14 @@ class Solution {
             } else if (nums1[i] > nums2[j]) {
                 j++;
             } else {
-                set.add(nums1[i]);
+                res.add(nums1[i]);
                 i++;
                 j++;
             }
         }
-        int[] result = new int[set.size()];
+        int[] result = new int[res.size()];
         int k = 0;
-        for (Integer num : set) {
+        for (Integer num : res) {
             result[k++] = num;
         }
         return result;

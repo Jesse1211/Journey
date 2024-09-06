@@ -1,7 +1,9 @@
-package TwoPointer;
+/**
+ * highlight: 牛逼的解法，三次翻转
+ */
 
 class Solution {
-    // [1,2,3,4,5,6,7]
+    // [1,2,3,4,5,6,7], k = 3
 
     // 7 6 5 4 3 2 1
 

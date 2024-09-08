@@ -62,3 +62,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day52 9/6/2024 第三 section: 重新复习 Two Pointer, 然后复习 sub 就完成 Array 部分了
   - 今天加练 - sub 要复习完
 - [x] Day53 9/7/2024 第三 section: 跟着 zhiyuan 瞎几把刷, 搞得我头疼
+- [x] Day54 9/8/2024 第三 section: 小练

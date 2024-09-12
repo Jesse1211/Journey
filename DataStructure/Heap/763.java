@@ -1,8 +1,12 @@
-package TwoPointer;
+package DataStructure.Heap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+/*
+ * highlight: 使用map的好机会
+ */
 
 class Solution {
     public List<Integer> partitionLabels(String s) {

@@ -1,4 +1,8 @@
-package TwoPointer;
+package TwoPointer.反向;
+
+/*
+ * highlight: 用不一样的incrementation分批做two pointer
+ */
 
 class Solution {
     public String reverseStr(String s, int k) {

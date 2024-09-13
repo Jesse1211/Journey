@@ -1,4 +1,4 @@
-package TwoPointer;
+package Sub;
 
 class Solution {
     public boolean isSubsequence(String t, String s) {

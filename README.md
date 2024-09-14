@@ -66,3 +66,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day55 9/9/2024 第三 section: 小练
 - [x] Day56 9/11/2024 第三 section: 清理 Array
 - [x] Day57 9/12/2024 第三 section: 清理 Array
+- [x] Day58 9/13/2024 第三 section: 明天就能做完 sub 了 🎉🎉🎉🎉🎉🎉

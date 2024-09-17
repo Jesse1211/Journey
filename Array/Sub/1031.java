@@ -11,6 +11,7 @@ import java.util.Arrays;
  *      2: 先secondLen, 再firstLen
  * /// 因为用的是Math.max, 不会存在两个值一定相连 / 重叠的情况
  */
+
 class Solution {
     public int maxSumTwoNoOverlap(int[] nums, int firstLen, int secondLen) {
         int[] sums = new int[nums.length + 1];
@@ -27,6 +28,8 @@ class Solution {
         for (int i = secondLen; i < sums.length - firstLen; i++) {
             sum2 = Math.max(sums[i] - sums[i - secondLen], sum2);
             sum1 = sums[i + firstLen] - sums[i];
+            // sum1 = Math.max(sums[i + firstLen] - sums[i]); 这两个是误区, 每次loop要找的是left最大和 +
+            // 当前right的和
             res = Math.max(sum1 + sum2, res);
         }
 
@@ -35,6 +38,8 @@ class Solution {
         for (int i = firstLen; i < sums.length - secondLen; i++) {
             sum1 = Math.max(sums[i] - sums[i - firstLen], sum1);
             sum2 = sums[i + secondLen] - sums[i];
+            // sum2 = Math.max(sums[i + secondLen] - sums[i]); 这两个是误区, 每次loop要找的是left最大和 +
+            // 当前right的和
             res = Math.max(sum1 + sum2, res);
         }
         return res;

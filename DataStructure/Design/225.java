@@ -1,21 +1,22 @@
-package DataStructure.Heap;
+package DataStructure.Design;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 class MyStack {
-
     Queue<Integer> q;
 
     public MyStack() {
-        this.q = new ArrayDeque<Integer>();
+        this.q = new ArrayDeque<>();
+        // head = newest
+        // tail = oldest
     }
 
     public void push(int x) {
-        q.add(x);
-        int len = q.size();
-        for (int i = 0; i < len - 1; i++) {
-            q.add(q.poll());
+        int size = q.size();
+        q.offer(x);
+        for (int i = 0; i < size; i++) {
+            q.offer(q.poll());
         }
     }
 
@@ -29,7 +30,6 @@ class MyStack {
 
     public boolean empty() {
         return q.isEmpty();
-
     }
 }
 

@@ -69,3 +69,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day58 9/13/2024 第三 section: 明天就能做完 sub 了 🎉🎉🎉🎉🎉🎉
 - [x] Day59 9/17/2024 第三 section: 结束 sub, 开始做 data structure 部分, 做完就可以开始第四 section 了
 - [x] Day60 9/18/2024 第三 section: 进行 data structure 的 linked list 部分
+- [x] Day61 9/19/2024 第三 section: 完成当日打卡

@@ -71,3 +71,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day60 9/18/2024 第三 section: 进行 data structure 的 linked list 部分
 - [x] Day61 9/19/2024 第三 section: 完成当日打卡
 - [x] Day62 9/20/2024 S1 section: 学习前端 (Promise, CSS box, ...)
+
+------ 第三 Section 临时中断 --- 现在要刷公司真题
+
+- [x] Day63 9/25/2024 特殊 section: 刷 Databricks

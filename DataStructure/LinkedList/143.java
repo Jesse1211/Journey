@@ -1,4 +1,4 @@
-package TwoPointer;
+package DataStructure.LinkedList;
 
 class ListNode {
     int val;
@@ -29,6 +29,7 @@ class Solution {
             slow = slow.next;
         }
 
+        // reverse the second half
         ListNode prev = null, next = null;
         while (slow != null) {
             next = slow.next;
@@ -37,6 +38,7 @@ class Solution {
             slow = next;
         }
 
+        // easy merge
         ListNode firstHalf = head;
         ListNode secondHalf = prev;
         while (secondHalf.next != null) {

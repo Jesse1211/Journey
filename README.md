@@ -76,3 +76,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 
 - [x] Day63 9/25/2024 特殊 section: 刷 Databricks
 - [x] Day64 9/26/2024 第三 section: 进行 data structure 的 linked list 部分
+- [x] Day65 9/27/2024 第三 section: 完成 LinkedList, 进行 Map

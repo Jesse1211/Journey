@@ -1,5 +1,3 @@
-package TwoPointer;
-
 class ListNode {
     int val;
     ListNode next;
@@ -16,6 +14,10 @@ class ListNode {
         this.next = next;
     }
 }
+
+/*
+ * highlight: linkedlist reverse
+ */
 
 class Solution {
     public boolean isPalindrome(ListNode head) {

@@ -1,5 +1,3 @@
-package DataStructure.LinkedList;
-
 class MyLinkedList {
 
     class LinkedList {

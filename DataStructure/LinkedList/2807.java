@@ -1,4 +1,3 @@
-package DataStructure.LinkedList;
 
 /*
  * highlight: findGCD比较难

@@ -1,4 +1,3 @@
-package DataStructure.LinkedList;
 
 class ListNode {
     int val;
@@ -16,6 +15,10 @@ class ListNode {
         this.next = next;
     }
 }
+
+/*
+ * highlight: 这个recursion很有意思
+ */
 
 class TreeNode {
     int val;

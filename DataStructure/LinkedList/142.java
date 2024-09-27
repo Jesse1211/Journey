@@ -1,5 +1,3 @@
-package DataStructure.LinkedList;
-
 class ListNode {
     int val;
     ListNode next;

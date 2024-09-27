@@ -1,4 +1,4 @@
-package Tree;
+package Backtracking.DFS.Tree;
 
 import java.util.ArrayList;
 import java.util.List;

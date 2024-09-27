@@ -1,4 +1,4 @@
-package Tree;
+package Backtracking.DFS.Tree;
 
 class TreeNode {
     int val;

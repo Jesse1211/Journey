@@ -1,5 +1,4 @@
-package Tree;
-
+package Backtracking.DFS.Tree;
 /*
  * 1. 判定dfs的parameters: root
 *      (这里只是invert, 所以不需要res)

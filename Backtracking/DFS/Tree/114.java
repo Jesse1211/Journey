@@ -1,5 +1,4 @@
-package Tree;
-
+package Backtracking.DFS.Tree;
 /*
  * highlight: 这个有点难, 必须从base 开始思考
  */

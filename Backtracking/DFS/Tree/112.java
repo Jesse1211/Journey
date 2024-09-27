@@ -1,4 +1,4 @@
-package Backtracking.BFS.Tree;
+package Backtracking.DFS.Tree;
 
 /*
  * 可以用DFS也可以用BFS

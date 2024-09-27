@@ -1,5 +1,4 @@
-package Tree;
-
+package Backtracking.DFS.Tree;
 /* 
  * 1. 判定dfs的parameters: p, q
 *      (这里只是比较, 所以不需要res)

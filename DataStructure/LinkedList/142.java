@@ -31,7 +31,7 @@ class Solution {
                 break;
         }
 
-        // handle if 1 head only or no head
+        // highlight:这部分怎么回事 handle if 1 head only or no head
         if (fast == null || fast.next == null)
             return null;
         while (slow != head) {

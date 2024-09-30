@@ -1,5 +1,10 @@
 package BinarySearchInclusive;
 
+/*
+ * 查找唯一元素 - target
+ * 找到后左右扩展
+ */
+
 class Solution {
     public int[] searchRange(int[] nums, int target) {
 

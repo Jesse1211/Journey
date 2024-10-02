@@ -19,15 +19,17 @@ class Solution {
     }
 
     public int checkIfWordPresentInString(String s, String word) {
-        int index = 0;
-        for (int i = 0; i <= s.length() - 1; i++) {
-            if (s.charAt(i) == word.charAt(index)) {
-                index++;
+        int wordIndex = 0;
+        int sIndex = 0;
+        while (sIndex < s.length()) {
+            if (s.charAt(sIndex) == word.charAt(wordIndex)) {
+                wordIndex++;
 
-                if (index == word.length()) {
-                    return index;
+                if (wordIndex == word.length()) {
+                    return wordIndex;
                 }
             }
+            sIndex++;
         }
         return 0;
     }

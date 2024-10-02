@@ -4,33 +4,36 @@ import java.util.Arrays;
 
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
-        int[] freqS1 = new int[26];
-        int[] freqS2 = new int[26];
-
-        if (s2.length() < s1.length()) {
+        if (s1.length() > s2.length()) {
             return false;
         }
 
+        int[] freq1 = new int[26];
+        int[] freq2 = new int[26];
+
+        // Fill the frequency map for s1
         for (int i = 0; i < s1.length(); i++) {
-            freqS1[s1.charAt(i) - 'a']++;
-            freqS2[s2.charAt(i) - 'a']++;
+            freq1[s1.charAt(i) - 'a']++;
+            freq2[s2.charAt(i) - 'a']++;
         }
 
-        if (Arrays.equals(freqS1, freqS2)) {
+        if (Arrays.equals(freq1, freq2)) {
             return true;
         }
 
-        int slow = 0;
-        for (int i = s1.length(); i < s2.length(); i++) {
-            freqS2[s2.charAt(i) - 'a']++;
-            freqS2[s2.charAt(slow) - 'a']--;
+        int left = 0;
+        int right = s1.length();
+        while (right < s2.length()) {
+            freq2[s2.charAt(right) - 'a']++;
+            freq2[s2.charAt(left) - 'a']--;
 
-            slow++;
-            if (Arrays.equals(freqS1, freqS2)) {
+            right++;
+            left++;
+            if (Arrays.equals(freq1, freq2)) {
                 return true;
             }
-
         }
+
         return false;
     }
 }

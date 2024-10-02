@@ -24,11 +24,14 @@ class Solution {
         }
 
         int slow = 0;
-        for (int i = p.length(); i < s.length(); i++) {
-            freqS[s.charAt(i) - 'a']++;
+        int fast = p.length();
+        while (fast < s.length()) {
+            // shift right
+            freqS[s.charAt(fast) - 'a']++;
             freqS[s.charAt(slow) - 'a']--;
 
             slow++;
+            fast++;
             if (Arrays.equals(freqS, freqP)) {
                 res.add(slow);
             }

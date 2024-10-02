@@ -8,30 +8,37 @@ import java.util.Set;
 
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        Set<List<Integer>> res = new HashSet<>();
         Arrays.sort(nums);
+        Set<List<Integer>> s = new HashSet<>();
+        List<List<Integer>> output = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
             for (int j = i + 1; j < nums.length; j++) {
-                int left = j + 1;
-                int right = nums.length - 1;
-                while (left < right) {
-                    long cur = (long) nums[i] + (long) nums[j] + (long) nums[left] + (long) nums[right];
-                    if (cur == target) {
-                        res.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
-                        left++;
-                        right--;
-                    } else if (cur < target) {
-                        left++;
+                if (j > i + 1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
+                int k = j + 1;
+                int l = nums.length - 1;
+                while (k < l) {
+                    long sum = nums[i];
+                    sum += nums[j];
+                    sum += nums[k];
+                    sum += nums[l];
+                    if (sum == target) {
+                        s.add(Arrays.asList(nums[i], nums[j], nums[k], nums[l]));
+                        k++;
+                        l--;
+                    } else if (sum < target) {
+                        k++;
                     } else {
-                        right--;
+                        l--;
                     }
                 }
-
             }
         }
-
-        List<List<Integer>> output = new ArrayList<>();
-        output.addAll(res);
+        output.addAll(s);
         return output;
     }
 }

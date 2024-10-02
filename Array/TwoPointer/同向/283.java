@@ -3,13 +3,13 @@ package TwoPointer.同向;
 class Solution {
     public void moveZeroes(int[] nums) {
         int slow = 0;
-        int index = 0;
-        while (index < nums.length) {
-            if (nums[index] != 0) {
-                nums[slow] = nums[index];
+        int fast = 0;
+        while (fast < nums.length) {
+            if (nums[fast] != 0) {
+                nums[slow] = nums[fast];
                 slow++;
             }
-            index++;
+            fast++;
         }
         while (slow < nums.length) {
             nums[slow++] = 0;

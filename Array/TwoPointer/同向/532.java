@@ -13,6 +13,7 @@ class Solution {
             if (nums[fast] - nums[slow] == k && slow != fast) {
                 res++;
                 while (fast + 1 < nums.length && nums[fast] == nums[fast + 1]) {
+                    // skip duplicates
                     fast++;
                 }
                 fast++;

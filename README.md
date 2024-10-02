@@ -78,3 +78,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day64 9/26/2024 第三 section: 进行 data structure 的 linked list 部分
 - [x] Day65 9/27/2024 第三 section: 完成 LinkedList, 进行 Map
 - [x] Day66 9/30/2024 第三 section: 没完成 map, 重刷了一下 binary search, 明天刷 prefix sum, 复习完 array 再弄 structure 部分
+- [x] Day67 10/02/2024 第三 section: 复习了 TwoPointer, 画出了几个比较经典的题. 复习完 array, 再弄 prefix sum, 然后 structure 部分

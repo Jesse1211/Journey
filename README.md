@@ -81,4 +81,6 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day67 10/02/2024 第三 section: 复习了 TwoPointer, 画出了几个比较经典的题. 复习完 array, 再弄 prefix sum, 然后 structure 部分
 
 ------ 第三 Section 临时中断 --- 现在要刷公司真题
+
 - [x] Day68 10/03/2024 特殊 section: 刷 Meta
+- [x] Day69 10/04/2024 特殊 section: 刷 Meta

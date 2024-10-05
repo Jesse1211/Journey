@@ -2,22 +2,24 @@ package TwoPointer.SlidingWindow;
 
 class Solution {
     public int characterReplacement(String s, int k) {
-        int[] freq = new int[26];
+        int left = 0;
+        int right = 0;
+        int[] window = new int[26];
+        int maxFreq = 0;
         int res = 0;
-        int slow = 0;
-        int maxCount = 0;
-        for (int i = 0; i < s.length(); i++) {
-            int cur = s.charAt(i) - 'A';
-            // always move forward
-            freq[cur]++;
-            maxCount = Math.max(maxCount, freq[cur]);
+        while (right < s.length()) {
 
-            // if need to shrink
-            if (i - slow + 1 - maxCount > k) {
-                freq[s.charAt(slow) - 'A']--;
-                slow++;
+            int cur = s.charAt(right) - 'A';
+            window[cur]++;
+            maxFreq = Math.max(maxFreq, window[cur]);
+
+            while (right - left + 1 > maxFreq + k) {
+                window[s.charAt(left) - 'A']--;
+                left++;
             }
-            res = Math.max(res, i - slow + 1);
+
+            res = Math.max(res, right - left + 1); // 这里可以用maxFreq但是要考虑到edge case
+            right++;
         }
         return res;
     }

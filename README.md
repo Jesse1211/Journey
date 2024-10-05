@@ -84,3 +84,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 
 - [x] Day68 10/03/2024 特殊 section: 刷 Meta
 - [x] Day69 10/04/2024 特殊 section: 刷 Meta
+- [x] Day70 10/05/2024 特殊 section: 刷 Meta

@@ -1,4 +1,4 @@
-package TwoPointer;
+package DataStructure.LinkedList;
 
 /*
  * highlight: 这啥玩意

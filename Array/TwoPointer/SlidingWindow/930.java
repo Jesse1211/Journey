@@ -2,21 +2,25 @@ package TwoPointer.SlidingWindow;
 
 class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
+        return findAll(nums, goal) - findAll(nums, goal - 1);
+    }
+
+    private int findAll(int[] nums, int goal) {
+        int left = 0;
+        int right = 0;
         int res = 0;
-        int sum = 0;
-        int slow = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            while (sum > goal) {
-                sum -= nums[slow++];
+        int cur = 0;
+        while (right < nums.length) {
+            cur += nums[right];
+
+            while (cur > goal && left <= right) {
+                cur -= nums[left];
+                left++;
             }
 
-            int curSlow = slow;
-            int curSum = sum;
-            while (curSum == goal && curSlow <= i) {
-                res++;
-                curSum -= nums[curSlow++];
-            }
+            int window = right - left + 1;
+            res += window;
+            right++;
         }
         return res;
     }

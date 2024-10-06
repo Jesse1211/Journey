@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package Sub;
 
 class Solution {
     public String longestPalindrome(String s) {

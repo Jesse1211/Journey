@@ -1,4 +1,4 @@
-package TwoPointer.SlidingWindow;
+package Sub;
 
 class Solution {
     public int maxTurbulenceSize(int[] arr) {

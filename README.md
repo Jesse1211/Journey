@@ -85,3 +85,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day68 10/03/2024 特殊 section: 刷 Meta
 - [x] Day69 10/04/2024 特殊 section: 刷 Meta
 - [x] Day70 10/05/2024 特殊 section: 刷 Meta
+- [x] Day71 10/06/2024 第三 section: 完成 Two Pointer & Sub 相关, 剩下三个题有点难 明天吧, 然后继续 Meta

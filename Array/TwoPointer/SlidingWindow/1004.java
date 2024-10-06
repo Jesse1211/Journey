@@ -2,23 +2,28 @@ package TwoPointer.SlidingWindow;
 
 class Solution {
     public int longestOnes(int[] nums, int k) {
-        int slow = 0;
-        int left = k;
         int res = 0;
+        int left = 0;
+        int right = 0;
+        int maxFreq = 0;
+        int[] freq = new int[2];
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                while (left == 0) {
-                    if (nums[slow] == 0) {
-                        left++;
-                    }
-                    slow++;
-                }
-                left--;
+        while (right < nums.length) {
+            int cur = nums[right];
+            freq[cur]++;
 
+            if (cur == 1) {
+                maxFreq = Math.max(freq[cur], maxFreq);
             }
-            res = Math.max(res, i - slow + 1);
 
+            while (right - left + 1 > maxFreq + k) {
+                int curLeft = nums[left];
+                freq[curLeft]--;
+                left++;
+            }
+
+            res = Math.max(right - left + 1, res);
+            right++;
         }
         return res;
     }

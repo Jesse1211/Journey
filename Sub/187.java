@@ -1,4 +1,4 @@
-package TwoPointer.SlidingWindow;
+package Sub;
 
 import java.util.ArrayList;
 import java.util.HashMap;

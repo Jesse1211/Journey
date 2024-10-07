@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * highlight:
+ *  和930比较像, 我们可以自主设定window size, 找出每个size能覆盖最长的substring
+ */
+
 class Solution {
     public int longestSubstring(String s, int k) {
         int n = findUniqueNums(s);
@@ -14,15 +19,15 @@ class Solution {
             Arrays.fill(freq, 0);
             int slow = 0;
             int fast = 0;
-            int curUniqueNum = 0;
+            int curUniqueNumCount = 0;
             int amountOfK = 0;
 
             while (fast < s.length()) {
                 // expand
-                if (curUniqueNum <= uniqueNum) {
+                if (curUniqueNumCount <= uniqueNum) {
                     int index = s.charAt(fast) - 'a';
                     if (freq[index] == 0) {
-                        curUniqueNum++;
+                        curUniqueNumCount++;
                     }
                     freq[index]++;
 
@@ -40,13 +45,13 @@ class Solution {
                     }
                     freq[index]--;
                     if (freq[index] == 0) {
-                        curUniqueNum--;
+                        curUniqueNumCount--;
                     }
                     slow++;
 
                 }
 
-                if (amountOfK == uniqueNum && curUniqueNum == amountOfK) {
+                if (amountOfK == uniqueNum && curUniqueNumCount == amountOfK) {
                     res = Math.max(res, fast - slow);
                 }
             }
@@ -55,7 +60,7 @@ class Solution {
     }
 
     private int findUniqueNums(String s) {
-        Set<Character> set = new HashSet<>();
+        Set<Character> set = new HashSet();
         for (char ch : s.toCharArray()) {
             set.add(ch);
         }

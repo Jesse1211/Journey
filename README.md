@@ -86,4 +86,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day69 10/04/2024 特殊 section: 刷 Meta
 - [x] Day70 10/05/2024 特殊 section: 刷 Meta
 - [x] Day71 10/06/2024 第三 section: 完成 Two Pointer & Sub 相关, 剩下三个题有点难 明天吧, 然后继续 Meta
-- [x] Day72 10/08/2024 第三 section: 做Prefix Sum
+- [x] Day72 10/08/2024 第三 section: 做 Prefix Sum
+- [x] Day73 10/09/2024 第三 section: 做完 prefix Sum; 刷 Meta 真题
+
+------ 第三 Section 马上写完了, 还剩下 Data Structure 部分. 之后要复习**记得复习 Two Pointer & Sliding Window & Prefix Sum**

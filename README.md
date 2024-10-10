@@ -90,3 +90,5 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day73 10/09/2024 第三 section: 做完 prefix Sum; 刷 Meta 真题
 
 ------ 第三 Section 马上写完了, 还剩下 Data Structure 部分. 之后要复习**记得复习 Two Pointer & Sliding Window & Prefix Sum**
+
+- [x] Day74 10/10/2024 meta 考完了

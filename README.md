@@ -92,3 +92,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 ------ 第三 Section 马上写完了, 还剩下 Data Structure 部分. 之后要复习**记得复习 Two Pointer & Sliding Window & Prefix Sum**
 
 - [x] Day74 10/10/2024 meta 考完了
+- [x] Day75 10/13/2024 第三 section: 刷 design 部分

@@ -1,4 +1,4 @@
-package Backtracking.BFS.ToCenter;
+package Backtracking.DFS;
 
 import java.util.*;
 

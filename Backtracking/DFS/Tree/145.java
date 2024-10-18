@@ -1,7 +1,7 @@
 package Backtracking.DFS.Tree;
-/*
- * highlight: 这个有点难, 必须从base 开始思考
- */
+
+import java.util.ArrayList;
+import java.util.List;
 
 class TreeNode {
     int val;
@@ -23,20 +23,21 @@ class TreeNode {
 }
 
 class Solution {
-    private TreeNode prev = null;
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        dfs(root, res);
+        return res;
+    }
 
-    public void flatten(TreeNode root) {
+    private void dfs(TreeNode root, List<Integer> res) {
+
         if (root == null) {
             return;
         }
 
-        // first right, then left, We need to reach lowest & right corner
-        flatten(root.right);
-        flatten(root.left);
-
-        root.right = prev;
-        root.left = null;
-        prev = root;
+        dfs(root.left, res);
+        dfs(root.right, res);
+        res.add(root.val);
         return;
     }
 }

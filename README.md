@@ -93,3 +93,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 
 - [x] Day74 10/10/2024 meta 考完了
 - [x] Day75 10/13/2024 第三 section: 刷 design 部分
+
+------ 提前开始第四 section, 复习 & 加强 BFS, DFS, Two Pointer, Binary Search, Sliding Window, Prefix Sum
+
+- [x] Day76 10/18/2024 第四 section: 完成 BFS

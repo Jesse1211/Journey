@@ -33,42 +33,48 @@ class TreeNode {
 class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
+
         if (root == null) {
             return res;
         }
-        Map<Integer, List<Integer>> map = new HashMap<>(); // column index : vertical column
+
         Queue<TreeNode> q = new ArrayDeque<>();
         Queue<Integer> col = new ArrayDeque<>();
+
+        Map<Integer, List<Integer>> map = new HashMap<>(); // index: list of node value
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
         q.offer(root);
         col.offer(0);
 
-        int leftBound = 0;
-        int rightBound = 0;
         while (!q.isEmpty()) {
-            TreeNode cur = q.poll();
-            int curCol = col.poll();
 
-            if (!map.containsKey(curCol)) {
-                map.put(curCol, new ArrayList<Integer>());
+            TreeNode cur = q.poll();
+            int curIndex = col.poll();
+
+            min = Math.min(min, curIndex);
+            max = Math.max(max, curIndex);
+            if (!map.containsKey(curIndex)) {
+                map.put(curIndex, new ArrayList<>());
             }
-            map.get(curCol).add(cur.val);
+            map.get(curIndex).add(cur.val);
 
             if (cur.left != null) {
-                col.add(curCol - 1);
-                q.add(cur.left);
-                leftBound = Math.min(leftBound, curCol - 1);
+                q.offer(cur.left);
+                col.offer(curIndex - 1);
             }
 
             if (cur.right != null) {
-                col.add(curCol + 1);
-                q.add(cur.right);
-                rightBound = Math.max(rightBound, curCol + 1);
+                q.offer(cur.right);
+                col.offer(curIndex + 1);
             }
         }
 
-        for (int i = leftBound; i <= rightBound; i++) {
+        for (int i = min; i <= max; i++) {
             res.add(map.get(i));
         }
         return res;
+
     }
 }

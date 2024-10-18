@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
 /*
@@ -41,29 +42,27 @@ class Node {
 
 class Solution {
     public Node cloneGraph(Node node) {
-        if (node == null) {
-            return null;
-        }
-
-        HashMap<Node, Node> map = new HashMap<>();
+        Map<Node, Node> map = new HashMap<>();
         Queue<Node> q = new ArrayDeque<>();
-        Node res = new Node(node.val);
+
+        if (node == null) {
+            return node;
+        }
         q.offer(node);
-        map.put(node, res);
+        map.put(node, new Node(node.val));
 
         while (!q.isEmpty()) {
-
             Node cur = q.poll();
-            Node newCur = map.get(cur);
+            for (Node nei : cur.neighbors) {
 
-            for (var each : cur.neighbors) {
-                if (!map.containsKey(each)) {
-                    map.put(each, new Node(each.val));
-                    q.offer(each);
+                if (!map.containsKey(nei)) {
+                    map.put(nei, new Node(nei.val));
+                    q.offer(nei);
                 }
-                newCur.neighbors.add(map.get(each));
+                map.get(cur).neighbors.add(map.get(nei));
             }
+
         }
-        return res;
+        return map.get(node);
     }
 }

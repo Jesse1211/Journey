@@ -17,24 +17,24 @@ class Solution {
 
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<>();
-
-        if (digits.isEmpty())
+        if (digits.equals("")) {
             return res;
-
-        dfs(digits, 0, res, "");
+        }
+        dfs(digits, res, "", 0);
         return res;
     }
 
-    private void dfs(String digits, int index, List<String> res, String cur) {
+    private void dfs(String digits, List<String> res, String cur, int index) {
 
         if (index == digits.length()) {
             res.add(cur);
             return;
         }
 
-        String letters = phoneMap[digits.charAt(index) - '2'];
-        for (char letter : letters.toCharArray()) {
-            dfs(digits, index + 1, res, cur + letter);
+        int digit = digits.charAt(index) - '0' - 2;
+
+        for (char c : phoneMap[digit].toCharArray()) {
+            dfs(digits, res, cur + c, index + 1);
         }
     }
 }

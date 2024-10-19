@@ -1,7 +1,9 @@
 package List;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /* : 如果所有element都是unique, 避免重复不需要set, 检查是否contain就好了
  * 1.  判定dfs的parameters: nums, res, cur (因为这次是无序, 所以不需要index)
@@ -15,22 +17,25 @@ import java.util.List;
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        dfs(nums, res, new ArrayList<>());
+        Set<Integer> visited = new HashSet<>();
+        dfs(nums, visited, new ArrayList<>(), res);
         return res;
     }
 
-    private void dfs(int[] nums, List<List<Integer>> res, List<Integer> cur) {
+    private void dfs(int[] nums, Set<Integer> visited, List<Integer> cur, List<List<Integer>> res) {
         if (cur.size() == nums.length) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            if (cur.contains(nums[i])) {
+        for (int num : nums) {
+            if (visited.contains(num)) {
                 continue;
             }
-            cur.add(nums[i]);
-            dfs(nums, res, cur);
+            visited.add(num);
+            cur.add(num);
+            dfs(nums, visited, cur, res);
+            visited.remove(num);
             cur.remove(cur.size() - 1);
         }
     }

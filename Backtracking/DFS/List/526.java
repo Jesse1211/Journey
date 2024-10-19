@@ -12,21 +12,18 @@ import java.util.Set;
  */
 
 class Solution {
-    int res;
 
     public int countArrangement(int n) {
-        res = 0;
         Set<Integer> visited = new HashSet<>();
-        dfs(1, n, visited);
-        return res;
+        return dfs(1, n, visited);
     }
 
-    private void dfs(int index, int n, Set<Integer> visited) {
+    private int dfs(int index, int n, Set<Integer> visited) {
         if (index == n + 1) {
-            res++;
-            return;
+            return 1;
         }
 
+        int res = 0;
         for (int i = 1; i <= n; i++) {
             if (visited.contains(i)) {
                 continue;
@@ -34,9 +31,10 @@ class Solution {
 
             if (i % index == 0 || index % i == 0) {
                 visited.add(i);
-                dfs(index + 1, n, visited);
+                res += dfs(index + 1, n, visited);
                 visited.remove(i);
             }
         }
+        return res;
     }
 }

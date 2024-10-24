@@ -12,10 +12,6 @@ class Solution {
         }
     }
 
-    /*
-     * highlight: 抽象
-     */
-
     public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
         int n = difficulty.length;
         Assignment[] assignments = new Assignment[n];
@@ -30,11 +26,11 @@ class Solution {
         int profitSoFar = 0;
         int index = 0;
         for (int work : worker) {
-            while (index < n && assignments[index].difficulty <= work) {
+            while (index < assignments.length && assignments[index].difficulty <= work) {
+                // one job can be completed multiple times.
                 profitSoFar = Math.max(profitSoFar, assignments[index].profit);
                 index++;
             }
-
             maxProfit += profitSoFar;
         }
         return maxProfit;

@@ -1,4 +1,4 @@
-package TwoPointer.反向;
+package 反向;
 
 /**
  * highlight: 对于删除一个, 或者多个的情况, 要逆向思考

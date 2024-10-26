@@ -1,4 +1,4 @@
-package TwoPointer.反向;
+package 反向;
 
 class Solution {
     public void reverseString(char[] s) {

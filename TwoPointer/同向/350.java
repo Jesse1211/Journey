@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 import java.util.ArrayList;
 import java.util.Arrays;

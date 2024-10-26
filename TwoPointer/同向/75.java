@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 // highlight: 正向反向双指针
 class Solution {

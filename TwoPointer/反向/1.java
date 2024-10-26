@@ -1,4 +1,4 @@
-package TwoPointer.反向;
+package 反向;
 
 import java.util.Arrays;
 

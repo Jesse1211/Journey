@@ -1,24 +1,35 @@
-package TwoPointer.反向;
+package 反向;
 
 /*
  * highlight: 用不一样的incrementation分批做two pointer
  */
 
-class Solution {
+ class Solution {
     public String reverseStr(String s, int k) {
-        char[] chars = s.toCharArray();
-
-        for (int i = 0; i < s.length() - 1; i += 2 * k) {
-            int start = i;
-            int end = Math.min(i + k - 1, s.length() - 1);
-
-            while (start < end) {
-                char temp = chars[start];
-                chars[start++] = chars[end];
-                chars[end--] = temp;
-            }
+        int slow = 0;
+        int fast = 2 * k - 1;
+        int mid = k - 1;
+        String cur = "";
+        while (fast < s.length()) {
+            // reverse left half, don't change right half
+            cur += reverse(s, slow, mid);
+            cur += s.substring(mid+1, fast+1);
+            // update
+            slow = fast + 1;
+            fast += 2 * k;
+            mid = slow + k;
         }
+        // cur += reverse(s, slow, mid);
+        cur += s.substring(mid+1, s.length());
+        return cur;
+    }
 
-        return new String(chars);
+    private String reverse(String s, int slow, int fast) {
+        StringBuilder sb = new StringBuilder();
+        while (slow < fast) {
+            sb.append(s.charAt(fast--));
+            sb.append(s.charAt(slow++));
+        }
+        return sb.toString();
     }
 }

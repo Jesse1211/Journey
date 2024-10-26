@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 // highlight: 这个很难想到，需要多做几遍
 class Solution {

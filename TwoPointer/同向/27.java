@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 class Solution {
     public int removeElement(int[] nums, int val) {

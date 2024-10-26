@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,13 +14,16 @@ class Solution {
 
         while (index < nums.length) {
             if (!set.contains(index)) {
+                // suppose get into one cycle
                 int slow = index;
                 int fast = index;
+                // 找到一个方向, 之后如果方向不同, 说明不是一个cycle
                 boolean isPositive = nums[index] >= 0;
                 while (true) {
                     // slow moves once, fast moves twice until merge
                     slow = updateIndex(nums, slow, isPositive);
                     if (slow == -1) {
+                        // 方向不同
                         break;
                     }
 

@@ -1,4 +1,4 @@
-package TwoPointer.同向;
+package 同向;
 
 import java.util.Arrays;
 
@@ -10,13 +10,14 @@ class Solution {
         int slow = 0;
         int fast = 1;
         while (fast < nums.length) {
-            if (nums[fast] - nums[slow] == k && slow != fast) {
+            if (fast == slow) {
+                fast++;
+            } else if (nums[fast] - nums[slow] == k) {
                 res++;
-                while (fast + 1 < nums.length && nums[fast] == nums[fast + 1]) {
-                    // skip duplicates
+                fast++;
+                while (fast < nums.length && nums[fast] == nums[fast - 1]) {
                     fast++;
                 }
-                fast++;
             } else if (nums[fast] - nums[slow] > k) {
                 slow++;
             } else {

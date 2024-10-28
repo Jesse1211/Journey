@@ -15,10 +15,13 @@ class Solution {
         while (left <= right) {
             int middle = (left + right) / 2;
             int sum = sumAfterChanges(arr, middle);
-            if (sum > target)
+            if (sum == target) {
+                return middle;
+            } else if (sum > target) {
                 right = middle - 1;
-            else
+            } else {
                 left = middle + 1;
+            }
 
             if ((Math.abs(sum - target) < minDifference)
                     || (Math.abs(sum - target) == minDifference && middle < result)) {
@@ -40,6 +43,7 @@ class Solution {
 }
 
 class Solution2 { // 个人喜欢这个写法 因为是exclusive
+
     public int findBestValue(int[] arr, int target) {
         int n = arr.length;
         int lo = 0, hi = 0;
@@ -53,7 +57,9 @@ class Solution2 { // 个人喜欢这个写法 因为是exclusive
             for (int i = 0; i < n; i++) {
                 sum += Math.min(arr[i], mid);
             }
-            if (sum >= target) {
+            if (sum == target) {
+                return mid;
+            } else if (sum > target) {
                 hi = mid;
             } else {
                 lo = mid + 1;

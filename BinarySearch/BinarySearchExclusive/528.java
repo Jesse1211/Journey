@@ -1,8 +1,7 @@
-package BinarySearchInclusive;
+package BinarySearchExclusive;
 
 import java.util.Random;
 
-// meta
 class Solution {
 
     private int[] nums;
@@ -31,13 +30,13 @@ class Solution {
     private int binarySearch(int n) {
         int left = 0;
         int right = nums.length - 1;
-        while (left <= right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             if (this.nums[mid] == n) {
                 return mid;
             }
             if (this.nums[mid] > n) {
-                right = mid - 1;
+                right = mid;
             } else {
                 left = mid + 1;
             }

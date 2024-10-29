@@ -2,6 +2,9 @@ package PrefixSum;
 
 class Solution {
     public int pivotIndex(int[] nums) {
+        // [1,7,3,6,5,6]
+        // [1, 8, 11,17,22,28]
+        // [28,27,20,17,11,6]
         int n = nums.length;
         int[] sumFromLeft = new int[n];
         int[] sumFromRight = new int[n];

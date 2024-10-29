@@ -103,3 +103,7 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day78 10/24/2024 第四 section: 完成复习 BFS 希望之后不会被 BFS 卡住
 - [x] Day79 10/25/2024 第四 section: 复习 Two Pointer
 - [x] Day80 10/27/2024 第四 section: 完成 DFS, Binary Search. Two pointer 还有题没有整理完 下次要开始写 Prefix Sum, LinkedList
+
+--- Day 81 - 致敬黑曼巴, MAMBA MENTALITY 加油---
+
+- [x] Day81 10/28/2024 第四 section: 热身 BFS, DFS 各一道, 开始 Prefix Sum. Two pointer 还有题没有整理完 下次要开始写 Prefix Sum, LinkedList

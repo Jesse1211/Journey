@@ -1,10 +1,13 @@
 
 import java.util.Arrays;
 
-/*
- * highlight:这...这个题目的思路是真的难想到
- */
 class Solution {
+    /*
+     * 从右到左遍历，找到第一个降序 A[x]
+     * 从右到左遍历，找到第一个比 A[x]大的数字 A[y]
+     * 交换 A[x]和 A[y]
+     * 将 x 之后的数字排序
+     */
     public void nextPermutation(int[] nums) {
         int n = nums.length;
         // find the breaking point: 第一个比右边element要小的数字

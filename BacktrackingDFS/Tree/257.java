@@ -25,6 +25,9 @@ class TreeNode {
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
         dfs(root, res, "");
         return res;
     }
@@ -34,17 +37,12 @@ class Solution {
             return;
         }
 
-        if (cur.length() != 0) {
-            cur += "->";
-        }
-        cur += root.val;
-
-        if (root.left == null && root.right == null) {
-            res.add(cur);
+        if (root != null && root.left == null && root.right == null) {
+            res.add(cur + root.val);
             return;
         }
 
-        dfs(root.left, res, cur);
-        dfs(root.right, res, cur);
+        dfs(root.left, res, cur + root.val + "->");
+        dfs(root.right, res, cur + root.val + "->");
     }
 }

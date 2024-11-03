@@ -1,5 +1,8 @@
 package BacktrackingDFS.Tree;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -19,7 +22,38 @@ class TreeNode {
     }
 }
 
-class Solution {
+class Solution1 {
+    int count = 0;
+    int targetSum;
+    Map<Long, Integer> h = new HashMap<>();
+
+    public int pathSum(TreeNode root, int targetSum) {
+        this.targetSum = targetSum;
+        preorder(root, 0L);
+        return count;
+    }
+
+    public void preorder(TreeNode node, long currSum) {
+        if (node == null)
+            return;
+
+        currSum += node.val;
+
+        if (currSum == targetSum)
+            count++;
+
+        count += h.getOrDefault(currSum - targetSum, 0);
+        h.put(currSum, h.getOrDefault(currSum, 0) + 1);
+
+        preorder(node.left, currSum);
+        preorder(node.right, currSum);
+
+        h.put(currSum, h.get(currSum) - 1);
+    }
+
+}
+
+class Solution2 {
     public int pathSum(TreeNode root, int targetSum) {
         if (root == null) {
             return 0;

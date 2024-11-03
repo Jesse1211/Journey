@@ -112,3 +112,5 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day84 11/01/2024 第四 section: 热身. 写完 Two pointer & prefix sum. 还剩下 linkedlist 和 datastructure, 我决定回头复习了
 
 --- Day 84 - 十一月好运 🍀 ---
+
+- [x] Day85 11/02/2024 第五 section: 复习完成 DFS 基础部分

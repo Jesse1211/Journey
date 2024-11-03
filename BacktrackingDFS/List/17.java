@@ -13,28 +13,28 @@ import java.util.List;
 *      用forloop来遍历所有的candidates
  */
 class Solution {
-    String[] phoneMap = { "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    String[] phoneMap = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<>();
         if (digits.equals("")) {
             return res;
         }
-        dfs(digits, res, "", 0);
+        dfs(digits, 0, new StringBuilder(), res);
         return res;
     }
 
-    private void dfs(String digits, List<String> res, String cur, int index) {
-
+    private void dfs(String digits, int index, StringBuilder cur, List<String> res) {
         if (index == digits.length()) {
-            res.add(cur);
+            res.add(cur.toString());
             return;
         }
 
-        int digit = digits.charAt(index) - '0' - 2;
-
-        for (char c : phoneMap[digit].toCharArray()) {
-            dfs(digits, res, cur + c, index + 1);
+        int curDigit = digits.charAt(index) - '0';
+        for (int i = 0; i < phoneMap[curDigit].length(); i++) {
+            cur.append(phoneMap[curDigit].charAt(i));
+            dfs(digits, index + 1, cur, res);
+            cur.deleteCharAt(cur.length() - 1);
         }
     }
 }

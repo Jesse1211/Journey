@@ -14,32 +14,32 @@ import java.util.List;
 *      用forloop来遍历所有的candidates
  * 
  */
-
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
-        dfs(candidates, target, res, new ArrayList<>(), 0);
+        List<List<Integer>> res = new ArrayList<>();
+        dfs(candidates, target, 0, new ArrayList<>(), res);
         return res;
     }
 
-    private void dfs(int[] candidates, int target, List<List<Integer>> res, List<Integer> cur, int index) {
+    private void dfs(int[] candidates, int target, int index, List<Integer> cur, List<List<Integer>> res) {
+        if (target < 0) {
+            return;
+        }
 
         if (target == 0) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
-        if (target < 0) {
-            return;
-        }
-
         for (int i = index; i < candidates.length; i++) {
-            if (i > index && candidates[i] == candidates[i - 1]) {
+            if (index < i && candidates[i] == candidates[i - 1]) {
+                // every recursive call in this level should not deduct same value -
+                // candidates[i]
                 continue;
             }
             cur.add(candidates[i]);
-            dfs(candidates, target - candidates[i], res, cur, i + 1);
+            dfs(candidates, target - candidates[i], i + 1, cur, res);
             cur.remove(cur.size() - 1);
         }
     }

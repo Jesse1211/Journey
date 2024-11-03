@@ -19,26 +19,41 @@ class TreeNode {
     }
 }
 
+class Solution2 {
+    public int sumOfLeftLeaves(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = 0;
+        if (root.left != null && root.left.left == null && root.left.right == null) {
+            left = root.left.val;
+        }
+
+        return left + sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
+    }
+}
+
 class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
             return 0;
         }
 
-        return dfs(root);
-
+        return dfs(root, false);
     }
 
-    public int dfs(TreeNode root) {
+    private int dfs(TreeNode root, boolean isLeft) {
         if (root == null) {
             return 0;
         }
 
-        int res = 0;
-        if (root.left != null && root.left.left == null && root.left.right == null) {
-            res += root.left.val;
+        if (isLeft) {
+            if (root.left == null && root.right == null) {
+                return root.val;
+            }
         }
 
-        return res + dfs(root.right) + dfs(root.left);
+        return dfs(root.left, true) + dfs(root.right, false);
     }
 }

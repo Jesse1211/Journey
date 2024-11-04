@@ -18,37 +18,30 @@ class TreeNode {
         this.right = right;
     }
 }
-/// 可以用inorder
 
+/// 可以用inorder
 class Solution {
     public int closestValue(TreeNode root, double target) {
-        if (root == null) {
-            return 0;
-        }
-        return dfs(root, target);
-    }
-
-    private int dfs(TreeNode root, double target) {
-        if (root == null) {
-            return Integer.MAX_VALUE;
-        }
-
-        if (target < root.val) {
-            int left = dfs(root.left, target);
-            if (Math.abs(left - target) < Math.abs(root.val - target)) {
-                return left;
-            } else if (Math.abs(left - target) == Math.abs(root.val - target)) {
-                return Math.min(left, root.val);
+        int res = root.val;
+        while (root != null) {
+            int val = root.val;
+            if (Math.abs(val - target) < Math.abs(res - target)) {
+                // val is closer
+                res = val;
+            } else if (Math.abs(val - target) == Math.abs(res - target)) {
+                if (val < res) {
+                    // same close but val is smaller
+                    res = val;
+                }
             }
-            return root.val;
-        }
 
-        int right = dfs(root.right, target);
-        if (Math.abs(right - target) < Math.abs(root.val - target)) {
-            return right;
-        } else if (Math.abs(right - target) == Math.abs(root.val - target)) {
-            return Math.min(right, root.val);
+            if (target < root.val) {
+                root = root.left;
+            } else {
+                root = root.right;
+            }
+
         }
-        return root.val;
+        return res;
     }
 }

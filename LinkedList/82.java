@@ -15,42 +15,27 @@ class ListNode {
     }
 }
 
-/*
- * highlight: 指到新的地方, 要注意把next的指向
- */
-
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode newHead = new ListNode();
-        ListNode dummyHead = newHead;
+        ListNode dummyHead = new ListNode();
+        dummyHead.next = head;
 
-        while (head != null) {
-            int cur = head.val;
-            boolean isDuplicate = false;
+        ListNode left = dummyHead;
+        ListNode right = head;
 
-            while (head.next != null && head.next.val == cur) {
-                head = head.next;
-                isDuplicate = true;
+        while (right != null) {
+            if (right.next != null && right.val == right.next.val) {
+                while (right.next != null && right.val == right.next.val) {
+                    right = right.next;
+                }
+                left.next = right.next;
+            } else {
+                left.next = right;
+                left = left.next;
             }
-
-            if (!isDuplicate) {
-                dummyHead.next = head;
-                dummyHead = dummyHead.next;
-            }
-            head = head.next;
-            dummyHead.next = null;
+            right = right.next;
         }
 
-        return newHead.next;
+        return dummyHead.next;
     }
 }

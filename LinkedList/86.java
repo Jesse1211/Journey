@@ -15,31 +15,28 @@ class ListNode {
     }
 }
 
-/*
- * highlight: 和82一样, 不能忘了把指针next置为null
- */
-
 class Solution {
     public ListNode partition(ListNode head, int x) {
         ListNode left = new ListNode();
-        ListNode dummyLeft = left;
-
+        ListNode dummyHeadLeft = left;
         ListNode right = new ListNode();
-        ListNode dummyRight = right;
+        ListNode dummyHeadRight = right;
+
         while (head != null) {
             if (head.val < x) {
-                dummyLeft.next = head;
+                left.next = head;
                 head = head.next;
-                dummyLeft = dummyLeft.next;
-                dummyLeft.next = null;
+                left = left.next;
+                left.next = null;
             } else {
-                dummyRight.next = head;
+                right.next = head;
                 head = head.next;
-                dummyRight = dummyRight.next;
-                dummyRight.next = null;
+                right = right.next;
+                right.next = null;
             }
         }
-        dummyLeft.next = right.next;
-        return left.next;
+
+        left.next = dummyHeadRight.next;
+        return dummyHeadLeft.next;
     }
 }

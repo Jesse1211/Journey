@@ -17,32 +17,38 @@ class ListNode {
 
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if (k == 0 || head == null) {
+        if (head == null) {
             return head;
         }
 
-        ListNode fast = head;
-        ListNode slow = head;
-        for (int i = 0; i < k; i++) {
-            if (fast.next == null) {
-                fast = head;
-            } else {
-                fast = fast.next;
-            }
+        ListNode left = head;
+        ListNode right = head;
+
+        int len = 0;
+        while (right != null) {
+            right = right.next;
+            len++;
         }
 
-        if (fast == slow) {
+        k %= len;
+        right = head;
+
+        if (k == 0) {
             return head;
         }
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next;
+        while (k-- > 0) {
+            right = right.next;
         }
 
-        ListNode newHead = slow.next;
-        slow.next = null;
-        fast.next = head;
-        return newHead;
+        while (right != null && right.next != null) {
+            right = right.next;
+            left = left.next;
+        }
+
+        ListNode next = left.next;
+        left.next = null;
+        right.next = head;
+        return next;
     }
 }

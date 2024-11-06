@@ -116,3 +116,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day85 11/02/2024 第五 section: 复习完成 DFS 基础部分
 - [x] Day86 11/03/2024 第五 section: 复习完成 DFS ALL, 复习 BFS
 - [x] Day87 11/04/2024 第五 section: 复习完成 BFS ALL, 刷点题
+- [x] Day88 11/05/2024 第四 section: 开始 Linked list, 差一点儿了. 刷完这个我就去 datastructure.

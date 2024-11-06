@@ -28,7 +28,55 @@ class TreeNode {
     }
 }
 
-class Solution {
+class Solution1 {
+    int res = 0;
+
+    public int countPairs(TreeNode root, int distance) {
+        dfs(root, distance);
+        return res;
+    }
+
+    private int[] dfs(TreeNode node, int distance) {
+        int[] sum = new int[distance + 1]; // access to chid within i distance
+
+        if (node == null) {
+            return sum;
+        }
+
+        if (node.left == null && node.right == null) {
+            // at distance 1, there is 1 leaf
+            sum[1] = 1; // for its parent to count
+            return sum;
+        }
+
+        int[] left = dfs(node.left, distance);
+        int[] right = dfs(node.right, distance);
+
+        // 结算left & right
+        int leftDistance = 0;
+        while (leftDistance < distance) {
+            int rightDistance = distance - leftDistance;
+            // 确保i + j <= distance
+            while (rightDistance > 0) {
+                // 相乘代表一共能组成pair的数量
+                res += left[leftDistance] * right[rightDistance];
+                rightDistance--;
+            }
+
+            leftDistance++;
+        }
+
+        // update sum for its parent
+        for (int i = 1; i < distance; i++) {
+            // 当前通过distance能达到的 = left 和 right 通过distance - 1 能达到的
+            sum[i] = left[i - 1] + right[i - 1];
+        }
+
+        return sum;
+    }
+}
+
+class Solution2 {
     public int countPairs(TreeNode root, int distance) {
         if (root == null) {
             return 0;

@@ -19,48 +19,55 @@ class ListNode {
 /*
  * highlight: 注意中点的寻找，以及链表的断开
  */
-
 class Solution {
     public ListNode sortList(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head == null || head.next == null)
             return head;
-        }
+        ListNode middle = getMiddle(head);
+        // 3->7->5->1
+        // 3->7 5->1
+        // 3 7 5 1
+        ListNode next = middle.next;
+        middle.next = null;
+        // 递归调用sortList
+        // 直到只剩下一个元素的时候开始merge
+        // 然后返回结果
+        return merge(sortList(head), sortList(next));
+    }
 
+    private ListNode getMiddle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        ListNode prev = head;
 
-        while (fast != null && fast.next != null) {
-            prev = slow;
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        prev.next = null;
+        return slow;
+    }
 
-        ListNode left = sortList(head);
-        ListNode right = sortList(slow);
+    private ListNode merge(ListNode a, ListNode b) {
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
 
-        ListNode res = new ListNode();
-        ListNode dummyHead = res;
-
-        while (left != null && right != null) {
-            if (left.val <= right.val) {
-                dummyHead.next = left;
-                left = left.next;
+        while (a != null && b != null) {
+            if (a.val <= b.val) {
+                cur.next = a;
+                a = a.next;
             } else {
-                dummyHead.next = right;
-                right = right.next;
+                cur.next = b;
+                b = b.next;
             }
-            dummyHead = dummyHead.next;
-            dummyHead.next = null;
+            cur = cur.next;
         }
 
-        if (left != null) {
-            dummyHead.next = left;
-        } else if (right != null) {
-            dummyHead.next = right;
+        if (a == null) {
+            cur.next = b;
+        } else {
+            cur.next = a;
         }
-        return res.next;
+
+        return dummy.next;
     }
 }

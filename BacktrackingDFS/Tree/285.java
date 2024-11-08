@@ -1,48 +1,43 @@
 package BacktrackingDFS.Tree;
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
- * }
- */
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
- * }
- */
+    TreeNode(int x) {
+        val = x;
+    }
+}
+
 class Solution {
-    TreeNode pre;
+    TreeNode prev;
     TreeNode res;
 
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-        helper(root, p);
+        if (root == null)
+            return null;
+        if (root.left == null && root.right == null)
+            return null;
+
+        dfs(root, p);
         return res;
     }
 
-    private void helper(TreeNode root, TreeNode target) {
-        if (root == null)
-            return;
-
-        helper(root.left, target);
-
-        if (pre == target) {
-            res = root;
-            // 不要忘记给pre赋值，不然之后每次都能match
-            pre = root;
+    private void dfs(TreeNode root, TreeNode target) {
+        if (root == null) {
             return;
         }
-        pre = root;
 
-        helper(root.right, target);
+        dfs(root.left, target);
+
+        if (prev != null && prev == target) {
+            res = root;
+            prev = null; // 之后再也不会进来这个if了
+        }
+
+        prev = root;
+        dfs(root.right, target);
     }
 }
 

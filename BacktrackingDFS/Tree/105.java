@@ -1,5 +1,8 @@
 package BacktrackingDFS.Tree;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -38,25 +41,59 @@ class TreeNode {
  */
 
 class Solution {
-    private int i = 0;
-    private int p = 0;
+    int pIndex;
+    int iIndex;
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        return build(preorder, inorder, Integer.MIN_VALUE);
+        return dfs(preorder, inorder, Integer.MAX_VALUE); // Integer.MAX_VALUE is a place holder for root
     }
 
-    private TreeNode build(int[] preorder, int[] inorder, int stop) {
-        if (p >= preorder.length) { // tree complete
-            return null;
-        }
-        if (inorder[i] == stop) { // sub tree complete
-            ++i;
+    private TreeNode dfs(int[] preorder, int[] inorder, int parentVal) {
+        // base case 1: entire tree is done
+        if (pIndex == preorder.length) {
             return null;
         }
 
-        TreeNode node = new TreeNode(preorder[p++]);
-        node.left = build(preorder, inorder, node.val);
-        node.right = build(preorder, inorder, stop);
-        return node;
+        // base case 2: sub tree is done
+        if (inorder[iIndex] == parentVal) {
+            iIndex++;
+            return null;
+        }
+
+        TreeNode cur = new TreeNode(preorder[pIndex]);
+        pIndex++;
+        TreeNode left = dfs(preorder, inorder, cur.val);
+        TreeNode right = dfs(preorder, inorder, parentVal);
+
+        cur.left = left;
+        cur.right = right;
+        return cur;
+    }
+}
+class Solution2 {
+    Map<Integer, Integer> iMap = new HashMap<>(); // value : index
+
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        for (int i = 0; i < inorder.length; i++) {
+            iMap.put(inorder[i], i);
+        }
+
+        return dfs(preorder, inorder, 0, 0, inorder.length - 1);
+    }
+
+    private TreeNode dfs(int[] preorder, int[] inorder, int pIndex, int iStart, int iEnd) {
+        if (pIndex == preorder.length || iStart > iEnd) {
+            return null;
+        }
+
+        TreeNode cur = new TreeNode(preorder[pIndex]);
+        int inorderIndex = iMap.get(preorder[pIndex]);
+
+        int leftP = pIndex + 1;
+        cur.left = dfs(preorder, inorder, leftP, iStart, inorderIndex - 1);
+
+        int rightP = pIndex + (inorderIndex - iStart) + 1;
+        cur.right = dfs(preorder, inorder, rightP, inorderIndex + 1, iEnd);
+        return cur;
     }
 }

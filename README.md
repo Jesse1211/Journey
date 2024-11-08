@@ -119,3 +119,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day88 11/05/2024 第四 section: 开始 Linked list, 差一点儿了. 刷完这个我就去 datastructure.
 - [x] Day89 11/06/2024 复习 BFS, DFS highlight 题. 心力憔悴 今天不想写了, 就这样吧. 之后再复习一下今天标注好的 BFS & DFS, 大概 20 题吧
 - [x] Day90 11/07/2024 复习 Binary Search, 重新整理逻辑. binary search 的题刷的有点少
+- [x] Day91 11/08/2024 刷了一下 Stack & Tree. 我觉得基础应该差不多了吧! 明天复习 Two Pointer & LinkedList. 后天 Binary Search 吧. 不知道为什么有点想哭, 现在都还没找到工作. 希望有好运

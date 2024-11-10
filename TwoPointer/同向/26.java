@@ -2,17 +2,18 @@ package 同向;
 
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int left = 1;
-        int right = 1;
-        while (right < nums.length) {
-            if (nums[right] == nums[right - 1]) {
-                right++;
+        int slow = 0;
+        int fast = 1;
+
+        while (fast < nums.length) {
+            if (nums[slow] == nums[fast]) {
+                fast++;
             } else {
-                nums[left] = nums[right];
-                left++;
-                right++;
+                slow++;
+                nums[slow] = nums[fast];
+                fast++;
             }
         }
-        return left;
+        return slow + 1;
     }
 }

@@ -4,25 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
-    public int[][] intervalIntersection(int[][] A, int[][] B) {
-        List<int[]> res = new ArrayList<>();
+    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+        List<int[]> list = new ArrayList<>();
+
         int left = 0;
         int right = 0;
 
-        while (left < A.length && right < B.length) {
-            int start = Math.max(A[left][0], B[right][0]);
-            int end = Math.min(A[left][1], B[right][1]);
+        while (left < firstList.length && right < secondList.length) {
+            int leftStart = firstList[left][0];
+            int leftEnd = firstList[left][1];
+            int rightStart = secondList[right][0];
+            int rightEnd = secondList[right][1];
 
-            if (start <= end) {
-                res.add(new int[] { start, end });
+            int newStart = Math.max(leftStart, rightStart);
+            int newEnd = Math.min(leftEnd, rightEnd);
+            // there is overlapped
+            if (newStart <= newEnd) {
+                list.add(new int[] { newStart, newEnd });
             }
 
-            if (A[left][1] < B[right][1]) {
+            if (leftEnd < rightEnd) {
                 left++;
             } else {
                 right++;
             }
         }
-        return res.toArray(new int[res.size()][2]);
+
+        int[][] res = new int[list.size()][2];
+        for (int i = 0; i < list.size(); i++) {
+            res[i] = new int[] { list.get(i)[0], list.get(i)[1] };
+        }
+
+        return res;
     }
 }

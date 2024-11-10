@@ -1,3 +1,5 @@
+package 同向;
+
 
 import java.util.Arrays;
 

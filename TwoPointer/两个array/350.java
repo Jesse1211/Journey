@@ -1,4 +1,4 @@
-package 同向;
+package 两个array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

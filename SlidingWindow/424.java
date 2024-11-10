@@ -2,25 +2,28 @@ package SlidingWindow;
 
 class Solution {
     public int characterReplacement(String s, int k) {
-        int left = 0;
-        int right = 0;
-        int[] window = new int[26];
-        int maxFreq = 0;
+        int[] dict = new int[26];
+
+        int start = 0;
+        int end = 0;
+        int maxCount = 0;
         int res = 0;
-        while (right < s.length()) {
 
-            int cur = s.charAt(right) - 'A';
-            window[cur]++;
-            maxFreq = Math.max(maxFreq, window[cur]);
+        while (end < s.length()) {
+            int cur = s.charAt(end) - 'A';
+            dict[cur]++;
 
-            while (right - left + 1 > maxFreq + k) {
-                window[s.charAt(left) - 'A']--;
-                left++;
+            maxCount = Math.max(maxCount, dict[cur]);
+
+            while (end - start + 1 - maxCount > k) {
+                dict[s.charAt(start) - 'A']--;
+                start++;
             }
 
-            res = Math.max(res, right - left + 1); // 这里可以用maxFreq但是要考虑到edge case
-            right++;
+            res = Math.max(res, end - start + 1);
+            end++;
         }
+
         return res;
     }
 }

@@ -16,6 +16,7 @@ class Solution {
             slow++;
             if (oldIndex != index) {
                 String distance = (index - oldIndex + 1) + "";
+                // distance如果两位数, 那就要分开赋值
                 for (char c : distance.toCharArray()) {
                     chars[slow] = c;
                     slow++;

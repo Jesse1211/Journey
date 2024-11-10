@@ -1,4 +1,4 @@
-package Sub;
+package 两个array;
 
 class Solution {
     public boolean isSubsequence(String t, String s) {

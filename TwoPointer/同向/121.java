@@ -3,16 +3,22 @@ package 同向;
 class Solution {
     public int maxProfit(int[] prices) {
         int res = 0;
-        int left = 0;
+        int slow = 0;
+        int fast = 0;
 
-        for (int i = 0; i < prices.length; i++) {
-            int profit = prices[i] - prices[left];
-            if (profit > 0) {
-                res = Math.max(profit, res);
+        while (fast < prices.length) {
+            int save = prices[fast] - prices[slow];
+
+            if (save < 0) {
+                // prices[fast] < prices[slow], a better time to buy
+                slow = fast;
+                fast++;
             } else {
-                left = i;
+                res = Math.max(res, save);
+                fast++;
             }
         }
+
         return res;
     }
 }

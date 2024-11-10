@@ -1,4 +1,4 @@
-// package TwoPointer;
+package 反向;
 
 import java.util.Arrays;
 
@@ -7,6 +7,8 @@ class Solution {
         Arrays.sort(people);
         int res = 0, slow = 0, fast = people.length - 1;
         while (slow <= fast) {
+
+            // Take 'slow' person or not
             if (people[slow] + people[fast] <= limit) {
                 slow++;
             }

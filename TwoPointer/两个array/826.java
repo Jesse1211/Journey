@@ -1,3 +1,5 @@
+package 两个array;
+
 import java.util.Arrays;
 
 class Solution {

@@ -1,4 +1,4 @@
-package 同向;
+package SlidingWindow;
 
 class Solution {
     public int strStr(String haystack, String needle) {

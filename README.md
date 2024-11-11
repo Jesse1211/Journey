@@ -127,3 +127,5 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day93 11/10/2024 第五 section: 完成 Prefix Sum, 之后只需要刷高阶题 ✅
 
 --- 恭喜 Prefix Sum 能力更上一层楼, 下次刷高阶就完事儿了 ✅✅
+
+- [x] Day93.5 11/10/2024 复习了很多 meta

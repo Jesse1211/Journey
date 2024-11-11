@@ -2,32 +2,33 @@ package DataStructure.Stack;
 
 import java.util.Stack;
 
-// meta
 class Solution {
     public int calculate(String s) {
         Stack<Integer> stack = new Stack<>();
-        int num = 0;
-        Character operator = '+';
-        for (int i = 0; i < s.length(); i++) {
-            Character cur = s.charAt(i);
+        int sum = 0;
+        char prevOperator = '+';
 
-            // cur is a number / a prefix of a number
+        for (int i = 0; i < s.length(); i++) {
+            char cur = s.charAt(i);
+
             if (Character.isDigit(cur)) {
-                num = num * 10 + (cur - '0');
+                sum = sum * 10 + (cur - '0');
             }
 
+            // 当看到新的operator 或者是最后一个数字的时候，就要进行计算
             if (isOperator(cur) || i == s.length() - 1) {
-                if (operator == '+') {
-                    stack.push(+num);
-                } else if (operator == '-') {
-                    stack.push(-num);
-                } else if (operator == '*') {
-                    stack.push(stack.pop() * num);
-                } else if (operator == '/') {
-                    stack.push(stack.pop() / num);
+                if (prevOperator == '+') {
+                    stack.push(sum);
+                } else if (prevOperator == '-') {
+                    stack.push(-1 * sum);
+                } else if (prevOperator == '*') {
+                    stack.push(stack.pop() * sum);
+                } else if (prevOperator == '/') {
+                    stack.push(stack.pop() / sum);
                 }
-                operator = cur;
-                num = 0;
+
+                prevOperator = cur;
+                sum = 0;
             }
         }
 
@@ -35,10 +36,11 @@ class Solution {
         while (!stack.isEmpty()) {
             res += stack.pop();
         }
+
         return res;
     }
 
-    private boolean isOperator(Character c) {
-        return c == '+' || c == '-' || c == '*' || c == '/';
+    private boolean isOperator(char cur) {
+        return cur == '+' || cur == '-' || cur == '*' || cur == '/';
     }
 }

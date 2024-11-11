@@ -1,4 +1,4 @@
-package DataStructure.Heap;
+package DataStructure.Map;
 
 import java.util.HashMap;
 import java.util.Map;

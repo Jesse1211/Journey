@@ -1,8 +1,10 @@
-package DataStructure.Heap;
+package DataStructure.Map;
 
 import java.util.PriorityQueue;
 
 class Solution {
+    // Time: O(nlogn), Space: O(n)
+    // 这个太慢了
     public int longestSubarray(int[] nums, int limit) {
         int slow = 0;
         int fast = 0;

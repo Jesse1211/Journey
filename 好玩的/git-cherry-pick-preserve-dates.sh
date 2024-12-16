@@ -1,3 +1,6 @@
+# GIT_COMMITTER_NAME="Jesse1211" GIT_COMMITTER_EMAIL="zl942@cornell.edu" GIT_COMMITTER_DATE="Fri Oct 18 03:24:10 2024 -0400" git commit --amend --no-edit --date="Fri Oct 18 03:24:10 2024 -0400" --author="Jesse1211 <zl942@cornell.edu>"
+
+
 #!/usr/bin/env bash
 set -e
 

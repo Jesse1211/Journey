@@ -150,3 +150,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 ## 2025
 
 - [x] Day102 01/11/2025 祝福 2025 年事事顺心, consistency
+- [x] Day103 01/24/2025 刷题咱也没怂过, 不服就干

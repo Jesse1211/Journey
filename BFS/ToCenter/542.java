@@ -13,12 +13,14 @@ import java.util.Queue;
 
 class Solution {
     public int[][] updateMatrix(int[][] mat) {
-        int[][] directions = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+        int n = mat.length;
+        int m = mat[0].length;
+        int[][] DIRS = new int[][] { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
         Queue<int[]> q = new ArrayDeque<>();
-        boolean[][] visited = new boolean[mat.length][mat[0].length];
+        boolean[][] visited = new boolean[n][m];
 
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[0].length; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 if (mat[i][j] == 0) {
                     q.offer(new int[] { i, j });
                     visited[i][j] = true;
@@ -27,33 +29,22 @@ class Solution {
         }
 
         while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            int r = cur[0];
+            int c = cur[1];
 
-            int level = q.size();
-            for (int i = 0; i < level; i++) {
+            for (int[] dir : DIRS) {
+                int newR = dir[0] + r;
+                int newC = dir[1] + c;
 
-                int[] cur = q.poll();
-                int row = cur[0];
-                int col = cur[1];
-
-                for (int[] dir : directions) {
-                    int newRow = row + dir[0];
-                    int newCol = col + dir[1];
-
-                    if (newRow < 0 || newCol < 0 || newRow >= mat.length || newCol >= mat[0].length) {
-                        continue;
-                    }
-
-                    if (visited[newRow][newCol] == true) {
-                        continue;
-                    }
-
-                    mat[newRow][newCol] = mat[row][col] + 1;
-                    visited[newRow][newCol] = true;
-                    q.offer(new int[] { newRow, newCol });
-
+                if (newR >= 0 && newC >= 0 && newR < n && newC < m && visited[newR][newC] == false) {
+                    mat[newR][newC] = mat[r][c] + 1;
+                    visited[newR][newC] = true;
+                    q.offer(new int[] { newR, newC });
                 }
             }
         }
+
         return mat;
     }
 }

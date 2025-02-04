@@ -7,23 +7,27 @@ import java.util.TreeSet;
  * highlight: 这是好题
  */
 class Solution {
-    // O(n logn)
     public int findRadius(int[] houses, int[] heaters) {
         Arrays.sort(houses);
         Arrays.sort(heaters);
 
-        int index = 0;
+        int heaterIndex = 0;
         int res = 0;
 
         for (int i = 0; i < houses.length; i++) {
-            int curr = houses[i];
+            int house = houses[i];
 
-            while (index < heaters.length - 1 &&
-                    Math.abs(heaters[index] - curr) >= Math.abs(heaters[index + 1] - curr)) {
-                index++;
+            // find closest heater for current house
+            while (heaterIndex < heaters.length - 1) {
+                int cur = Math.abs(heaters[heaterIndex] - house);
+                int next = Math.abs(heaters[heaterIndex + 1] - house);
+                if (cur < next) {
+                    break;
+                }
+                heaterIndex++;
             }
 
-            res = Math.max(res, Math.abs(heaters[index] - curr));
+            res = Math.max(res, Math.abs(heaters[heaterIndex] - house));
         }
 
         return res;

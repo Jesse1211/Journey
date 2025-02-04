@@ -8,30 +8,26 @@ class Solution {
     public List<List<Integer>> findMissingRanges(int[] nums, int lower, int upper) {
         List<List<Integer>> res = new ArrayList<>();
 
-        int leftBound = lower;
+        int left = lower;
 
-        for (int i = 0; i < nums.length; i++) {
-
-            // too small, jump to next number
-            if (nums[i] < lower) {
+        for (int i : nums) {
+            if (i < left) {
                 continue;
             }
 
-            // there is a segment at left
-            if (nums[i] > leftBound) {
-                // segment from leftBound to cur - 1
-                res.add(Arrays.asList(leftBound, nums[i] - 1));
+            if (i > left) {
+                res.add(Arrays.asList(left, i - 1));
             }
 
-            leftBound = nums[i] + 1;
+            left = i + 1;
 
-            if (leftBound > upper) {
+            if (i > upper) {
                 return res;
             }
         }
 
-        if (leftBound <= upper) {
-            res.add(Arrays.asList(leftBound, upper));
+        if (left <= upper) {
+            res.add(Arrays.asList(left, upper));
         }
 
         return res;

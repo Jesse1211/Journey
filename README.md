@@ -152,3 +152,4 @@ id 刷题 === 早日上岸: why don't you start right now?
 - [x] Day102 01/11/2025 祝福 2025 年事事顺心, consistency
 - [x] Day103 01/24/2025 刷题咱也没怂过, 不服就干
 - [x] Day104 01/27/2025 刷 Binary search + prefix sum
+- [x] Day105 02/04/2025 刷 BFS, Binary search + prefix sum

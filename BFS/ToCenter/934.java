@@ -4,61 +4,76 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 class Solution {
-    int[][] directions = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
-
     public int shortestBridge(int[][] grid) {
+        int[][] DIRS = new int[][] { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
         int n = grid.length;
-        int[] first = new int[2];
+        int m = grid[0].length;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        Queue<int[]> q = new ArrayDeque<>();
+
+        outer: for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 if (grid[i][j] == 1) {
-                    first[0] = i;
-                    first[1] = j;
-                    break;
+                    q.offer(new int[] { i, j });
+                    grid[i][j] = 2; // avoid inf loop
+                    break outer; // 两层loop,都要break
                 }
             }
         }
 
-        Queue<int[]> q1 = new ArrayDeque<>(); // first traverse to find all position from land #1
-        Queue<int[]> q2 = new ArrayDeque<>(); // second traverse to find best path to land #2
-        q1.offer(first);
-        q2.offer(first);
-        grid[first[0]][first[1]] = 2; // avoid inf loop
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
 
-        while (!q1.isEmpty()) {
-            int[] cur = q1.poll();
-            for (int[] next : directions) {
-                int curX = next[0] + cur[0];
-                int curY = next[1] + cur[1];
-                if (curX >= 0 && curX < n && curY >= 0 && curY < n && grid[curX][curY] == 1) {
-                    q1.offer(new int[] { curX, curY });
-                    q2.offer(new int[] { curX, curY });
-                    grid[curX][curY] = 2;
+            for (int[] dir : DIRS) {
+                int newR = cur[0] + dir[0];
+                int newC = cur[1] + dir[1];
+
+                if (newR < 0 || newC < 0 || newR >= n || newC >= m) {
+                    continue;
+                }
+
+                if (grid[newR][newC] == 1) {
+                    q.offer(new int[] { newR, newC });
+                    grid[newR][newC] = 2;
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == 2) {
+                    q.offer(new int[] { i, j });
                 }
             }
         }
 
         int res = 0;
-        while (!q2.isEmpty()) {
-            int level = q2.size();
-            while (level-- > 0) {
-                int[] cur = q2.poll();
-                for (int[] next : directions) {
-                    int curX = next[0] + cur[0];
-                    int curY = next[1] + cur[1];
-                    if (curX >= 0 && curX < n && curY >= 0 && curY < n) {
-                        if (grid[curX][curY] == 1) {
-                            return res;
-                        } else if (grid[curX][curY] == 0) {
-                            q2.add(new int[] { curX, curY });
-                            grid[curX][curY] = -1;
-                        }
+        while (!q.isEmpty()) {
+            int size = q.size();
+            while (size-- > 0) {
+                int[] cur = q.poll();
+
+                for (int[] dir : DIRS) {
+                    int newR = cur[0] + dir[0];
+                    int newC = cur[1] + dir[1];
+
+                    if (newR < 0 || newC < 0 || newR >= n || newC >= m) {
+                        continue;
+                    }
+
+                    if (grid[newR][newC] == 1) {
+                        return res;
+                    }
+
+                    if (grid[newR][newC] == 0) {
+                        q.offer(new int[] { newR, newC });
+                        grid[newR][newC] = -1;
                     }
                 }
             }
             res++;
         }
+
         return -1;
     }
 }

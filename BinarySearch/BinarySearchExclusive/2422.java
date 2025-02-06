@@ -2,29 +2,29 @@ package BinarySearchExclusive;
 
 class Solution {
     public int minimumOperations(int[] nums) {
+        int res = 0;
         int left = 0;
         int right = nums.length - 1;
-        int res = 0;
 
-        int leftSum = nums[left];
-        int rightSum = nums[right];
+        int leftNum = nums[left];
+        int rightNum = nums[right];
+
         while (left < right) {
-
-            if (leftSum == rightSum) {
+            if (leftNum == rightNum) {
                 left++;
                 right--;
-                leftSum = nums[left];
-                rightSum = nums[right];
+                leftNum += nums[left];
+                rightNum += nums[right];
+                continue;
             }
 
-            else if (leftSum > rightSum) {
-                res++;
-                right--;
-                rightSum += nums[right];
-            } else {
-                res++;
+            res++;
+            if (leftNum < rightNum) {
                 left++;
-                leftSum += nums[left];
+                leftNum += nums[left];
+            } else {
+                right--;
+                rightNum += nums[right];
             }
         }
 

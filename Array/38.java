@@ -1,4 +1,3 @@
-package String;
 
 class Solution {
     public String countAndSay(int n) {

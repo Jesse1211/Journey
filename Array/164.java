@@ -6,11 +6,14 @@ class Solution {
         int res = 0;
         Arrays.sort(nums);
 
-        if (n < 2) {return 0;}
-        
-        for (int i = 0; i < n-1; i++) {
-            res = Math.max((nums[i+1] - nums[i]), res);
+        if (n < 2) {
+            return 0;
+        }
+
+        for (int i = 0; i < n - 1; i++) {
+            res = Math.max((nums[i + 1] - nums[i]), res);
         }
         return res;
     }
 }
+// 如果要O(n), 考了就白给

@@ -30,36 +30,36 @@ class Solution {
         }
 
         Queue<TreeNode> q = new ArrayDeque<>();
-        Queue<Integer> col = new ArrayDeque<>();
+        Queue<Integer> indices = new ArrayDeque<>();
         q.offer(root);
-        col.offer(0);
+        indices.offer(0);
 
         while (!q.isEmpty()) {
-            int size = q.size();
-            int leftMostIndex = -1;
-            int rightMostIndex = -1;
+            int len = q.size();
+            int min = 0;
+            int max = 0;
 
-            while (size-- > 0) {
+            for (int i = 0; i < len; i++) {
                 TreeNode cur = q.poll();
-                int index = col.poll();
-
-                if (leftMostIndex == -1) {
-                    leftMostIndex = index;
+                int index = indices.poll();
+                if (i == 0) {
+                    min = index;
                 }
-                rightMostIndex = index;
+
+                max = index;
 
                 if (cur.left != null) {
                     q.offer(cur.left);
-                    col.offer(index * 2);
+                    indices.offer(index * 2);
                 }
 
                 if (cur.right != null) {
                     q.offer(cur.right);
-                    col.offer(index * 2 + 1);
+                    indices.offer(index * 2 + 1);
                 }
             }
 
-            res = Math.max(res, rightMostIndex - leftMostIndex + 1);
+            res = Math.max(max - min + 1, res);
         }
 
         return res;

@@ -1,7 +1,9 @@
 package BFS.FromCenter;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.HashSet;
 import java.util.Queue;
+import java.util.Set;
 
 /*
  * 1. 判定bfs的逻辑:
@@ -14,37 +16,37 @@ import java.util.Queue;
 *      如果cur < x * x, 则break
 *      如果cur > x * x, 则更新cur = cur - x * x
  */
-
 class Solution {
     public int numSquares(int n) {
-        Queue<Integer> q = new LinkedList<>();
-
-        if (n <= 0) {
-            return 0;
-        }
-
+        Queue<Integer> q = new ArrayDeque<>();
         q.offer(n);
+        Set<Integer> visited = new HashSet<>();
+        visited.add(n);
         int res = 0;
+
         while (!q.isEmpty()) {
+            int level = q.size();
             res++;
 
-            int level = q.size();
-            for (int i = 0; i < level; i++) {
-
+            while (level-- > 0) {
                 int cur = q.poll();
-                for (int j = 1; j < cur; j++) {
-                    if (j * j == cur) {
+                for (int i = 0; i <= cur; i++) {
+                    int left = cur - i * i;
+
+                    if (left == 0) {
                         return res;
-                    } else if (j * j > cur) {
+                    } else if (left < 0) {
                         break;
-                    } else {
-                        q.offer(cur - j * j);
+                    } else if (visited.contains(left)) {
+                        continue;
                     }
+
+                    q.offer(cur - i * i);
+                    visited.add(left);
                 }
-
             }
-
         }
+
         return res;
     }
 }

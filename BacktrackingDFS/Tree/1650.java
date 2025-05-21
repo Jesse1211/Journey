@@ -15,46 +15,49 @@ class Node {
 class Solution {
     public Node lowestCommonAncestor(Node p, Node q) {
         while (p != null) {
-            if (searchDown(p, q))
+            if (dfs(p, q))
                 return p;
             p = p.parent;
         }
         return null;
     }
 
-    private boolean searchDown(Node root, Node target) {
-        if (root == null)
-            return false;
-        if (root == target)
+    private boolean dfs(Node parent, Node q) { // if parent has q
+        if (parent == q) {
             return true;
-        return searchDown(root.left, target) || searchDown(root.right, target);
-    }
+        } else if (parent == null) {
+            return false;
+        }
 
+        return dfs(parent.left, q) || dfs(parent.right, q);
+    }
 }
 
-class Solution1 {
+class Solution2 {
     public Node lowestCommonAncestor(Node p, Node q) {
-        Set<Node> pVisited = new HashSet<>();
         Set<Node> qVisited = new HashSet<>();
+        Set<Node> pVisited = new HashSet<>();
+        qVisited.add(q);
+        pVisited.add(p);
 
-        while (p != q) {
-            if (pVisited.contains(q)) {
+        while (q != null && p != null) {
+
+            if (qVisited.contains(p)) {
+                return p;
+            } else if (pVisited.contains(q)) {
                 return q;
-            } else if (qVisited.contains(p)) {
+            } else if (q == p) {
                 return p;
             }
 
-            pVisited.add(p);
-            qVisited.add(q);
-            if (p.parent != null)
-                p = p.parent;
             if (q.parent != null)
                 q = q.parent;
+            if (p.parent != null)
+                p = p.parent;
+            qVisited.add(q);
+            pVisited.add(p);
         }
 
-        if (q != null) {
-            return q;
-        }
-        return p;
+        return null;
     }
 }

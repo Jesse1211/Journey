@@ -11,33 +11,27 @@ class TreeNode {
 }
 
 class Solution {
-    TreeNode prev;
     TreeNode res;
+    TreeNode prev; // always slower than root, when prev == p, root is res
 
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-        if (root == null)
-            return null;
-        if (root.left == null && root.right == null)
-            return null;
-
-        dfs(root, p);
+        inorder(root, p);
         return res;
     }
 
-    private void dfs(TreeNode root, TreeNode target) {
+    private void inorder(TreeNode root, TreeNode p) {
         if (root == null) {
             return;
         }
 
-        dfs(root.left, target);
+        inorder(root.left, p);
 
-        if (prev != null && prev == target) {
+        if (prev == p) {
             res = root;
-            prev = null; // 之后再也不会进来这个if了
         }
-
         prev = root;
-        dfs(root.right, target);
+
+        inorder(root.right, p);
     }
 }
 

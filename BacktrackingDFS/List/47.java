@@ -1,7 +1,6 @@
 package BacktrackingDFS.List;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,33 +18,35 @@ import java.util.Set;
 
 class Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
-        Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
-        Set<Integer> visitedIndex = new HashSet<>();
-        dfs(nums, new ArrayList<>(), res, visitedIndex);
+        Set<Integer> visited = new HashSet<>();
+        dfs(nums, res, visited, new ArrayList<>());
         return res;
     }
 
-    private void dfs(int[] nums, List<Integer> cur, List<List<Integer>> res, Set<Integer> visitedIndex) {
-        if (nums.length == cur.size()) {
+    private void dfs(int[] nums, List<List<Integer>> res, Set<Integer> visited, List<Integer> cur) {
+        if (cur.size() == nums.length) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
+        Set<Integer> start = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            if (visitedIndex.contains(i)) {
+            if (visited.contains(i)) {
                 continue;
             }
 
-            // 当前level不可以重复使用相同integer
-            if (i > 0 && nums[i] == nums[i - 1] && !visitedIndex.contains(i - 1)) {
+            if (start.contains(nums[i])) {
                 continue;
             }
-            visitedIndex.add(i);
+
+            start.add(nums[i]);
+
+            visited.add(i);
             cur.add(nums[i]);
-            dfs(nums, cur, res, visitedIndex);
-            visitedIndex.remove(i);
-            cur.remove(cur.size() - 1);
+            dfs(nums, res, visited, cur);
+            cur.removeLast();
+            visited.remove(i);
         }
     }
 }

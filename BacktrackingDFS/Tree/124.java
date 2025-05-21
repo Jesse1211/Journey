@@ -33,6 +33,7 @@ class Solution {
             return 0;
         }
 
+        // if <0, then abort the left/right
         int left = Math.max(dfs(root.left), 0);
         int right = Math.max(dfs(root.right), 0);
         res = Math.max(res, right + left + root.val);

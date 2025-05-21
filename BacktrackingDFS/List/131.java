@@ -19,19 +19,17 @@ class Solution {
     }
 
     private void dfs(List<List<String>> res, String s, int index, List<String> cur) {
-
-        int n = s.length();
-
-        if (index == n) {
+        if (s.length() == index) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
-        for (int i = index; i < n; i++) {
-            if (isPalindrome(s.substring(index, i + 1))) {
-                cur.add(s.substring(index, i + 1));
+        for (int i = index; i < s.length(); i++) {
+            String sub = s.substring(index, i + 1);
+            if (isPalindrome(sub)) {
+                cur.add(sub);
                 dfs(res, s, i + 1, cur);
-                cur.remove(cur.size() - 1);
+                cur.removeLast();
             }
         }
     }
@@ -47,5 +45,4 @@ class Solution {
         }
         return true;
     }
-
 }

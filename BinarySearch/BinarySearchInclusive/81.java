@@ -16,22 +16,20 @@ class Solution {
             if (nums[mid] == target) {
                 return true;
             }
-            // mid is maximum
-            if (nums[mid] >= nums[right]) { // check right
-                if (target < nums[mid] && nums[right] < target) {
+            if (nums[mid] > nums[left]) {
+                if (target < nums[mid] && target >= nums[left]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
                 }
-            } else if (nums[mid] >= nums[left]) { // check left
-                if (nums[left] <= target && nums[mid] > target) {
+            } else if (nums[mid] > nums[right]) {
+                if (target >= nums[left] && target < nums[mid]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
                 }
+            } else { // left, right, mid are same
 
-                // mid is minimum
-            } else {
                 if (nums[left] != target) {
                     left++;
                 } else {
@@ -47,5 +45,3 @@ class Solution {
         return false;
     }
 }
-
-// [4,5,0,1,2]

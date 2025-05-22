@@ -177,3 +177,4 @@ LONG TIME NO SEE!!! WELCOME BACK!!!
 - [x] Day 115 19/05/2025 写了一部分 DFS, 现在写起来多多少少还有点吃力. 再继续努力!
 - [x] Day 116 20/05/2025 完成 DFS, 有点难 卡住了
 - [x] Day 117 21/05/2025 完成 DFS, (其实没完成, 偷懒一下 preorder inorder postorder 部分)
+- [x] Day 117 21/05/2025 入门复习了一下 binary search, **保留 DFS 剩下部分之后做**

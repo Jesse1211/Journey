@@ -9,7 +9,7 @@ class Node {
 
 class Solution {
     public Node inorderSuccessor(Node node) {
-        // check right children
+        // 左侧traverse过了, node要看右侧的最靠左
         if (node.right != null) {
             node = node.right;
             // 要优先左, 然后root
@@ -19,10 +19,10 @@ class Solution {
             return node;
         }
 
-        // find the parent
+        // 左侧traverse过了, 但是右侧为空, 向上查找parent
         Node parent = node.parent;
 
-        // node必须是parent的左子树
+        // 新的node必须是parent的右子树
         while (parent != null && parent.val < node.val) {
             parent = parent.parent;
         }

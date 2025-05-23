@@ -22,37 +22,35 @@ class TreeNode {
     }
 }
 
-class Solution1 {
+class Solution {
     int count = 0;
-    int targetSum;
-    Map<Long, Integer> h = new HashMap<>();
 
     public int pathSum(TreeNode root, int targetSum) {
-        this.targetSum = targetSum;
-        preorder(root, 0L);
+        preorder(root, 0, targetSum, new HashMap<>());
         return count;
     }
 
-    public void preorder(TreeNode node, long currSum) {
+    public void preorder(TreeNode node, long cur, int targetSum, Map<Long, Integer> h) {
         if (node == null)
             return;
 
-        currSum += node.val;
+        cur += node.val;
 
-        if (currSum == targetSum)
+        if (cur == targetSum)
             count++;
 
-        count += h.getOrDefault(currSum - targetSum, 0);
-        h.put(currSum, h.getOrDefault(currSum, 0) + 1);
+        count += h.getOrDefault(cur - targetSum, 0);
+        h.put(cur, h.getOrDefault(cur, 0) + 1);
 
-        preorder(node.left, currSum);
-        preorder(node.right, currSum);
+        preorder(node.left, cur, targetSum, h);
+        preorder(node.right, cur, targetSum, h);
 
-        h.put(currSum, h.get(currSum) - 1);
+        h.put(cur, h.get(cur) - 1); // 按时删除保证不会add up不相连的点
     }
 
 }
 
+// TOO SLOW!
 class Solution2 {
     public int pathSum(TreeNode root, int targetSum) {
         if (root == null) {

@@ -2,21 +2,25 @@ package BinarySearchInclusive;
 
 class Solution {
     public int mySqrt(int x) {
-        if (x == 0)
-            return 0;
-        int left = 1;
-        int right = x;
-        while (left <= right) {
+        long left = 0;
+        long right = (long) x + 1;
+
+        while (left < right) {
             long mid = left + (right - left) / 2;
-            long cur = mid * mid;
-            if (cur > (long) x) {
-                right = (int) mid - 1;
-            } else if (cur == (long) x) {
+            if (mid * mid == x) { // (int / 2)^2 有可能会爆
                 return (int) mid;
+            }
+
+            if (mid * mid < x) {
+                left = mid + 1;
             } else {
-                left = (int) mid + 1;
+                right = mid;
             }
         }
-        return Math.round(right);
+
+        if (left * left <= x) {
+            return (int) left;
+        }
+        return (int) left - 1;
     }
 }

@@ -1,12 +1,51 @@
-package BinarySearch;
-
 import java.util.Arrays;
 import java.util.TreeSet;
 
 /**
  * highlight: 这是好题
  */
-class Solution {
+
+class Solution1 { // Binary Search
+    public int findRadius(int[] houses, int[] heaters) {
+        Arrays.sort(houses);
+        Arrays.sort(heaters);
+
+        int n = houses.length;
+        int left = 0;
+        int right = Integer.MAX_VALUE;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (coversAll(houses, heaters, mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left;
+    }
+
+    private boolean coversAll(int[] houses, int[] heaters, int radius) {
+        int heaterIndex = 0;
+        for (int house : houses) {
+            int curDis = Math.abs(house - heaters[heaterIndex]);
+
+            while (curDis > radius) {
+                heaterIndex++;
+
+                if (heaterIndex == heaters.length) {
+                    return false;
+                }
+
+                curDis = Math.abs(house - heaters[heaterIndex]);
+            }
+        }
+        return true;
+    }
+}
+
+class Solution2 { // Two pointers
     public int findRadius(int[] houses, int[] heaters) {
         Arrays.sort(houses);
         Arrays.sort(heaters);
@@ -34,7 +73,7 @@ class Solution {
     }
 }
 
-class Solution2 {
+class Solution3 {
     // O(m logn)
     public int findRadius(int[] houses, int[] heaters) {
         TreeSet<Integer> heaterSet = new TreeSet<>();
@@ -56,38 +95,5 @@ class Solution2 {
         }
 
         return res;
-    }
-}
-
-class Solution3 {
-    public int findRadius(int[] houses, int[] heaters) {
-        Arrays.sort(heaters);
-        int res = 0;
-
-        for (int house : houses) {
-            int index = binarySearch(heaters, house);
-
-            int d1 = index - 1 >= 0 ? house - heaters[index - 1] : Integer.MAX_VALUE;
-            int d2 = index < heaters.length ? heaters[index] - house : Integer.MAX_VALUE;
-
-            res = Math.max(res, Math.min(d1, d2));
-        }
-
-        return res;
-    }
-
-    private int binarySearch(int[] heaters, int target) {
-        int left = 0, right = heaters.length - 1;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (heaters[mid] == target) {
-                return mid;
-            } else if (heaters[mid] < target) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return left; // closest heater index or insertion point
     }
 }

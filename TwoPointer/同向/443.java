@@ -2,27 +2,33 @@ package 同向;
 
 class Solution {
     public int compress(char[] chars) {
-        int index = 0;
         int slow = 0;
+        int fast = 0;
 
-        while (index < chars.length) {
+        while (fast < chars.length) {
+            int start = fast;
 
-            int oldIndex = index;
-            while (index + 1 < chars.length && chars[index] == chars[index + 1]) {
-                index++;
+            while (fast < chars.length - 1 && chars[fast] == chars[fast + 1]) {
+                fast++;
             }
 
-            chars[slow] = chars[oldIndex];
+            chars[slow] = chars[fast];
+
+            int count = fast - start + 1;
+
+            if (count == 1) {
+                slow++;
+                fast++;
+                continue;
+            }
+
             slow++;
-            if (oldIndex != index) {
-                String distance = (index - oldIndex + 1) + "";
-                // distance如果两位数, 那就要分开赋值
-                for (char c : distance.toCharArray()) {
-                    chars[slow] = c;
-                    slow++;
-                }
+            for (char c : Integer.toString(count).toCharArray()) {
+                chars[slow] = c;
+                slow++;
             }
-            index++;
+
+            fast++;
         }
 
         return slow;

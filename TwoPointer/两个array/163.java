@@ -7,27 +7,26 @@ import java.util.List;
 class Solution {
     public List<List<Integer>> findMissingRanges(int[] nums, int lower, int upper) {
         List<List<Integer>> res = new ArrayList<>();
+        int n = nums.length;
 
-        int left = lower;
+        if (n == 0) {
+            res.add(Arrays.asList(lower, upper));
+            return res;
+        }
 
-        for (int i : nums) {
-            if (i < left) {
-                continue;
-            }
+        if (nums[0] > lower) {
+            res.add(Arrays.asList(lower, nums[0] - 1));
+            lower = nums[0];
+        }
 
-            if (i > left) {
-                res.add(Arrays.asList(left, i - 1));
-            }
-
-            left = i + 1;
-
-            if (i > upper) {
-                return res;
+        for (int i = 0; i < n - 1; i++) {
+            if (nums[i + 1] - nums[i] > 1) {
+                res.add(Arrays.asList(nums[i] + 1, nums[i + 1] - 1));
             }
         }
 
-        if (left <= upper) {
-            res.add(Arrays.asList(left, upper));
+        if (nums[n - 1] < upper) {
+            res.add(Arrays.asList(nums[n - 1] + 1, upper));
         }
 
         return res;

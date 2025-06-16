@@ -183,3 +183,9 @@ LONG TIME NO SEE!!! WELCOME BACK!!!
 - [x] Day 120 24/05/2025 prefix sum
 - [x] Day 121 25/05/2025 prefix sum & two pointers
 - [x] Day 122 26/05/2025 two pointers, 剩下 sliding window 和部分 two pointer
+
+最近忙着上班没功夫写了, 每天学几道题~
+
+- [x] Day 123 15/06/2025 BFS, Perfix
+- [x] Day 124 16/06/2025 Perfix, DFS
+

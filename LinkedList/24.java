@@ -22,11 +22,14 @@ class Solution {
             return head;
         }
 
-        ListNode firstNode = head;
-        ListNode secondNode = head.next;
+        ListNode left = head;
+        ListNode right = head.next;
+        ListNode next = right.next;
 
-        firstNode.next = swapPairs(secondNode.next);
-        secondNode.next = firstNode;
-        return secondNode;
+        // inductive: 第一次运行时, 不需要考虑谁的next指向了left
+        right.next = left;
+        left.next = swapPairs(next);
+
+        return right;
     }
 }

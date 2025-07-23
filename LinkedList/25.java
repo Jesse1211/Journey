@@ -18,29 +18,45 @@ class ListNode {
 
 class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
-        int count = 0;
-        ListNode end = head;
-
-        while (end != null && count != k) {
-            end = end.next;
-            count++;
+        if (head == null) {
+            return null;
         }
 
-        if (count == k) { // able to reverse one segment
-            end = reverseKGroup(end, k); // recursive to next segment
-
-            // swap current segment & connect head to END
-            ListNode next = null;
-            for (int i = 0; i < k; i++) {
-                next = head.next;
-                head.next = end;
-                end = head;
-                head = next;
+        // find current segment
+        ListNode dummyHead = head;
+        for (int i = 0; i < k - 1; i++) {
+            if (head == null || head.next == null) {
+                return dummyHead;
             }
-
-            head = end;
+            head = head.next;
         }
 
-        return head;
+        // process next segment
+        ListNode next = reverseKGroup(head.next, k);
+        head.next = null;
+
+        // reverse current segment
+        ListNode newHead = reverse(dummyHead);
+        dummyHead = newHead;
+        while (newHead != null && newHead.next != null) {
+            newHead = newHead.next;
+        }
+
+        // connect current & next segment
+        newHead.next = next;
+        return dummyHead;
+    }
+
+    private ListNode reverse(ListNode head) {
+        ListNode prev = null;
+
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+
+        return prev;
     }
 }

@@ -18,41 +18,42 @@ class ListNode {
 /*
  * highlight: linkedlist reverse
  */
-
 class Solution {
     public void reorderList(ListNode head) {
-        if (head == null || head.next == null)
-            return;
 
-        ListNode fast = head;
         ListNode slow = head;
+        ListNode fast = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
 
-        // reverse the second half
-        ListNode prev = null, next = null;
-        while (slow != null) {
-            next = slow.next;
-            slow.next = prev;
-            prev = slow;
-            slow = next;
+        ListNode firstHead = head;
+        ListNode secondHead = reverse(slow);
+
+        while (secondHead.next != null) {
+            ListNode firstHeadNext = firstHead.next;
+            ListNode secondHeadNext = secondHead.next;
+
+            firstHead.next = secondHead;
+            secondHead.next = firstHeadNext;
+
+            firstHead = firstHeadNext;
+            secondHead = secondHeadNext;
+        }
+        return;
+    }
+
+    private ListNode reverse(ListNode head) {
+        ListNode prev = null;
+
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
         }
 
-        // easy merge
-        ListNode firstHalf = head;
-        ListNode secondHalf = prev;
-        while (secondHalf.next != null) {
-            next = firstHalf.next;
-            prev = secondHalf.next;
-
-            firstHalf.next = secondHalf;
-            secondHalf.next = next;
-
-            firstHalf = next;
-            secondHalf = prev;
-        }
-
+        return prev;
     }
 }

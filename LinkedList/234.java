@@ -21,31 +21,35 @@ class ListNode {
 
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        if (head == null) {
-            return true;
-        }
-
-        ListNode slow = head, fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        ListNode newHead = null, newNode = null;
-        while (slow != null) {
-            newNode = slow;
-            slow = slow.next;
-            newNode.next = newHead;
-            newHead = newNode;
-        }
-
+        ListNode newHead = reverse(slow);
         while (newHead != null) {
-            if (newHead.val != head.val) {
+            if (head.val != newHead.val) {
                 return false;
             }
-            newHead = newHead.next;
             head = head.next;
+            newHead = newHead.next;
         }
+
         return true;
+    }
+
+    private ListNode reverse(ListNode head) {
+        ListNode prev = null;
+
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+
+        return prev;
     }
 }

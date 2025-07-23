@@ -1,67 +1,39 @@
+import java.util.HashMap;
+import java.util.Map;
 
 class Node {
-    public int val;
-    public Node next;
-    public Node random;
+    int val;
+    Node next;
+    Node random;
 
-    public Node() {
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
     }
-
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, Node _next, Node _random) {
-        val = _val;
-        next = _next;
-        random = _random;
-    }
-};
+}
 
 class Solution {
     public Node copyRandomList(Node head) {
-        Node iter = head;
-        Node next = null;
+        Map<Node, Node> map = new HashMap<>();
 
-        // 让iter.next 指向copy
-        // copy.next 指向下一个node
-        while (iter != null) {
-            next = iter.next;
+        Node dummyHead = head;
 
-            Node copy = new Node(iter.val);
-            iter.next = copy;
-            copy.next = next;
-
-            iter = next;
+        // 1. 存
+        while (head != null) {
+            Node newHead = new Node(head.val);
+            map.put(head, newHead);
+            head = head.next;
         }
 
-        iter = head;
-        while (iter != null) {
-            if (iter.random != null) {
-                // iter.next 就是copy
-                // iter.random.next 才是copy的node
-                iter.next.random = iter.random.next;
-            }
-            iter = iter.next.next;
+        // 2. 链接
+        head = dummyHead;
+        while (head != null) {
+            map.get(head).random = map.get(head.random);
+            map.get(head).next = map.get(head.next);
+            head = head.next;
         }
 
-        iter = head;
-        Node dummy = new Node(0);
-        Node copy = dummy;
-        Node copyIter = dummy;
-
-        while (iter != null) {
-            next = iter.next.next;
-
-            copy = iter.next;
-            copyIter.next = copy;
-            copyIter = copy;
-
-            iter.next = next;
-
-            iter = next;
-        }
-
-        return dummy.next;
+        return map.get(dummyHead);
     }
 }

@@ -189,3 +189,8 @@ LONG TIME NO SEE!!! WELCOME BACK!!!
 - [x] Day 123 15/06/2025 BFS, Perfix
 - [x] Day 124 16/06/2025 Perfix, DFS
 
+回国找工作, 新的开始, 继续刷题 + 学习八股文
+
+- [x] Day 125 23/07/2025 LinkedList
+- [x] Day 126 25/07/2025 Binary Search & Sliding window
+

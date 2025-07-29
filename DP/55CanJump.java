@@ -7,22 +7,36 @@ class Solution {
         if (nums.length == 1) {
             return true;
         }
-        int[] dp = new int[nums.length];
-        Arrays.fill(dp, 0);
-        dp[0] = 1;
-        for (int i = 0; i < nums.length; i++) {
-            if (dp[i] == 0) {
-                break;
+
+        if (nums[0] == 0) {
+            return false;
+        }
+
+        boolean[] dp = new boolean[nums.length];
+        Arrays.fill(dp, false);
+        dp[0] = true;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (dp[i] == false) {
+                return false;
             }
-            for (int j = 1; j < nums[i] + 1; j++) {
-                if (i + j < dp.length) {
-                    dp[i + j] = 1;
-                }
+
+            int dis = nums[i];
+            int leftMost = i - dis; // inclusive
+            if (leftMost < 0) {
+                leftMost = 0;
             }
-            if (dp[nums.length - 1] == 1) {
-                return true;
+            int rightMost = i + dis; // inclusive
+            if (rightMost >= nums.length) {
+                rightMost = nums.length - 1;
+            }
+
+            while (leftMost <= rightMost) {
+                dp[leftMost] = true;
+                leftMost++;
             }
         }
-        return dp[nums.length - 1] == 1;
+
+        return dp[nums.length - 1];
     }
 }

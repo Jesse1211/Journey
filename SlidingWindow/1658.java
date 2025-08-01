@@ -2,32 +2,35 @@ package SlidingWindow;
 
 class Solution {
     public int minOperations(int[] nums, int x) {
-        // find the window with sum of all sum - x
-
-        int target = -x;
+        int n = -1 * x;
         for (int num : nums) {
-            target += num;
+            n += num;
         }
 
-        int slow = 0;
-        int fast = 0;
+        if (n < 0) {
+            return -1;
+        }
+
+        int res = Integer.MAX_VALUE;
+
+        int left = 0;
+        int right = 0;
         int sum = 0;
-        int res = Integer.MIN_VALUE;
+        while (right < nums.length) {
+            sum += nums[right];
 
-        while (fast < nums.length) {
-            sum += nums[fast];
-
-            while (sum > target && slow <= fast) {
-                sum -= nums[slow++];
+            while (sum > n) {
+                sum -= nums[left];
+                left++;
             }
 
-            if (sum == target) {
-                res = Math.max(res, fast - slow + 1);
+            if (sum == n) {
+                res = Math.min(res, nums.length - (right - left + 1));
             }
 
-            fast++;
+            right++;
         }
 
-        return res == Integer.MIN_VALUE ? -1 : nums.length - res;
+        return res == Integer.MAX_VALUE ? -1 : res;
     }
 }

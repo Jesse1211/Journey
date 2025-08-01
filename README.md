@@ -194,4 +194,5 @@ LONG TIME NO SEE!!! WELCOME BACK!!!
 - [x] Day 125 23/07/2025 LinkedList
 - [x] Day 126 25/07/2025 Binary Search & Sliding window
 - [x] Day 127 29/07/2025 面试考了DP & linkedlist
+- [x] Day 128 01/08/2025 复习完成 Two Pointer & Sliding Window
 

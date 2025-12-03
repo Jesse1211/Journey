@@ -14,7 +14,8 @@
 	- Model dimension: $d_{\text{model}}$
 	- Number of layers (encoder/decoder blocks): N
 2. Input preprocessing: tokenization - text → tokens (e.g., BPE/subword units).
-	- Tokens are mapped to integer IDs in a vocabulary $$x_t \in \{1, \dots, V\}, y_t \in \{1, \dots, V\}$$
+	- Tokens are mapped to integer IDs in a vocabulary 
+	- $$x_t \in \{1, \dots, V\}, y_t \in \{1, \dots, V\}$$
 3. Embeddings + Positional Encoding
 	1. Token embedding: Each token index is mapped to a vector via an embedding matrix 
          - $$E \in \mathbb{R}^{V \times d_{\text{model}}}$$
@@ -59,10 +60,13 @@
 		2. $head_h​=\text{Attention}(Q_h​,K_h​,V_h​)$
 		3. Concat heads and project as usual
 	3. FNN
-		- Final decoder states: $$Z \in \mathbb{R}^{T_y \times d_{\text{model}}}$$
+		- Final decoder states: 
+		- $$Z \in \mathbb{R}^{T_y \times d_{\text{model}}}$$
 6. Output: Projection & Softmax
-	1. For each target position t, we map $z_t$​ to `logits` over vocabulary $$\text{logits}_t = W_{\text{out}} z_t + b \in \mathbb{R}^{V}$$
-	2. Softmax $$P(y_t = v \mid \text{context}) = \text{softmax}(\text{logits}_t)_v$$ 
+	1. For each target position t, we map $z_t$​ to `logits` over vocabulary 
+         - $$\text{logits}_t = W_{\text{out}} z_t + b \in \mathbb{R}^{V}$$
+	2. Softmax
+         - $$P(y_t = v \mid \text{context}) = \text{softmax}(\text{logits}_t)_v$$ 
 #### Details
 Solved problem
 - Sequence modeling

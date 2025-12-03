@@ -16,5 +16,5 @@ CONSISTENCY
 - [x] Day 7 29/11/2025 Paper - Attention Is All You Need
 - [x] Day 8 30/11/2025 Paper - Stanford 329P - Supervision
 - [x] Day 9 27/11/2025 Paper - Stanford 329P - Supervision
-- [x] Day 10 02/12/2025 Paper - Stanford 329P - Data Transformation
-- [ ] Day 11 03/12/2025 Paper - Stanford 329P - Feature Engineering
+- [x] Day 10 02/12/2025 Course - Stanford 329P - Data Transformation
+- [x] Day 11 03/12/2025 感觉学的有点快了, 需要复习 + 整理一下, 一句话总结一下吧, 现在需要吸收

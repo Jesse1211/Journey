@@ -18,3 +18,4 @@ CONSISTENCY
 - [x] Day 9 27/11/2025 Paper - Stanford 329P - Supervision
 - [x] Day 10 02/12/2025 Course - Stanford 329P - Data Transformation
 - [x] Day 11 03/12/2025 感觉学的有点快了, 需要复习 + 整理一下, 一句话总结一下吧, 现在需要吸收
+- [x] Day 12 05/12/2025 Review - 学了扭头就忘, 再看看再看看

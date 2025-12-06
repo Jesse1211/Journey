@@ -1,23 +1,32 @@
 ## 基础
-### More attributes => easier to overfit
-More attributes gives more ways to 'explain' the training data than reality actually justifies. 
-1. More features -> more params -> higher capacity
-	- $$\hat{y} = w^\top x + b$$
-	- Takes more costs to reduce the training error: d features -> d params in w
-2. High Dimensions produces Noise
-	- Distances goes irrelevant
-		- Some attributes are irrelevant to the true label / just pure noise
-	- VC dimension - measurement of how flexible of a model class is at fitting labels on data
-		- $$\text{VCdim}(\text{linear in } \mathbb{R}^d) = d + 1$$
-	- more polynomial terms => curve can **wiggle through every training point**
-		- $$\hat{y} = w_1 x + w_2 x^2 + \dots + w_{10} x^{10} + b$$
-3. Complexity
-	- More features require more data
-	- $$\sqrt{\frac{\text{complexity}}{n}}$$
-		- complexity: approximated by number of parameters or VC dimension
+### Overfit
+More attributes gives more ways to 'explain' the training data than reality actually justifies.
+$$\text{Test loss} \;\approx\; \underbrace{\text{Training loss}}_{\text{fit data}} \;+\; \underbrace{\text{complexity penalty}}_{\text{depends on } H, m}$$
+curve can wiggle through every training point 
+$$\hat{y} = w_1 x + w_2 x^2 + \dots + w_{10} x^{10} + b$$
 
-### Normalization
-Re-scale **some** subset (3-d: batch × sequence length × hidden dimension) of axes $x = (x_1, x_2, ..., x_d)$ to $\hat{x}$ with 0 mean and 1 variance (then learn a scale + bias)
+Flow - more attribute => more H => higher model complexity / capacity => lower best possible loss => more risk of overfitting
+1. More attributes => bigger H
+   $$H_d \subseteq H_{d+1}$$
+2. Bigger H -> higher capacity / complexity
+	- VC dimension - measurement of how flexible of a model class is at fitting labels on data 
+	  $$\text{VCdim}(H_d) = d + 1$$
+3. Bigger H -> lower possible training loss 
+   $$\min_{h \in H_{d+1}} \hat R(h) \;\le\; \min_{h \in H_d} \hat R(h)$$
+4. ⇒ Higher overfitting risk (if data & regularization unchanged)
+
+Exception - DL
+- Use huge H but still avoiding overfitting
+- With more parameters than training examples, network fits random labels even huge H
+	- Huge H with small effective complexity: SGD + Regularization prefer "simple" solutions inside H 
+### Norm & Normalization
+Norm - size of the weights (a number)
+$$\text{distance to the origin:  }\|w\|_2 = \sqrt{\sum_{i=1}^d w_i^2}$$
+- Small norm = weights are “small” = the model isn’t reacting too wildly to inputs.
+- smaller norm ⇒ simpler function ⇒ better generalization bound
+
+Normalization (an operation to rescale based on rule - norms / statistics)
+- Re-scale **some** subset (3-d: batch × sequence length × hidden dimension) of axes $x = (x_1, x_2, ..., x_d)$ to $\hat{x}$ with 0 mean and 1 variance (then learn a scale + bias)
 1. $$\mu = \frac{1}{d} \sum_{i=1}^d x_i,\quad \sigma^2 = \frac{1}{d} \sum_{i=1}^d (x_i - \mu)^2,\quad \hat{x}_i = \frac{x_i - \mu}{\sqrt{\sigma^2 + \epsilon}}$$
 2. $$y_i = \gamma \hat{x}_i + \beta$$
 - $x_{b, t, i}$
@@ -47,6 +56,10 @@ add the input back in, instead of replacing a layer’s input with its output.
 - Better gradient flow
 	- allow deep stacking (dozens/hundreds of layers) without killing gradients.
 ### Others
+> Margin - how confidently to separate classes
+- the distance from the points to decision boundary
+- large margin -> more robust classifier -> better generalization
+
 > MLX array/matrix APIs
 - 运算框架, 类似 NumPy
 

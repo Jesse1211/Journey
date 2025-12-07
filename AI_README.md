@@ -22,3 +22,5 @@ CONSISTENCY
 - [x] Day 13 06/12/2025 Review - 复习基础 + Fundamentals
 
 我发现现在的笔记已经够啃了, 等啃完了我觉得就算是入门AI了. 
+
+- [x] Day 14 07/12/2025 Review - 复习基础 + DL

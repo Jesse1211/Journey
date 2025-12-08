@@ -24,3 +24,4 @@ CONSISTENCY
 我发现现在的笔记已经够啃了, 等啃完了我觉得就算是入门AI了. 
 
 - [x] Day 14 07/12/2025 Review - 复习基础 + DL
+- [x] Day 15 08/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧

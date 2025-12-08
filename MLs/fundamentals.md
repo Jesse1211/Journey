@@ -1,10 +1,20 @@
 ## 基础
+1. Representation - define hypothesis space & express in formal language
+	- **architecture + input representation + some regularization-induced biases**
+	- model class (linear model, CNN, Transformer, etc.)
+	- feature space (raw pixels vs embeddings vs hand-crafted features)    
+	- capacity / structure (depth, width, attention heads, etc.)
+2. Evaluation / objective / scoring function
+	- Evaluation = Data loss (find which H is good / bad, e.g. accuracy, cross-entropy) + (maybe) Regularization
+	- $$L_{\text{total}}(w) = L_{\text{data}}(w) + \lambda \,\Omega(w)$$
+		- $L_{\text{data}}​(w)$: data loss (how well we fit training samples)
+		- $\Omega(w)$: regularizer (e.g. $\|w\|_2^2$​, sparsity, etc.)
+		- $\lambda$: weight of regularization
+3. Optimization - for efficiency
+	- search for the best model under evaluation (highest score) from the hypothesis space $h^* = \text{arg } \text{max}_{h \in H} \text{Score}(h, D)$ 
 ### Overfit
-More attributes gives more ways to 'explain' the training data than reality actually justifies.
+More attributes gives more ways to 'explain' the training data than reality actually justifies (accurate in training data but in new / unseen data - fail to generalize)
 $$\text{Test loss} \;\approx\; \underbrace{\text{Training loss}}_{\text{fit data}} \;+\; \underbrace{\text{complexity penalty}}_{\text{depends on } H, m}$$
-curve can wiggle through every training point 
-$$\hat{y} = w_1 x + w_2 x^2 + \dots + w_{10} x^{10} + b$$
-
 Flow - more attribute => more H => higher model complexity / capacity => lower best possible loss => more risk of overfitting
 1. More attributes => bigger H
    $$H_d \subseteq H_{d+1}$$
@@ -15,10 +25,56 @@ Flow - more attribute => more H => higher model complexity / capacity => lower b
    $$\min_{h \in H_{d+1}} \hat R(h) \;\le\; \min_{h \in H_d} \hat R(h)$$
 4. ⇒ Higher overfitting risk (if data & regularization unchanged)
 
-Exception - DL
+> Exception - Deep learning
 - Use huge H but still avoiding overfitting
 - With more parameters than training examples, network fits random labels even huge H
 	- Huge H with small effective complexity: SGD + Regularization prefer "simple" solutions inside H 
+#### Reason from High dimensionality
+too many features (variables) => explosion of feature space 
+- input space's volume grows exponentially, each example = one point in that high-dimensional space, curve can wiggle through every training point 
+  $$\hat{y} = w_1 x + w_2 x^2 + \dots + w_{10} x^{10} + b$$
+- irrelevant dimensions dilute the signal
+	- Many features are often irrelevant or weakly relevant => random output (KNN: distance loses meaning, all points similarly far)
+- unintuitive probability
+	- thin shell and gets further from the center
+- overfitting due to variance
+
+Blessing of Non-uniformity
+- Effective dimension < Raw dimension
+	- Real data lives in a tiny & structured subset of that space (manifold: lower-dimensional surface)
+	- handwritten digits: stokes, shapes, patterns...
+- Learners
+	- Implicitly behave as only focusing on meaningful directions
+	- Explicitly use dimensionality reduction
+#### Solution - generalization
+Improving generalization is the key to reducing/avoiding overfitting.
+- Model performs on new / unseen data as the training data with minimized true test error
+- constraints
+	- can't evaluate the objective directly
+	- training error is just a proxy
+
+The Bias–Variance Decomposition to find bias–variance tradeoff
+- Bias => underfitting 
+	- too simple (missed important patterns & learn same wrong things)
+- Variance => overfitting
+	- too complex / sensitive (learn random & irrespective things)
+- Naive Bayes has high bias, low variance; rule learners have low bias, high variance
+
+solve by Cross-validation (evaluation method - estimate generalization performance of a model, used after/during training) (might overfit)
+- Estimates model’s ability to generalize.
+- k-fold cross-validation
+	- Split data into k parts
+	- Train on k-1 parts, test on the 1 left out
+	- Repeat k times
+	- Average results = estimated test error
+- regularization term (evaluation function - score how well a model fits the data, used during training)
+	- Adds a penalty for complexity to the loss function.
+		- L2 regularization - Ridge / L1 regularization - Lasso
+- multiple testing (Too many hypotheses increases the chance of false positives)
+- Correct Significance Tests: adjust p-values or thresholds based on the number of tests (might under-fit)
+- False Discovery Rate FDR control
+	- Limits falsely accepted hypotheses
+	- More flexible than strict corrections (like Bonferroni)
 ### Norm & Normalization
 Norm - size of the weights (a number)
 $$\text{distance to the origin:  }\|w\|_2 = \sqrt{\sum_{i=1}^d w_i^2}$$
@@ -56,6 +112,8 @@ add the input back in, instead of replacing a layer’s input with its output.
 - Better gradient flow
 	- allow deep stacking (dozens/hundreds of layers) without killing gradients.
 ### Others
+> rule learner: discover explicit IF-THEN rules
+
 > Margin - how confidently to separate classes
 - the distance from the points to decision boundary
 - large margin -> more robust classifier -> better generalization

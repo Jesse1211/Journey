@@ -1,6 +1,6 @@
 ## Neural network - Deep learning
 Huge H & optimization succeeds => near 0 training loss
-- Optimization + architecture + regularization effectively restrict $H_{\text{eff}} \subset H$​: exploring more structured, low-norm, invariant, 'simple' subset of $H$ 
+- **Architecture + Regularization + Optimization** effectively restrict $H_{\text{eff}} \subset H$​: exploring more structured, low-norm, invariant, 'simple' subset of $H$ 
   $$\text{Test loss} \approx \text{Train loss} + \text{ComplexityPenalty}(H_{\text{eff}}, m)$$
   $$\text{ComplexityPenalty} \approx \text{Complexity}(H_{\text{eff}}) \ll \text{Complexity}(H)$$
   $$H_{\text{eff}} \subseteq H_{\text{reg}} \subseteq H \subseteq H_{\text{all}}$$
@@ -10,6 +10,7 @@ Huge H & optimization succeeds => near 0 training loss
 	- $H_{\text{eff}}$: function in $H_{\text{reg}}$ which optimizer finds random init
   
 - Architecture - from $H_{\text{all}}$ to H
+	- Architecture $\subset$ Representation
 	- Each sub-structure handles individual patterns (e.g. CNNs' local receptive fields + weight sharing; picking CNN / RNN / Transformer)
 	- Composition by staking linear & nonlinear parts (ReLU / Sigmoid)
 		- depth → compositional structure → effective function space grows exponentially with number of layers, not linearly with parameters.
@@ -17,6 +18,7 @@ Huge H & optimization succeeds => near 0 training loss
 		- CNN - same filter at many positions
 		- Reduces explicit dimensionality of H while retaining power
 - Regularization - from H to $H_{\text{reg}}$
+	- Regularization $\subset$ Evaluation
 	1. Explicit regularization (norm penalties)
 	   $$H_{\text{reg}} \approx \{h_\theta \in H : \|\theta\| \text{ not too big}\}$$
 		- shrink $H_{\text{reg}}$ by penalizing complex solutions large $\|\theta\|$
@@ -101,7 +103,7 @@ starting from a single scalar loss L
 
 Use chain-rule to find gradient
 - For any intermediate node u 
-$$\frac{\partial L}{\partial u} = \frac{\partial L}{\partial v} \cdot \frac{\partial v}{\partial u}$$
+  $$\frac{\partial L}{\partial u} = \frac{\partial L}{\partial v} \cdot \frac{\partial v}{\partial u}$$
 1. Suppose 
    $$L = (\hat{y} - y)^2 \text{ and } \hat{y} = w_{\text{old}}x$$
 2. backprop 
@@ -115,14 +117,14 @@ updating parameters to reduce loss
 - Update with learning rate $\eta$ 
   $$\theta_{\text{new}} = \theta_{\text{old}} - \eta \,\nabla_\theta L(\theta_{\text{old}})$$
 
-Full gradient descent (stochastic / mini-batch GD) - like implicit regularization (encourages “simpler”).
+Full gradient descent (stochastic / mini-batch GD) - like implicit regularization (encourages “simpler”)
 $$\nabla_\theta L(\theta) = \frac{1}{n} \sum_{i=1}^n \nabla_\theta \ell(f_\theta(x_i), y_i)$$
 - Better version - less cost using mini-batch $B \subset \{1,\dots,n\}$
 $$\widehat{\nabla_\theta L}(\theta)
 = \frac{1}{|B|} \sum_{i \in B} \nabla_\theta \ell(f_\theta(x_i), y_i)$$
 $$\theta_{\text{new}} = \theta_{\text{old}} - \eta \, \widehat{\nabla_\theta L}(\theta_{\text{old}})$$
-  - approximate the loss and gradient using only that batch.
-  - Adds noise that helps escape bad local minima
+    - approximate the loss and gradient using only that batch.
+    - Adds noise that helps escape bad local minima
 ### 3. Validation set
 **Periodically** pause training, and at those checkpoints we run validation forward passes to see how the model is doing.
 - Train set: compute gradients and update parameters.

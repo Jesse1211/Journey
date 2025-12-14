@@ -25,3 +25,10 @@ CONSISTENCY
 
 - [x] Day 14 07/12/2025 Review - 复习基础 + DL
 - [x] Day 15 08/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧
+- [x] Day 16 14/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧, 
+
+未来计划
+- [ ] 复习
+- [ ] 把Stanford 329P 听完
+- [ ] 把Stanford 221 听完
+- [ ] 读懂 Attention is all you need, 然后做项目

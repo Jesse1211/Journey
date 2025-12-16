@@ -27,6 +27,7 @@ CONSISTENCY
 - [x] Day 15 08/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧
 - [x] Day 16 14/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧, 
 - [x] Day 17 15/12/2025 Course - Stanford 221 - Linear Regression & CNN
+- [x] Day 18 16/12/2025 Course - Stanford 221 - Pain is necessary, but suffering is optional
 
 未来计划
 - [ ] 复习

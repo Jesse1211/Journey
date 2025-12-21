@@ -28,9 +28,4 @@ CONSISTENCY
 - [x] Day 16 14/12/2025 Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧, 
 - [x] Day 17 15/12/2025 Course - Stanford 221 - Linear Regression & CNN
 - [x] Day 18 16/12/2025 Course - Stanford 221 - Pain is necessary, but suffering is optional
-
-未来计划
-- [ ] 复习
-- [ ] 把Stanford 329P 听完 - 还差一半课程就ok! 不知道这周能不能搞定
-- [ ] 把Stanford 221 听完
-- [ ] 读懂 Attention is all you need, 然后做项目
+- [x] Day 19 21/12/2025 Course - Stanford 221 - COMPLETED & Reviewing all notes, todo: Stanford 221 & 读懂 Attention is all you need, 然后做项目

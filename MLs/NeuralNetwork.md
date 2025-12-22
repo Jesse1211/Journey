@@ -1,4 +1,9 @@
 ## Neural network - Deep learning
+1. Optimization dynamics (SGD)
+2. Architecture
+3. Regularization (explicit & implicit)
+4. Data structure
+
 Huge H & optimization succeeds => near 0 training loss
 - **Architecture + Regularization + Optimization** effectively restrict $H_{\text{eff}} \subset H$​: exploring more structured, low-norm, invariant, 'simple' subset of $H$ 
   $$\text{Test loss} \approx \text{Train loss} + \text{ComplexityPenalty}(H_{\text{eff}}, m)$$

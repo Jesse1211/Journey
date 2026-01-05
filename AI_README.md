@@ -30,3 +30,4 @@ CONSISTENCY
 - [x] Day 18 16/12/2025 Course - Stanford 221 - Pain is necessary, but suffering is optional
 - [x] Day 19 21/12/2025 Course - Stanford 221 - COMPLETED & Reviewing all notes, todo: Stanford 221 & 读懂 Attention is all you need, 然后做项目
 - [x] Day 20 22/12/2025 Course - Reviewed Fundamentals. 有点枯燥, train 一个 NLP model 玩玩
+- [x] Day 21 5/1/2025 新年快乐 - 继续夯实数学 & 开始看 Agent

@@ -32,3 +32,4 @@ CONSISTENCY
 - [x] Day 20 22/12/2025 Course - Reviewed Fundamentals. 有点枯燥, train 一个 NLP model 玩玩
 - [x] Day 21 5/1/2025 新年快乐 - 继续夯实数学 & 开始看 Agent
 - [x] Day 22 10/1/2025 继续夯实数学 & Agent AI
+- [x] Day 23 11/1/2025 CoT Chain of Thought

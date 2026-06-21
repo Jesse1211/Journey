@@ -1,4 +1,4 @@
-package Design;
+package DataStructure;
 
 import java.util.PriorityQueue;
 import java.util.Arrays;

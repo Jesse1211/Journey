@@ -1,0 +1,23 @@
+file	from	to	confidence	reason
+Algos/BFS/Tree/449.java	BFS	BacktrackingDFS	high	postorder DFS recursion not BFS
+Algos/BFS/FromCenter/1584.java	BFS	BFS	keep	PQ/Dijkstra but no better canonical topic; keep
+Algos/BacktrackingDFS/List/536.java	BacktrackingDFS	DataStructure	high	string parse with stack
+Algos/BacktrackingDFS/Tree/270.java	BacktrackingDFS	BinarySearch	high	iterative BST closest, binary-search-like
+Algos/BacktrackingDFS/Trie/212FindWords.java	BacktrackingDFS	DataStructure	high	Trie is core data structure
+Algos/TwoPointer/TwoArrays/163.java	TwoPointer	Array	high	missing ranges via iteration
+Algos/DataStructure/Map/567.java	DataStructure	SlidingWindow	medium	sliding window; keep (medium)
+Algos/Array/20IsValid.java	Array	DataStructure	high	stack-based paren matching
+Algos/Array/4MedianOfTwoSortedArrays.java	Array	BinarySearch	high	binary search partition
+Algos/BinarySearch/BinarySearchExclusive/300.java	BinarySearch	DP	high	LIS core is DP (dup of DP/300lengthOfLIS)
+Algos/BinarySearch/BinarySearchExclusive/2422.java	BinarySearch	TwoPointer	high	two-pointer greedy, no binary search
+Algos/PrefixSum/238.java	PrefixSum	Array	high	left/right product not prefix sum
+Algos/PrefixSum/2874.java	PrefixSum	Array	high	max left/right precompute not prefix sum
+Algos/PrefixSum/2909.java	PrefixSum	Greedy	high	no canonical dest (Greedy); keep
+Algos/SlidingWindow/219.java	SlidingWindow	DataStructure	medium	hashmap; keep (medium)
+Algos/SlidingWindow/2365.java	SlidingWindow	TwoPointer	medium	keep (medium)
+Algos/SlidingWindow/28.java	SlidingWindow	TwoPointer	high	string search no window
+Algos/SlidingWindow/621.java	SlidingWindow	DP	medium	PQ greedy; keep (medium)
+Algos/LinkedList/287.java	LinkedList	LinkedList	keep	Floyd on array; LinkedList technique ok, keep
+Algos/LinkedList/460.java	LinkedList	Design	high	LFU cache class
+Algos/LinkedList/707.java	LinkedList	Design	high	design linked list ADT
+Algos/Design/253.java	Design	DataStructure	high	PQ interval scheduling not a class

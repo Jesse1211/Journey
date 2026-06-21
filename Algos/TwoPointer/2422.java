@@ -1,4 +1,4 @@
-package BinarySearchExclusive;
+package TwoPointer;
 
 class Solution {
     public int minimumOperations(int[] nums) {

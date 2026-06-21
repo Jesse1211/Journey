@@ -1,4 +1,4 @@
-package BFS.Tree;
+package BacktrackingDFS;
 
 import java.util.ArrayDeque;
 

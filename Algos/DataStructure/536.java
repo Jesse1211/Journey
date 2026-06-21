@@ -1,4 +1,4 @@
-package BacktrackingDFS.List;
+package DataStructure;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package SlidingWindow;
+package TwoPointer;
 
 class Solution {
     public int strStr(String haystack, String needle) {

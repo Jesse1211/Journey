@@ -1,0 +1,344 @@
+path	has_package	package
+Algos/Array/1054.java	no	
+Algos/Array/12.java	no	
+Algos/Array/151.java	no	
+Algos/Array/164.java	no	
+Algos/Array/179.java	no	
+Algos/Array/189.java	no	
+Algos/Array/20IsValid.java	no	
+Algos/Array/214.java	no	
+Algos/Array/217.java	no	
+Algos/Array/242.java	no	
+Algos/Array/268.java	no	
+Algos/Array/350.java	no	
+Algos/Array/38.java	no	
+Algos/Array/49.java	no	
+Algos/Array/4MedianOfTwoSortedArrays.java	no	
+Algos/Array/56.java	no	
+Algos/Array/57Insert.java	no	
+Algos/Array/767.java	no	
+Algos/Array/845.java	no	
+Algos/BFS/FromCenter/1091.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/127.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/133.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/1584.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/200.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/279.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/322.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/505.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/690.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/721.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/733.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/752.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/787.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/815.java	yes	BFS.FromCenter
+Algos/BFS/FromCenter/863.java	yes	BFS.FromCenter
+Algos/BFS/ToCenter/1162.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/130.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/207.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/210.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/269.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/286.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/310.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/317.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/329.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/339.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/364.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/365.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/417.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/542.java	yes	BFS.ToCenter
+Algos/BFS/ToCenter/934.java	yes	BFS.ToCenter
+Algos/BFS/Tree/102.java	yes	BFS.Tree
+Algos/BFS/Tree/103.java	yes	BFS.Tree
+Algos/BFS/Tree/104.java	yes	BFS.Tree
+Algos/BFS/Tree/107.java	yes	BFS.Tree
+Algos/BFS/Tree/111.java	yes	BFS.Tree
+Algos/BFS/Tree/116_117.java	yes	BFS.Tree
+Algos/BFS/Tree/1530.java	yes	BFS.Tree
+Algos/BFS/Tree/199.java	yes	BFS.Tree
+Algos/BFS/Tree/261.java	yes	BFS.Tree
+Algos/BFS/Tree/297.java	yes	BFS.Tree
+Algos/BFS/Tree/314.java	yes	BFS.Tree
+Algos/BFS/Tree/429.java	yes	BFS.Tree
+Algos/BFS/Tree/449.java	yes	BFS.Tree
+Algos/BFS/Tree/513.java	yes	BFS.Tree
+Algos/BFS/Tree/515.java	yes	BFS.Tree
+Algos/BFS/Tree/559.java	yes	BFS.Tree
+Algos/BFS/Tree/662.java	yes	BFS.Tree
+Algos/BFS/Tree/958.java	yes	BFS.Tree
+Algos/BFS/Tree/987.java	yes	BFS.Tree
+Algos/BacktrackingDFS/List/1079.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/130.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/131.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/17.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/200.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/207.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/216.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/22.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/301.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/39.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/40.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/417.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/419.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/46.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/47.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/51.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/526.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/536.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/547.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/694.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/77.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/78.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/79.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/90.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/List/93.java	yes	BacktrackingDFS.List
+Algos/BacktrackingDFS/Tree/100.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/101.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/105.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/106.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/112.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/113.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/114.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/124.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/129.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/1367.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/145.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/156.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/1650.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/173.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/226.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/235.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/236.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/250.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/257.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/270.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/285.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/298.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/333.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/404.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/426.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/437.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/450.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/510.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/530.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/572.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/814.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/865.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/938.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Tree/98.java	yes	BacktrackingDFS.Tree
+Algos/BacktrackingDFS/Trie/212FindWords.java	yes	BacktrackingDFS.Trie
+Algos/BinarySearch/272.java	yes	BinarySearch
+Algos/BinarySearch/302.java	yes	BinarySearch
+Algos/BinarySearch/475.java	no	
+Algos/BinarySearch/BinarySearchExclusive/1011.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/1268.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/153.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/154.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/162.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/1802.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/2422.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/278.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/300.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/410.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/528.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/540.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchExclusive/875.java	yes	BinarySearchExclusive
+Algos/BinarySearch/BinarySearchInclusive/1300.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/1539.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/275.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/33.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/34.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/35.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/367.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/658.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/69.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/74.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/81.java	yes	BinarySearchInclusive
+Algos/BinarySearch/BinarySearchInclusive/852.java	yes	BinarySearchInclusive
+Algos/DP/1143LongestCommonSubsequence.java	yes	DP
+Algos/DP/120Triangle.java	yes	DP
+Algos/DP/139WordBreak.java	yes	DP
+Algos/DP/198Rob.java	yes	DP
+Algos/DP/213Rob2.java	yes	DP
+Algos/DP/300lengthOfLIS.java	yes	DP
+Algos/DP/322.java	yes	DP
+Algos/DP/377CombinationSum4.java	yes	DP
+Algos/DP/435EraseOverlapIntervals.java	yes	DP
+Algos/DP/55CanJump.java	yes	DP
+Algos/DP/55CanJump2.java	yes	DP
+Algos/DP/62UniquePaths.java	yes	DP
+Algos/DP/62UniquePaths2.java	yes	DP
+Algos/DP/64MinPathSum.java	yes	DP
+Algos/DP/674findLengthOfLCIS.java	yes	DP
+Algos/DP/70ClimbingStairs.java	yes	DP
+Algos/DP/91NumDecodings.java	yes	DP
+Algos/DP/931.java	yes	DP
+Algos/DataStructure/Heap/1235.java	yes	DataStructure.Heap
+Algos/DataStructure/Heap/215.java	yes	DataStructure.Heap
+Algos/DataStructure/Map/1.java	yes	DataStructure.Map
+Algos/DataStructure/Map/1001.java	yes	DataStructure.Map
+Algos/DataStructure/Map/1086.java	no	
+Algos/DataStructure/Map/13.java	yes	DataStructure.Map
+Algos/DataStructure/Map/1438LongestContinuousSubarray.java	yes	DataStructure.Map
+Algos/DataStructure/Map/230.java	yes	DataStructure.Map
+Algos/DataStructure/Map/299.java	yes	DataStructure.Map
+Algos/DataStructure/Map/347.java	yes	DataStructure.Map
+Algos/DataStructure/Map/378.java	yes	DataStructure.Map
+Algos/DataStructure/Map/387.java	no	
+Algos/DataStructure/Map/454.java	no	
+Algos/DataStructure/Map/567.java	yes	DataStructure.Map
+Algos/DataStructure/Map/633.java	yes	DataStructure.Map
+Algos/DataStructure/Map/692.java	yes	DataStructure.Map
+Algos/DataStructure/Map/763.java	yes	DataStructure.Map
+Algos/DataStructure/Map/791.java	yes	DataStructure.Map
+Algos/DataStructure/Map/939.java	yes	DataStructure.Map
+Algos/DataStructure/Map/973.java	yes	DataStructure.Map
+Algos/DataStructure/Stack/1209RemoveDuplicates.java	no	
+Algos/DataStructure/Stack/1249.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/1472BrowserHistory.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/155.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/1762.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/1944.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/227.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/255.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/32.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/71.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/735.java	yes	DataStructure.Stack
+Algos/DataStructure/Stack/739.java	no	
+Algos/DataStructure/Stack/921.java	yes	DataStructure.Stack
+Algos/DataStructure/Tree/222.java	yes	DataStructure.Tree
+Algos/DataStructure/Trie/208Trie.java	yes	DataStructure.Trie
+Algos/DataStructure/Trie/211WordDictionary.java	yes	DataStructure.Trie
+Algos/Design/146.java	yes	Design
+Algos/Design/155.java	yes	Design
+Algos/Design/225.java	yes	Design
+Algos/Design/253.java	yes	Design
+Algos/Design/295.java	yes	Design
+Algos/Design/303.java	yes	Design
+Algos/Design/348.java	yes	Design
+Algos/Design/362.java	yes	Design
+Algos/Design/380.java	yes	Design
+Algos/Design/731.java	yes	Design
+Algos/Design/981TimeMap.java	yes	Design
+Algos/LinkedList/138.java	no	
+Algos/LinkedList/141.java	no	
+Algos/LinkedList/142.java	no	
+Algos/LinkedList/143.java	no	
+Algos/LinkedList/147.java	no	
+Algos/LinkedList/148.java	no	
+Algos/LinkedList/160.java	no	
+Algos/LinkedList/19.java	no	
+Algos/LinkedList/206.java	no	
+Algos/LinkedList/21.java	no	
+Algos/LinkedList/23.java	no	
+Algos/LinkedList/234.java	no	
+Algos/LinkedList/24.java	no	
+Algos/LinkedList/25.java	no	
+Algos/LinkedList/2807.java	no	
+Algos/LinkedList/2816.java	no	
+Algos/LinkedList/287.java	no	
+Algos/LinkedList/328.java	no	
+Algos/LinkedList/430.java	no	
+Algos/LinkedList/460.java	no	
+Algos/LinkedList/61.java	no	
+Algos/LinkedList/707.java	no	
+Algos/LinkedList/708.java	no	
+Algos/LinkedList/82.java	no	
+Algos/LinkedList/86.java	no	
+Algos/LinkedList/876.java	no	
+Algos/LinkedList/92.java	no	
+Algos/Matrix/240.java	yes	Matrix
+Algos/Matrix/54.java	yes	Matrix
+Algos/Matrix/59.java	yes	Matrix
+Algos/Matrix/73.java	yes	Matrix
+Algos/PrefixSum/1094.java	yes	PrefixSum
+Algos/PrefixSum/1109.java	yes	PrefixSum
+Algos/PrefixSum/1590.java	yes	PrefixSum
+Algos/PrefixSum/2021.java	yes	PrefixSum
+Algos/PrefixSum/2237.java	yes	PrefixSum
+Algos/PrefixSum/238.java	yes	PrefixSum
+Algos/PrefixSum/2406.java	yes	PrefixSum
+Algos/PrefixSum/2874.java	yes	PrefixSum
+Algos/PrefixSum/2909.java	yes	PrefixSum
+Algos/PrefixSum/325.java	yes	PrefixSum
+Algos/PrefixSum/437.java	yes	PrefixSum
+Algos/PrefixSum/523.java	yes	PrefixSum
+Algos/PrefixSum/525.java	yes	PrefixSum
+Algos/PrefixSum/560.java	yes	PrefixSum
+Algos/PrefixSum/670.java	yes	PrefixSum
+Algos/PrefixSum/724.java	yes	PrefixSum
+Algos/PrefixSum/974.java	yes	PrefixSum
+Algos/SlidingWindow/1004.java	yes	SlidingWindow
+Algos/SlidingWindow/1052.java	yes	SlidingWindow
+Algos/SlidingWindow/1248.java	yes	SlidingWindow
+Algos/SlidingWindow/1343.java	yes	SlidingWindow
+Algos/SlidingWindow/1423.java	yes	SlidingWindow
+Algos/SlidingWindow/1658.java	yes	SlidingWindow
+Algos/SlidingWindow/1838.java	yes	SlidingWindow
+Algos/SlidingWindow/2090.java	yes	SlidingWindow
+Algos/SlidingWindow/219.java	yes	SlidingWindow
+Algos/SlidingWindow/2365.java	yes	SlidingWindow
+Algos/SlidingWindow/28.java	yes	SlidingWindow
+Algos/SlidingWindow/3.java	yes	SlidingWindow
+Algos/SlidingWindow/424.java	yes	SlidingWindow
+Algos/SlidingWindow/438.java	yes	SlidingWindow
+Algos/SlidingWindow/567.java	yes	SlidingWindow
+Algos/SlidingWindow/621.java	yes	SlidingWindow
+Algos/SlidingWindow/643.java	yes	SlidingWindow
+Algos/SlidingWindow/713.java	yes	SlidingWindow
+Algos/SlidingWindow/76.java	yes	SlidingWindow
+Algos/SlidingWindow/904.java	yes	SlidingWindow
+Algos/SlidingWindow/930.java	yes	SlidingWindow
+Algos/Sub/1031.java	yes	Sub
+Algos/Sub/128.java	yes	Sub
+Algos/Sub/152.java	yes	Sub
+Algos/Sub/187.java	yes	Sub
+Algos/Sub/209.java	yes	Sub
+Algos/Sub/3043.java	yes	Sub
+Algos/Sub/395.java	yes	Sub
+Algos/Sub/424.java	yes	Sub
+Algos/Sub/53.java	yes	Sub
+Algos/Sub/581.java	yes	Sub
+Algos/Sub/978.java	yes	Sub
+Algos/TwoPointer/反向/1.java	yes	反向
+Algos/TwoPointer/反向/11.java	yes	反向
+Algos/TwoPointer/同向/121.java	yes	同向
+Algos/TwoPointer/反向/125.java	yes	反向
+Algos/TwoPointer/反向/15.java	yes	反向
+Algos/TwoPointer/反向/16.java	yes	反向
+Algos/TwoPointer/反向/167.java	yes	反向
+Algos/TwoPointer/反向/18.java	yes	反向
+Algos/TwoPointer/反向/259.java	yes	反向
+Algos/TwoPointer/同向/26.java	yes	同向
+Algos/TwoPointer/同向/27.java	yes	同向
+Algos/TwoPointer/同向/283.java	yes	同向
+Algos/TwoPointer/同向/31.java	yes	同向
+Algos/TwoPointer/同向/3163.java	yes	同向
+Algos/TwoPointer/反向/344.java	yes	反向
+Algos/TwoPointer/反向/345.java	yes	反向
+Algos/TwoPointer/反向/42.java	yes	反向
+Algos/TwoPointer/同向/443.java	yes	同向
+Algos/TwoPointer/同向/457.java	yes	同向
+Algos/TwoPointer/反向/5.java	yes	反向
+Algos/TwoPointer/同向/532.java	yes	同向
+Algos/TwoPointer/反向/541.java	yes	反向
+Algos/TwoPointer/反向/611.java	yes	反向
+Algos/TwoPointer/反向/680.java	yes	反向
+Algos/TwoPointer/同向/75.java	yes	同向
+Algos/TwoPointer/同向/80.java	yes	同向
+Algos/TwoPointer/同向/88.java	yes	同向
+Algos/TwoPointer/反向/881.java	yes	反向
+Algos/TwoPointer/反向/923.java	yes	反向
+Algos/TwoPointer/两个array/1570.java	yes	两个array
+Algos/TwoPointer/两个array/163.java	yes	两个array
+Algos/TwoPointer/两个array/349.java	yes	两个array
+Algos/TwoPointer/两个array/350.java	yes	两个array
+Algos/TwoPointer/两个array/392.java	yes	两个array
+Algos/TwoPointer/两个array/408.java	yes	两个array
+Algos/TwoPointer/两个array/455.java	yes	两个array
+Algos/TwoPointer/两个array/524.java	yes	两个array
+Algos/TwoPointer/两个array/826.java	yes	两个array
+Algos/TwoPointer/两个array/986.java	yes	两个array
+Algos/UnionFind/1101.java	yes	UnionFind
+Algos/UnionFind/399.java	yes	UnionFind
+Algos/UnionFind/684.java	yes	UnionFind

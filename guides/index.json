@@ -1,0 +1,50 @@
+{
+  "count": 9,
+  "guides": [
+    {
+      "slug": "bfs",
+      "title": "Breath-First Search",
+      "status": "published"
+    },
+    {
+      "slug": "binarySearch",
+      "title": "Binary Search",
+      "status": "published"
+    },
+    {
+      "slug": "dfs",
+      "title": "Depth-First Search",
+      "status": "published"
+    },
+    {
+      "slug": "linkedList",
+      "title": "Linked List",
+      "status": "published"
+    },
+    {
+      "slug": "DP",
+      "title": "Dynamic Programming",
+      "status": "pending"
+    },
+    {
+      "slug": "dataStructure",
+      "title": "Data Structure",
+      "status": "pending"
+    },
+    {
+      "slug": "unionFind",
+      "title": "Union Find",
+      "status": "pending"
+    },
+    {
+      "slug": "prefixSum",
+      "title": "Prefix Sum",
+      "status": "published"
+    },
+    {
+      "slug": "twoPointer",
+      "title": "Two Pointer",
+      "status": "published"
+    }
+  ]
+}

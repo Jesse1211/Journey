@@ -1,0 +1,2445 @@
+{
+  "generatedBy": ".design/gen-manifest.mjs",
+  "schema": {
+    "note": "One entry per solution FILE. Duplicate ids across topics are intentional (different solutions). Metadata is derived only — no invented difficulty/title/url.",
+    "fields": [
+      "id",
+      "topic",
+      "solutionType",
+      "subtopic?",
+      "nameFragment?",
+      "file",
+      "originalFile?",
+      "strategyComment?"
+    ]
+  },
+  "count": 343,
+  "topics": [
+    "Array",
+    "BFS",
+    "BacktrackingDFS",
+    "BinarySearch",
+    "DP",
+    "DataStructure",
+    "Design",
+    "LinkedList",
+    "Matrix",
+    "PrefixSum",
+    "SlidingWindow",
+    "Sub",
+    "TwoPointer",
+    "UnionFind"
+  ],
+  "solutions": [
+    {
+      "id": 12,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/12.java",
+      "strategyComment": "highlight: 考了很多structure的题目，这个题目是一个很好的例子，用array来存储int和对应的roman"
+    },
+    {
+      "id": 38,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/38.java"
+    },
+    {
+      "id": 49,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/49.java",
+      "strategyComment": "普通的array题要学会借助其他structure来解决问题"
+    },
+    {
+      "id": 56,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/56.java"
+    },
+    {
+      "id": 57,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/57Insert.java",
+      "nameFragment": "Insert",
+      "strategyComment": "highlight: 培养structural thinking"
+    },
+    {
+      "id": 151,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/151.java",
+      "strategyComment": "class Solution {\npublic String reverseWords(String s) {\nStringBuilder sb = new StringBuilder();\nString[] sList = s.trim().split(\"\\\\s+\"); // one or more whitespace characters\nfor (int i = sList.length - 1; i >= 0; i--) {\nsb.append(sList[i]);\nif (i > 0) {\nsb.append(\" \");\n}\n}\nreturn sb.toString();\n}\n}"
+    },
+    {
+      "id": 163,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/163.java",
+      "originalFile": "Algos/TwoPointer/TwoArrays/163.java"
+    },
+    {
+      "id": 164,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/164.java"
+    },
+    {
+      "id": 179,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/179.java",
+      "strategyComment": "朴实无华的sort"
+    },
+    {
+      "id": 189,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/189.java",
+      "strategyComment": "highlight: 牛逼的解法，三次翻转"
+    },
+    {
+      "id": 214,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/214.java",
+      "strategyComment": "highlight: 有刷题价值, 看left和right的变化. 还参考return的recursive写法"
+    },
+    {
+      "id": 217,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/217.java"
+    },
+    {
+      "id": 238,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/238.java",
+      "originalFile": "Algos/PrefixSum/238.java"
+    },
+    {
+      "id": 242,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/242.java"
+    },
+    {
+      "id": 268,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/268.java"
+    },
+    {
+      "id": 350,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/350.java",
+      "strategyComment": "sort之后做两个指针就行了"
+    },
+    {
+      "id": 767,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/767.java"
+    },
+    {
+      "id": 845,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/845.java"
+    },
+    {
+      "id": 1054,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/1054.java"
+    },
+    {
+      "id": 2874,
+      "topic": "Array",
+      "solutionType": "Array",
+      "file": "Algos/Array/2874.java",
+      "originalFile": "Algos/PrefixSum/2874.java"
+    },
+    {
+      "id": 17,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/17.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: digits, index, res, cur\n当前candidates取决于digits & index\n层层更新cur, 最终加到res中\n2. dfs 何时停止: 没有candidates, 所有的digits都被处理\n3. dfs 如何更新: cur + letter,\nletter是当前digits的一个candidate\n用forloop来遍历所有的candidates"
+    },
+    {
+      "id": 22,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/22.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: n, res, cur, left, right\n当前candidates取决于left, right\n层层更新cur, 最终加到res中\n2. dfs 何时停止: cur.length() == 2 * n\n3. dfs 如何更新: 增加 \"(\" 或者 \")\"\n“(” 的数量小于n时，可以增加“(”\n“)” 的数量小于“(”时，可以增加“)”"
+    },
+    {
+      "id": 39,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/39.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: candidates, target, res, cur, index\n当前candidates取决于candidates & index\n层层更新cur, 最终加到res中\n2. dfs 何时停止: 满足目标 target == 0\n3. dfs 如何更新: cur + candidate,\n从index开始, 用forloop来遍历所有的candidates"
+    },
+    {
+      "id": 40,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/40.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: candidates, target, res, cur, index\n当前candidates取决于index\n层层更新cur, 最终加到res中\n2. dfs 何时停止: 没有candidates, target < 0\n3. dfs 如何更新: cur + candidate,\n需要避免重复, 如果当前candidate和上一个相同, 则跳过, 因为上一个已经把所有的情况都考虑了\n用forloop来遍历所有的candidates"
+    },
+    {
+      "id": 46,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/46.java",
+      "subtopic": "List",
+      "strategyComment": ": 如果所有element都是unique, 避免重复不需要set, 检查是否contain就好了\n1.  判定dfs的parameters: nums, res, cur (因为这次是无序, 所以不需要index)\n当前nums取决于cur是否包含\n层层更新cur, 最终加到res中\n2. dfs 何时停止: cur.size() == nums.length\n3. dfs 如何更新: cur + nums[i],\n需要避免重复, 如果cur包含nums[i], 则跳过\n用forloop来遍历所有的nums"
+    },
+    {
+      "id": 47,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/47.java",
+      "subtopic": "List",
+      "strategyComment": "highlight:  如果有重复的元素, 避免重复需要set, 但是recursive call前后要记得更新set\n1.  判定dfs的parameters: nums, res, cur, visited\n当前nums取决于cur是否包含\n层层更新cur, 最终加到res中\n2. dfs 何时停止: cur.size() == nums.length\n3. dfs 如何更新: cur + nums[i],\n需要避免重复, 如果cur包含nums[i], 则跳过\n用forloop来遍历所有的nums"
+    },
+    {
+      "id": 51,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/51.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 77,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/77.java",
+      "subtopic": "List",
+      "strategyComment": "from 1 to n, each time choose only k numbers\n如果找的结果是有顺序的, 每次recursive call的时候用的是for里面的i, 而不是index\n1. 判定dfs的parameters: n, k, res, cur, index\n当前n取决于index\n层层更新cur, 最终加到res中\n2. dfs 何时停止: k == 0\n3. dfs 如何更新: cur + i,\n用forloop来遍历所有的n"
+    },
+    {
+      "id": 78,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/78.java",
+      "subtopic": "List",
+      "strategyComment": "添加res没有先前条件, 所以dfs每次跑都会加到res中\n1. 判定dfs的parameters: nums, res, index, cur\n当前nums取决于index\n层层更新cur, 最终加到res中\n2. dfs 何时停止: index > nums.length\n3. dfs 如何更新: cur + nums[index],\n用forloop来遍历所有的nums, 因为有顺序, 所以每次recursive call的时候用的是for里面的i, 而不是index"
+    },
+    {
+      "id": 79,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/79.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: i, j, board, word, index, visited\n2. dfs 何时停止: index == word.length() 或者i 和j 超出边界 或者已经访问过 或者board[i][j] != word.charAt(index)\n3. dfs 如何更新: 上下左右四个方向"
+    },
+    {
+      "id": 90,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/90.java",
+      "subtopic": "List",
+      "strategyComment": "continue的逻辑很好, 多看几遍\nhighlight:  有重复的数字, 为了避免res存在重复, 用dfs的时候, 要先sort, 然后在dfs的时候, 跳过重复的数字\n其他和78.java一样"
+    },
+    {
+      "id": 93,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/93.java",
+      "subtopic": "List",
+      "strategyComment": "highlight: bfs内部的forloop不仅是遍历所有children, 还有当前level, 比如这里的segment\n1. 判定dfs的parameters: s, index, segNum, res, cur\n当前char取决于index\n当前segment包含的char (从1到3个)取决于index 和 i\n每个segment更新一次cur, 最终加到res中\n用segNum来判定是否有三个segments\n2. dfs 何时停止: s.length() == index && segNum == 4 合理并且有四个segments\n3. dfs 如何更新: cur + s.substring(index, index + i)"
+    },
+    {
+      "id": 98,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/98.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 100,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/100.java",
+      "subtopic": "Tree",
+      "strategyComment": "1. 判定dfs的parameters: p, q\n(这里只是比较, 所以不需要res)\n当前candidates取决于p.val, q.val\n层层比较p.val, q.val\n2. dfs 何时停止: p和q都为null, 或者p.val != q.val, 或者只有p or q为null\n3. dfs 如何更新: p.val == q.val时, dfs(p.left, q.left) && dfs(p.right, q.right)"
+    },
+    {
+      "id": 101,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/101.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 105,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/105.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 106,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/106.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 112,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/112.java",
+      "subtopic": "Tree",
+      "strategyComment": "可以用DFS也可以用BFS"
+    },
+    {
+      "id": 113,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/113.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 114,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/114.java",
+      "subtopic": "Tree",
+      "strategyComment": "highlight: 这个有点难, 必须从base 开始思考"
+    },
+    {
+      "id": 124,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/124.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 129,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/129.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 130,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/130.java",
+      "subtopic": "List",
+      "strategyComment": "ex-highlight: 在matrix的时候, 一般是dfs四个方向, 但是在list的时候, 一般是dfs两个方向, 并且如果只是改data, 一般不需要res\n1. 判定dfs的parameters: board, i, j\n(这里只是改数据, 所以不需要res)\n当前candidates取决于board[i][j]\n层层更新board, 最终board中的'O'变成'X', 'K'变成'O'\n2. dfs 何时停止: out of bound || board[i][j] == 'X' || board[i][j] == 'K'\n3. dfs 如何更新: board[i][j] == 'O'时, board[i][j] = 'K', 然后dfs四个方向"
+    },
+    {
+      "id": 131,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/131.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: res, s, index, cur\n当前char取决于index\n当前segment包含的char取决于index 和 i\n每个segment更新一次cur, 最终加到res中\n2. dfs 何时停止: s.length() == index\n3. dfs 如何更新: cur + s.substring(index, index + i)"
+    },
+    {
+      "id": 145,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/145.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 156,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/156.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 173,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/173.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 200,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/200.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: grid, i, j\n(这里只是改数据, 所以不需要res)\n当前candidates取决于grid[i][j]\n层层更新grid, 最终grid中的'1'变成'0'\n2. dfs 何时停止: out of bound || grid[i][j] == '0'\n3. dfs 如何更新: grid[i][j] == '1'时, grid[i][j] = '0', 然后dfs四个方向"
+    },
+    {
+      "id": 207,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/207.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: id, map, visited\n如果map没有id, 那就说明没有需要上的课了\n如果visited中有id, 直接返回false\n通过id找到preq, 进一步遍历preq\n2. dfs 何时停止:\n如果没有preq, 直接返回true\n如果visited中有id, 直接返回false\n3. dfs 如何更新:\n添加id到visited\n遍历他的preq, 需要每一个preq都return true\n如果当前课程可以上, 那就从map中移除"
+    },
+    {
+      "id": 216,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/216.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: k, n, res, cur, index\n当前候选数取决于index\n当前是否满足条件取决于k, n\n2. dfs 何时停止: k == 0 && n == 0\n3. dfs 如何更新: cur.add(i) 但是i是当前cur的最大值 (防重)"
+    },
+    {
+      "id": 226,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/226.java",
+      "subtopic": "Tree",
+      "strategyComment": "1. 判定dfs的parameters: root\n(这里只是invert, 所以不需要res)\n当前candidates取决于root.left, root.right\n层层invert root.left, root.right\n2. dfs 何时停止: root == null\n3. dfs 如何更新:\n先把当前root的left和right交换, 然后再dfs\ninvertTree(root.left), invertTree(root.right)"
+    },
+    {
+      "id": 235,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/235.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 236,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/236.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 250,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/250.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 257,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/257.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 285,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/285.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 298,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/298.java",
+      "subtopic": "Tree",
+      "strategyComment": "Definition for a binary tree node.\npublic class TreeNode {\nint val;\nTreeNode left;\nTreeNode right;\nTreeNode() {}\nTreeNode(int val) { this.val = val; }\nTreeNode(int val, TreeNode left, TreeNode right) {\nthis.val = val;\nthis.left = left;\nthis.right = right;\n}\n}"
+    },
+    {
+      "id": 301,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/301.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 333,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/333.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 404,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/404.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 417,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/417.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: i, j, visit, prev, heights\n当前候选数取决于i, j\n当前是否满足条件取决于prev, heights\nvisite防重\n2. dfs 何时停止: i < 0 || i >= heights.length || j < 0 || j >= heights[0].length || heights[i][j] < prev || visit[i][j]\n3. dfs 如何更新: visit[i][j] = true; dfs(i+1, j, visit, heights[i][j], heights); dfs(i, j+1, visit, heights[i][j], heights); dfs(i-1, j, visit, heights[i][j], heights); dfs(i, j-1, visit, heights[i][j], heights);"
+    },
+    {
+      "id": 419,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/419.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 426,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/426.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 437,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/437.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 449,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/449.java",
+      "originalFile": "Algos/BFS/Tree/449.java"
+    },
+    {
+      "id": 450,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/450.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 510,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/510.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 526,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/526.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 530,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/530.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 547,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/547.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 572,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/572.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 694,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/694.java",
+      "subtopic": "List"
+    },
+    {
+      "id": 814,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/814.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 865,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/865.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 938,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/938.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 1079,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/List/1079.java",
+      "subtopic": "List",
+      "strategyComment": "1. 判定dfs的parameters: tiles, visited, res, cur\nvisited防重覆使用一个index\nres防重覆添加一个string\ncur记录当前的string来自于tiles\n2. dfs 何时停止: 当前string已经添加到res中, 不需要再看能怎么添加了\n3. dfs 如何更新:\n先把当前string加入res\n试着给cur加一个新的char: dfs(tiles, visited, res, cur + tiles.charAt(i));"
+    },
+    {
+      "id": 1367,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/1367.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 1650,
+      "topic": "BacktrackingDFS",
+      "solutionType": "BacktrackingDFS",
+      "file": "Algos/BacktrackingDFS/Tree/1650.java",
+      "subtopic": "Tree",
+      "strategyComment": "meta"
+    },
+    {
+      "id": 102,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/102.java",
+      "subtopic": "Tree",
+      "strategyComment": "1. 判断bfs逻辑:\n先从root开始, 层层遍历\n2. 用queue & list保存信息:\nqueue: 保存将要访问的点\nList: 保存每一层的点\n3. 用queue更新信息:\n从root开始, 遍历所有相邻的点, 把符合条件的点加入queue"
+    },
+    {
+      "id": 103,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/103.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102很像, 只不过需要加一个flag来判断是否需要reverse"
+    },
+    {
+      "id": 104,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/104.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102很像, 每层不需要存到res里, 只需要increment by 1"
+    },
+    {
+      "id": 107,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/107.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102很像, 把最后的答案reverse一下"
+    },
+    {
+      "id": 111,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/111.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102题的区别:\n用variable res来记录当前的层数\n如果当前node没有children, 直接return"
+    },
+    {
+      "id": 116,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/116_117.java",
+      "subtopic": "Tree",
+      "nameFragment": "_117",
+      "strategyComment": "可以用recursion也可以用BFS"
+    },
+    {
+      "id": 127,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/127.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 130,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/130.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历\n2. 用queue保存信息:\n保存将要访问的点\n3. 用queue更新信息:\n遍历所有相邻的点, 把符合条件的点加入queue并且改变数值"
+    },
+    {
+      "id": 133,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/133.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从任意点出发, 逐层遍历\n因为graph, 小心重复访问\n2. 用Map&queue保存信息:\nold : new\n将要访问的点\n3. 用queue更新信息:\n遍历old的neighbors, 通过是否在map中判断是否访问过\n如果没有访问过, 则建立新的node, 加入map和queue, 把新的node加入new的neighbors\n如果访问过, 则直接加入new的neighbors"
+    },
+    {
+      "id": 199,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/199.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102的区别:\n每一层的for loop中, 除了最后一个元素, 都把当前元素的左右子树加入queue\n最后一个元素代表当前level的最右侧, 加入res, 然后再把左右子树加入queue"
+    },
+    {
+      "id": 200,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/200.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从符合标准的任意点出发, 逐层遍历\n通过改变数值来避免重复访问\n2. 用queue保存信息:\n保存将要访问的点\n3. 用queue更新信息:\n遍历所有相邻的点, 把符合条件的点加入queue并且改变数值"
+    },
+    {
+      "id": 207,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/207.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历\n2. 用queue, map, degrees保存信息:\nmap: key是preq, value是cur (类似于children)\nqueue: 保存将要访问的点\ndegrees: 保存每个点的children数量来找出leaf\n3. 用queue更新信息:\n从leaf开始, 遍历所有相邻的点, 把符合条件的点加入queue并且改变degrees\nres取决于最后是不是所有的点都是leaf"
+    },
+    {
+      "id": 210,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/210.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "和207的区别在于:\n210需要返回一个list, 207只需要返回boolean\n但是逻辑是一样的, 207中每次找到一个leaf就+1, 210中每次找到一个leaf就把它加入list"
+    },
+    {
+      "id": 261,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/261.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 269,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/269.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 279,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/279.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从结果出发, 逐层删减, 最快能找到 x * x = cur结束\n2. 用queue保存每层cur的信息:\n保存当前剩余的值\n3. 用queue更新信息:\n每次拿出来的cur都要从0到cur来找结果 (log n)\n如果cur == x * x, 则返回结果\n如果cur < x * x, 则break\n如果cur > x * x, 则更新cur = cur - x * x"
+    },
+    {
+      "id": 286,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/286.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 297,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/297.java",
+      "subtopic": "Tree",
+      "strategyComment": "highlight: concat String 太慢了，可以用StringBuffer"
+    },
+    {
+      "id": 310,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/310.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "highlight: 高频题 - 从degree为1的点开始bfs, 最后剩下的点就是root\n1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历\n2. 用queue & map保存信息:\n用map保存每个点的相邻点并且记录degree\nqueue保存将要访问的点也就是degree为1的点 (从边界开始)\n3. 用queue更新信息:\n遍历所有相邻的点, 把符合条件的点加入queue并且改变degree"
+    },
+    {
+      "id": 314,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/314.java",
+      "subtopic": "Tree",
+      "strategyComment": "highlight: 最难BFS meta"
+    },
+    {
+      "id": 317,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/317.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 322,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/322.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 329,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/329.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 339,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/339.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "// This is the interface that allows for creating nested lists.\n// You should not implement it, or speculate about its implementation\npublic interface NestedInteger {\n// Constructor initializes an empty nested list.\npublic NestedInteger();\n// Constructor initializes a single integer.\npublic NestedInteger(int value);\n// @return true if this NestedInteger holds a single integer, rather than a\nnested list.\npublic boolean isInteger();\n// @return the single integer that this NestedInteger holds, if it holds a\nsingle integer\n// Return null if this NestedInteger holds a nested list\npublic Integer getInteger();\n// Set this NestedInteger to hold a single integer.\npublic void setInteger(int value);\n// Set this NestedInteger to hold a nested list and adds a nested integer to\nit.\npublic void add(NestedInteger ni);\n// @return the nested list that this NestedInteger holds, if it holds a\nnested list\n// Return empty list if this NestedInteger holds a single integer\npublic List<NestedInteger> getList();\n}\nhighlight: 好玩的BFS\nmeta"
+    },
+    {
+      "id": 364,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/364.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "// This is the interface that allows for creating nested lists.\n// You should not implement it, or speculate about its implementation\npublic interface NestedInteger {\n// Constructor initializes an empty nested list.\npublic NestedInteger();\n// Constructor initializes a single integer.\npublic NestedInteger(int value);\n// @return true if this NestedInteger holds a single integer, rather than a\nnested list.\npublic boolean isInteger();\n// @return the single integer that this NestedInteger holds, if it holds a\nsingle integer\n// Return null if this NestedInteger holds a nested list\npublic Integer getInteger();\n// Set this NestedInteger to hold a single integer.\npublic void setInteger(int value);\n// Set this NestedInteger to hold a nested list and adds a nested integer to\nit.\npublic void add(NestedInteger ni);\n// @return the nested list that this NestedInteger holds, if it holds a\nnested list\n// Return empty list if this NestedInteger holds a single integer\npublic List<NestedInteger> getList();\n}"
+    },
+    {
+      "id": 365,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/365.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 417,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/417.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历, 因为是matrix, 需要boolean[][] visited防止重复访问\n2. 用queue保存信息:\n保存将要访问的点\n3. 用queue更新信息:\n遍历所有相邻的点, 把符合条件的点加入queue并且改变在visited中的数值, 因为res是根据visited来的"
+    },
+    {
+      "id": 429,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/429.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102的区别: 这个是chilren, 需要一个for loop来把每个children加到queue"
+    },
+    {
+      "id": 505,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/505.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 513,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/513.java",
+      "subtopic": "Tree",
+      "strategyComment": "highlight: tree的bfs最难吧\n1. 判断bfs逻辑:\n先从root开始, 层层遍历\n2. 用queue & int保存信息:\nqueue: 保存将要访问的点\nint: 保存每一层的最左侧的点\n3. 用queue更新信息:\n从root开始, 遍历所有相邻的点, 把符合条件的点加入queue"
+    },
+    {
+      "id": 515,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/515.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102的区别: 每层需要找到最大值并且加入res"
+    },
+    {
+      "id": 542,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/542.java",
+      "subtopic": "ToCenter",
+      "strategyComment": "highlight: matrix刷的还是不够\n1. 判断bfs逻辑: 先从边界开始, 把符合条件的点加入queue, 然后逐层遍历, 因为是matrix, 需要boolean[][] visited防止重复访问\n2. 用queue保存信息:\n保存将要访问的点\n3. 用queue更新信息:\n遍历所有相邻的点, 把符合条件的点加入queue并且改变数值"
+    },
+    {
+      "id": 559,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/559.java",
+      "subtopic": "Tree",
+      "strategyComment": "和102的区别: track一共走了多少个level\n如果queue是空的, 那就说明没有下一层了, 返回res"
+    },
+    {
+      "id": 662,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/662.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 690,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/690.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从id出发, 遍历所有的subordinates\n2. 用Map&queue保存信息:\nmap: id : data 为了更快找到对应的data\nqueue: 保存将要访问的Employee\n3. 用queue更新信息:\n更新 res += cur.importance\n遍历当前Employee的subordinates, 把subordinates加入queue\n通过map找到对应的data, 并且加入importance"
+    },
+    {
+      "id": 721,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/721.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 733,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/733.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 752,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/752.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从\"0000\"出发, 遍历所有的可能的密码\n2. 用Set&queue保存信息:\nset: deadends 为了更快判断是否是deadends并且避免重复\nqueue: 保存将要访问的密码\n3. 用queue更新信息:\n遍历当前密码的每一位, 生成新的密码\n如果新的密码不是deadends, 并且没有访问过, 就加入queue"
+    },
+    {
+      "id": 787,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/787.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从src到dst, 有多少条路径\n2. 用map&list&queue保存信息:\nmap: 保存每个城市能到达的地方: from: [to, cost]\nlist: 保存到每个城市的cost\nqueue: 当前level能走到的城市\n3. 用queue更新信息:\n1. 从queue中取出当前城市\n2. 从map中取出当前城市能到达的城市\n(如果已经有更小的cost, 则break)\n3. 更新costs\n4. 将当前城市能到达的城市加入queue"
+    },
+    {
+      "id": 815,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/815.java",
+      "subtopic": "FromCenter",
+      "strategyComment": "1. 判定bfs的逻辑:\n从source出发, 遍历所有能去的车站\n2. 用Set&queue保存信息:\nset: 避免重复\nqueue: 保存将要访问的车站\n3. 用queue更新信息:\n遍历从当前车站能去的所有车站, 并且没有访问过, 就加入queue"
+    },
+    {
+      "id": 863,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/863.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 934,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/934.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 958,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/958.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 987,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/987.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 1091,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/1091.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 1162,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/ToCenter/1162.java",
+      "subtopic": "ToCenter"
+    },
+    {
+      "id": 1530,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/Tree/1530.java",
+      "subtopic": "Tree"
+    },
+    {
+      "id": 1584,
+      "topic": "BFS",
+      "solutionType": "BFS",
+      "file": "Algos/BFS/FromCenter/1584.java",
+      "subtopic": "FromCenter"
+    },
+    {
+      "id": 4,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/4MedianOfTwoSortedArrays.java",
+      "nameFragment": "MedianOfTwoSortedArrays",
+      "originalFile": "Algos/Array/4MedianOfTwoSortedArrays.java",
+      "strategyComment": "# Binary Search Solution\n# 他的优点是够快 O(log(min(n, m)))\n# 把两个数组分成两部分, 然后比较两个数组的中间值,\n# 如果两个数组的中间值相等, 那么就是中位数,\n# 如果不相等, 那么就把中间值小的那个数组的左半部分和中间值大的那个数组的右半部分合并, 然后再找中间值, 直到找到中位数"
+    },
+    {
+      "id": 33,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/33.java",
+      "subtopic": "BinarySearchInclusive",
+      "strategyComment": "highlight: 要有structural thinking, 先判断mid, 然后判断mid和左右点的联系"
+    },
+    {
+      "id": 34,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/34.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 35,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/35.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 69,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/69.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 74,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/74.java",
+      "subtopic": "BinarySearchInclusive",
+      "strategyComment": "highlight: 二分查找matrix\n- 可以从每行的最右边查找, 但是不够快\n- 从最中间找! 或者从对角线找, 但是不知道怎么写"
+    },
+    {
+      "id": 81,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/81.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 153,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/153.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 154,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/154.java",
+      "subtopic": "BinarySearchExclusive",
+      "strategyComment": "先抓左边, 再抓右边, 最后看有什么case没有过, 单独给结论"
+    },
+    {
+      "id": 162,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/162.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 270,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/270.java",
+      "originalFile": "Algos/BacktrackingDFS/Tree/270.java"
+    },
+    {
+      "id": 272,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/272.java"
+    },
+    {
+      "id": 275,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/275.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 278,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/278.java",
+      "subtopic": "BinarySearchExclusive",
+      "strategyComment": "The isBadVersion API is defined in the parent class VersionControl.\nboolean isBadVersion(int version);"
+    },
+    {
+      "id": 302,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/302.java"
+    },
+    {
+      "id": 367,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/367.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 410,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/410.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 475,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/475.java",
+      "strategyComment": "highlight: 这是好题"
+    },
+    {
+      "id": 528,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/528.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 540,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/540.java",
+      "subtopic": "BinarySearchExclusive",
+      "strategyComment": "highlight: 要找规律的还是要多刷"
+    },
+    {
+      "id": 658,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/658.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 852,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/852.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 875,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/875.java",
+      "subtopic": "BinarySearchExclusive",
+      "strategyComment": "”纵向“ 选取mid\nleft是最小值, right是最大值, 那就看看mid能不能吃\n如果mid能吃, 试试更小的, 否则试试多吃点"
+    },
+    {
+      "id": 1011,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/1011.java",
+      "subtopic": "BinarySearchExclusive",
+      "strategyComment": "highlight: binary search的helper function需要想好怎么算比较简单"
+    },
+    {
+      "id": 1268,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/1268.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 1300,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/1300.java",
+      "subtopic": "BinarySearchInclusive",
+      "strategyComment": "highlight: 纵向 / 横向 比较，找到最小的差值"
+    },
+    {
+      "id": 1539,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchInclusive/1539.java",
+      "subtopic": "BinarySearchInclusive"
+    },
+    {
+      "id": 1802,
+      "topic": "BinarySearch",
+      "solutionType": "BinarySearch",
+      "file": "Algos/BinarySearch/BinarySearchExclusive/1802.java",
+      "subtopic": "BinarySearchExclusive"
+    },
+    {
+      "id": 1,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/1.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 13,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/13.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 20,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/20IsValid.java",
+      "nameFragment": "IsValid",
+      "originalFile": "Algos/Array/20IsValid.java"
+    },
+    {
+      "id": 32,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/32.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 71,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/71.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 155,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/155.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 208,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Trie/208Trie.java",
+      "subtopic": "Trie",
+      "nameFragment": "Trie"
+    },
+    {
+      "id": 211,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Trie/211WordDictionary.java",
+      "subtopic": "Trie",
+      "nameFragment": "WordDictionary"
+    },
+    {
+      "id": 212,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/212FindWords.java",
+      "nameFragment": "FindWords",
+      "originalFile": "Algos/BacktrackingDFS/Trie/212FindWords.java",
+      "strategyComment": "Trie + DFS"
+    },
+    {
+      "id": 215,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Heap/215.java",
+      "subtopic": "Heap"
+    },
+    {
+      "id": 219,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/219.java",
+      "originalFile": "Algos/SlidingWindow/219.java",
+      "strategyComment": "highlight: 用set存储窗口内的元素，如果set中已经有了，说明有重复元素"
+    },
+    {
+      "id": 222,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Tree/222.java",
+      "subtopic": "Tree",
+      "strategyComment": "highlight: 通过depth确定左右子树哪个是完全二叉树\n完全二叉树: node总数为2^depth\n不完全二叉树: node总数要进一步计算"
+    },
+    {
+      "id": 227,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/227.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 230,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/230.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 253,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/253.java",
+      "originalFile": "Algos/Design/253.java"
+    },
+    {
+      "id": 255,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/255.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 299,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/299.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 347,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/347.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 378,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/378.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 387,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/387.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 454,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/454.java",
+      "subtopic": "Map",
+      "strategyComment": "package TwoPointer;\nhighlight: 开辟新思维，将四个数组分成两组，分别计算两组的和，然后再计算两组的和的和"
+    },
+    {
+      "id": 536,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/536.java",
+      "originalFile": "Algos/BacktrackingDFS/List/536.java"
+    },
+    {
+      "id": 567,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/567.java",
+      "subtopic": "Map",
+      "strategyComment": "highlight: 这个难"
+    },
+    {
+      "id": 633,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/633.java",
+      "subtopic": "Map",
+      "strategyComment": "highlight: 活用map\nclass Solution {\npublic boolean judgeSquareSum(int c) {\nlong min = 0;\nlong max = (long) Math.sqrt(c);\nwhile (min <= max) {\nlong cur = min * min + max * max;\nif (cur == c) {\nreturn true;\n} else if (cur < c) {\nmin++;\n} else {\nmax--;\n}\n}\nreturn false;\n}\n}"
+    },
+    {
+      "id": 692,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/692.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 735,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/735.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 739,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/739.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 763,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/763.java",
+      "subtopic": "Map",
+      "strategyComment": "highlight: 使用map的好机会"
+    },
+    {
+      "id": 791,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/791.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 921,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/921.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 939,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/939.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 973,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/973.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 1001,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/1001.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 1086,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/1086.java",
+      "subtopic": "Map"
+    },
+    {
+      "id": 1209,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/1209RemoveDuplicates.java",
+      "subtopic": "Stack",
+      "nameFragment": "RemoveDuplicates"
+    },
+    {
+      "id": 1235,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Heap/1235.java",
+      "subtopic": "Heap"
+    },
+    {
+      "id": 1249,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/1249.java",
+      "subtopic": "Stack",
+      "strategyComment": "meta"
+    },
+    {
+      "id": 1438,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Map/1438LongestContinuousSubarray.java",
+      "subtopic": "Map",
+      "nameFragment": "LongestContinuousSubarray"
+    },
+    {
+      "id": 1472,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/1472BrowserHistory.java",
+      "subtopic": "Stack",
+      "nameFragment": "BrowserHistory"
+    },
+    {
+      "id": 1762,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/1762.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 1944,
+      "topic": "DataStructure",
+      "solutionType": "DataStructure",
+      "file": "Algos/DataStructure/Stack/1944.java",
+      "subtopic": "Stack"
+    },
+    {
+      "id": 146,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/146.java",
+      "strategyComment": "highlight: 希望我可以从失败中汲取教训，不要再犯同样的错误"
+    },
+    {
+      "id": 155,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/155.java"
+    },
+    {
+      "id": 225,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/225.java"
+    },
+    {
+      "id": 295,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/295.java"
+    },
+    {
+      "id": 303,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/303.java"
+    },
+    {
+      "id": 348,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/348.java",
+      "strategyComment": "Category: Matrix / Design"
+    },
+    {
+      "id": 362,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/362.java",
+      "strategyComment": "Category: Design"
+    },
+    {
+      "id": 380,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/380.java"
+    },
+    {
+      "id": 460,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/460.java",
+      "originalFile": "Algos/LinkedList/460.java"
+    },
+    {
+      "id": 707,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/707.java",
+      "originalFile": "Algos/LinkedList/707.java"
+    },
+    {
+      "id": 731,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/731.java"
+    },
+    {
+      "id": 981,
+      "topic": "Design",
+      "solutionType": "Design",
+      "file": "Algos/Design/981TimeMap.java",
+      "nameFragment": "TimeMap"
+    },
+    {
+      "id": 55,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/55CanJump.java",
+      "nameFragment": "CanJump"
+    },
+    {
+      "id": 55,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/55CanJump2.java",
+      "nameFragment": "CanJump2"
+    },
+    {
+      "id": 62,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/62UniquePaths.java",
+      "nameFragment": "UniquePaths"
+    },
+    {
+      "id": 62,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/62UniquePaths2.java",
+      "nameFragment": "UniquePaths2"
+    },
+    {
+      "id": 64,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/64MinPathSum.java",
+      "nameFragment": "MinPathSum"
+    },
+    {
+      "id": 70,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/70ClimbingStairs.java",
+      "nameFragment": "ClimbingStairs"
+    },
+    {
+      "id": 91,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/91NumDecodings.java",
+      "nameFragment": "NumDecodings"
+    },
+    {
+      "id": 120,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/120Triangle.java",
+      "nameFragment": "Triangle"
+    },
+    {
+      "id": 139,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/139WordBreak.java",
+      "nameFragment": "WordBreak"
+    },
+    {
+      "id": 198,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/198Rob.java",
+      "nameFragment": "Rob"
+    },
+    {
+      "id": 213,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/213Rob2.java",
+      "nameFragment": "Rob2"
+    },
+    {
+      "id": 300,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/300.java",
+      "originalFile": "Algos/BinarySearch/BinarySearchExclusive/300.java"
+    },
+    {
+      "id": 300,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/300lengthOfLIS.java",
+      "nameFragment": "lengthOfLIS"
+    },
+    {
+      "id": 322,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/322.java"
+    },
+    {
+      "id": 377,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/377CombinationSum4.java",
+      "nameFragment": "CombinationSum4",
+      "strategyComment": "TODO: Understand the problem and solve it"
+    },
+    {
+      "id": 435,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/435EraseOverlapIntervals.java",
+      "nameFragment": "EraseOverlapIntervals"
+    },
+    {
+      "id": 621,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/621.java",
+      "originalFile": "Algos/SlidingWindow/621.java"
+    },
+    {
+      "id": 674,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/674findLengthOfLCIS.java",
+      "nameFragment": "findLengthOfLCIS"
+    },
+    {
+      "id": 931,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/931.java"
+    },
+    {
+      "id": 1143,
+      "topic": "DP",
+      "solutionType": "DP",
+      "file": "Algos/DP/1143LongestCommonSubsequence.java",
+      "nameFragment": "LongestCommonSubsequence"
+    },
+    {
+      "id": 19,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/19.java"
+    },
+    {
+      "id": 21,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/21.java"
+    },
+    {
+      "id": 23,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/23.java"
+    },
+    {
+      "id": 24,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/24.java"
+    },
+    {
+      "id": 25,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/25.java"
+    },
+    {
+      "id": 61,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/61.java"
+    },
+    {
+      "id": 82,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/82.java"
+    },
+    {
+      "id": 86,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/86.java"
+    },
+    {
+      "id": 92,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/92.java"
+    },
+    {
+      "id": 138,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/138.java"
+    },
+    {
+      "id": 141,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/141.java"
+    },
+    {
+      "id": 142,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/142.java"
+    },
+    {
+      "id": 143,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/143.java"
+    },
+    {
+      "id": 147,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/147.java",
+      "strategyComment": "需要快慢指针\n需要比较快和慢的值\n然后把快指针插入到已经sort好的排序中\n然后用慢指针来更新快指针(快 = 慢.next)\nhighlight: 全场最重要+1"
+    },
+    {
+      "id": 148,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/148.java"
+    },
+    {
+      "id": 160,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/160.java"
+    },
+    {
+      "id": 206,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/206.java",
+      "strategyComment": "highlight: 全场最重要"
+    },
+    {
+      "id": 234,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/234.java"
+    },
+    {
+      "id": 287,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/287.java",
+      "strategyComment": "highlight: 这啥玩意"
+    },
+    {
+      "id": 328,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/328.java"
+    },
+    {
+      "id": 430,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/430.java"
+    },
+    {
+      "id": 708,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/708.java"
+    },
+    {
+      "id": 876,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/876.java"
+    },
+    {
+      "id": 2807,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/2807.java",
+      "strategyComment": "highlight: findGCD比较难"
+    },
+    {
+      "id": 2816,
+      "topic": "LinkedList",
+      "solutionType": "LinkedList",
+      "file": "Algos/LinkedList/2816.java"
+    },
+    {
+      "id": 54,
+      "topic": "Matrix",
+      "solutionType": "Matrix",
+      "file": "Algos/Matrix/54.java"
+    },
+    {
+      "id": 59,
+      "topic": "Matrix",
+      "solutionType": "Matrix",
+      "file": "Algos/Matrix/59.java"
+    },
+    {
+      "id": 73,
+      "topic": "Matrix",
+      "solutionType": "Matrix",
+      "file": "Algos/Matrix/73.java"
+    },
+    {
+      "id": 240,
+      "topic": "Matrix",
+      "solutionType": "Matrix",
+      "file": "Algos/Matrix/240.java",
+      "strategyComment": "highlight: matrix里面找中间值, 这个case里面是右上角\n如果matrix[i][j] == target, return true\n如果matrix[i][j] < target, i++ 下一行\n如果matrix[i][j] > target, j-- 左一列"
+    },
+    {
+      "id": 325,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/325.java"
+    },
+    {
+      "id": 437,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/437.java"
+    },
+    {
+      "id": 523,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/523.java",
+      "strategyComment": "sub highlight: 这个难, 找前后两个数的关系\n1. 确定可以用一个forloop就可以完成\n2. 用一个map来记录 余数:index\n3. 判定逻辑:\n衔接left edge的window: 如果余数为0，且index大于0，就返回true\n中间: 前后两个数的余数相同，且index的差大于1，就返回true\n如果都没有找到，就返回false"
+    },
+    {
+      "id": 525,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/525.java"
+    },
+    {
+      "id": 560,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/560.java"
+    },
+    {
+      "id": 670,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/670.java"
+    },
+    {
+      "id": 724,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/724.java"
+    },
+    {
+      "id": 974,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/974.java"
+    },
+    {
+      "id": 1094,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/1094.java"
+    },
+    {
+      "id": 1109,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/1109.java"
+    },
+    {
+      "id": 1590,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/1590.java"
+    },
+    {
+      "id": 2021,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/2021.java"
+    },
+    {
+      "id": 2237,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/2237.java"
+    },
+    {
+      "id": 2406,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/2406.java"
+    },
+    {
+      "id": 2909,
+      "topic": "PrefixSum",
+      "solutionType": "PrefixSum",
+      "file": "Algos/PrefixSum/2909.java"
+    },
+    {
+      "id": 3,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/3.java"
+    },
+    {
+      "id": 76,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/76.java"
+    },
+    {
+      "id": 424,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/424.java"
+    },
+    {
+      "id": 438,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/438.java"
+    },
+    {
+      "id": 567,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/567.java"
+    },
+    {
+      "id": 643,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/643.java"
+    },
+    {
+      "id": 713,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/713.java"
+    },
+    {
+      "id": 904,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/904.java"
+    },
+    {
+      "id": 930,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/930.java"
+    },
+    {
+      "id": 1004,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1004.java"
+    },
+    {
+      "id": 1052,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1052.java"
+    },
+    {
+      "id": 1248,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1248.java"
+    },
+    {
+      "id": 1343,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1343.java"
+    },
+    {
+      "id": 1423,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1423.java"
+    },
+    {
+      "id": 1658,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1658.java"
+    },
+    {
+      "id": 1838,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/1838.java"
+    },
+    {
+      "id": 2090,
+      "topic": "SlidingWindow",
+      "solutionType": "SlidingWindow",
+      "file": "Algos/SlidingWindow/2090.java"
+    },
+    {
+      "id": 53,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/53.java",
+      "strategyComment": "sub highlight: 和prefix sum使用\n1. 确定一个forloop就可以完成\n2. 用一个level来记录当前的和，如果level小于0，就把level置为当前的值\n3. res是所有level中最大的值"
+    },
+    {
+      "id": 128,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/128.java",
+      "strategyComment": "sub highlight: 看起来很难, 通过assume当前element是sequence的起点, 然后向左找"
+    },
+    {
+      "id": 152,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/152.java",
+      "strategyComment": "sub highlight: 有点抽象"
+    },
+    {
+      "id": 187,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/187.java"
+    },
+    {
+      "id": 209,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/209.java",
+      "strategyComment": "highlight: Prefix Sum & Sliding Window"
+    },
+    {
+      "id": 395,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/395.java",
+      "strategyComment": "highlight:\n和930比较像, 我们可以自主设定window size, 找出每个size能覆盖最长的substring"
+    },
+    {
+      "id": 424,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/424.java",
+      "strategyComment": "highlight: Sliding Window难难难"
+    },
+    {
+      "id": 581,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/581.java",
+      "strategyComment": "highlight - TODO: 这个很难想到，需要多做几遍\n找到最左边和最右边的不符合升序的元素，然后计算他们之间的长度"
+    },
+    {
+      "id": 978,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/978.java"
+    },
+    {
+      "id": 1031,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/1031.java",
+      "strategyComment": "sub highlight: 这个难点在于，两个区间的长度是不一样的，所以要分两种情况讨论, 并且每个情况还有点复杂\n1. 不能用一个loop, 不确定谁先谁后\n2. 准备: 用一个sum数组来记录前i个数的和\n3. 两种情况:\n1: 先firstLen, 再secondLen\n2: 先secondLen, 再firstLen\n/// 因为用的是Math.max, 不会存在两个值一定相连 / 重叠的情况"
+    },
+    {
+      "id": 3043,
+      "topic": "Sub",
+      "solutionType": "Sub",
+      "file": "Algos/Sub/3043.java",
+      "strategyComment": "highlight: longest common prefix"
+    },
+    {
+      "id": 1,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/1.java",
+      "subtopic": "Opposite",
+      "strategyComment": "highlight: 如果要sort, 记得用一个新的array来存储index"
+    },
+    {
+      "id": 5,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/5.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 11,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/11.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 15,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/15.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 16,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/16.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 18,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/18.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 26,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/26.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 27,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/27.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 28,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/28.java",
+      "originalFile": "Algos/SlidingWindow/28.java"
+    },
+    {
+      "id": 31,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/31.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 42,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/42.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 75,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/75.java",
+      "subtopic": "SameDirection",
+      "strategyComment": "highlight: 正向反向双指针"
+    },
+    {
+      "id": 80,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/80.java",
+      "subtopic": "SameDirection",
+      "strategyComment": "highlight: 这个很难想到，需要多做几遍"
+    },
+    {
+      "id": 88,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/88.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 121,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/121.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 125,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/125.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 167,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/167.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 259,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/259.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 283,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/283.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 344,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/344.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 345,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/345.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 349,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/349.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 350,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/350.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 392,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/392.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 408,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/408.java",
+      "subtopic": "TwoArrays",
+      "strategyComment": "meta"
+    },
+    {
+      "id": 443,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/443.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 455,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/455.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 457,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/457.java",
+      "subtopic": "SameDirection",
+      "strategyComment": "highlight: 快慢指针 - 挺繁琐, 但是思路很清晰, 除了题目不太好理解"
+    },
+    {
+      "id": 524,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/524.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 532,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/532.java",
+      "subtopic": "SameDirection",
+      "strategyComment": "highlight: 可以sort也可以用hashmap解决"
+    },
+    {
+      "id": 541,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/541.java",
+      "subtopic": "Opposite",
+      "strategyComment": "highlight: 用不一样的incrementation分批做two pointer"
+    },
+    {
+      "id": 611,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/611.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 680,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/680.java",
+      "subtopic": "Opposite",
+      "strategyComment": "highlight: 对于删除一个, 或者多个的情况, 要逆向思考"
+    },
+    {
+      "id": 826,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/826.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 881,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/881.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 923,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/Opposite/923.java",
+      "subtopic": "Opposite"
+    },
+    {
+      "id": 986,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/986.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 1570,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/TwoArrays/1570.java",
+      "subtopic": "TwoArrays"
+    },
+    {
+      "id": 2365,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/2365.java",
+      "originalFile": "Algos/SlidingWindow/2365.java"
+    },
+    {
+      "id": 2422,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/2422.java",
+      "originalFile": "Algos/BinarySearch/BinarySearchExclusive/2422.java"
+    },
+    {
+      "id": 3163,
+      "topic": "TwoPointer",
+      "solutionType": "TwoPointer",
+      "file": "Algos/TwoPointer/SameDirection/3163.java",
+      "subtopic": "SameDirection"
+    },
+    {
+      "id": 399,
+      "topic": "UnionFind",
+      "solutionType": "UnionFind",
+      "file": "Algos/UnionFind/399.java"
+    },
+    {
+      "id": 684,
+      "topic": "UnionFind",
+      "solutionType": "UnionFind",
+      "file": "Algos/UnionFind/684.java"
+    },
+    {
+      "id": 1101,
+      "topic": "UnionFind",
+      "solutionType": "UnionFind",
+      "file": "Algos/UnionFind/1101.java"
+    }
+  ]
+}

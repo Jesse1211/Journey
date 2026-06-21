@@ -37,7 +37,7 @@ The part of Kubernetes that decides what should happen — not what runs your co
 	observe actual state (system)
 	↓
 	compute diff
-	↓
+	↓ 
 	perform corrective actions
 	↓
 	repeat forever

@@ -1,0 +1,981 @@
+{
+  "generatedBy": ".design/gen-timeline.mjs",
+  "source": "ALGO_README.md",
+  "note": "Daily LeetCode training log. rawDate kept verbatim (2024 entries are M/D/YYYY, 2025 entries are D/M/YYYY — not normalized to avoid misinterpretation).",
+  "count": 133,
+  "entries": [
+    {
+      "day": "Day1",
+      "dayNum": 1,
+      "rawDate": "4/12/2024",
+      "section": "2024",
+      "note": null
+    },
+    {
+      "day": "Day2",
+      "dayNum": 2,
+      "rawDate": "4/13/2024",
+      "section": "2024",
+      "note": null
+    },
+    {
+      "day": "Day3",
+      "dayNum": 3,
+      "rawDate": "4/15/2024",
+      "section": "2024",
+      "note": null
+    },
+    {
+      "day": "Day4",
+      "dayNum": 4,
+      "rawDate": "4/16/2024",
+      "section": "2024",
+      "note": null
+    },
+    {
+      "day": "Day5",
+      "dayNum": 5,
+      "rawDate": "4/17/2024",
+      "section": "2024",
+      "note": null
+    },
+    {
+      "day": "Day6",
+      "dayNum": 6,
+      "rawDate": "4/27/2024",
+      "section": "2024",
+      "note": "复习 Sort & Backtracking"
+    },
+    {
+      "day": "Day7",
+      "dayNum": 7,
+      "rawDate": "5/22/2024",
+      "section": "2024",
+      "note": "复习 Sort & Backtracking"
+    },
+    {
+      "day": "Day8",
+      "dayNum": 8,
+      "rawDate": "5/23/2024",
+      "section": "2024",
+      "note": "复习 BFS & DFS + 学习 binary search"
+    },
+    {
+      "day": "Day9",
+      "dayNum": 9,
+      "rawDate": "5/24/2024",
+      "section": "2024",
+      "note": "学习 DP 经典部分"
+    },
+    {
+      "day": "Day10",
+      "dayNum": 10,
+      "rawDate": "5/25/2024",
+      "section": "2024",
+      "note": "学习 DP 更多部分"
+    },
+    {
+      "day": "Day11",
+      "dayNum": 11,
+      "rawDate": "5/26/2024",
+      "section": "2024",
+      "note": "学习 DP 真题"
+    },
+    {
+      "day": "Day12",
+      "dayNum": 12,
+      "rawDate": "5/27/2024",
+      "section": "2024",
+      "note": "学习 DP 真题"
+    },
+    {
+      "day": "Day13",
+      "dayNum": 13,
+      "rawDate": null,
+      "section": "2024",
+      "note": "写了 snowflake 和 Awardco 的 OA"
+    },
+    {
+      "day": "Day14",
+      "dayNum": 14,
+      "rawDate": "5/29/2024",
+      "section": "2024",
+      "note": "binary search"
+    },
+    {
+      "day": "Day15",
+      "dayNum": 15,
+      "rawDate": "6/12/2024",
+      "section": "2024",
+      "note": "开始 blind 75"
+    },
+    {
+      "day": "Day16",
+      "dayNum": 16,
+      "rawDate": "6/15/2024",
+      "section": "2024",
+      "note": "complete Graph, Interval, LinkedList"
+    },
+    {
+      "day": "Day17",
+      "dayNum": 17,
+      "rawDate": "6/16/2024",
+      "section": "2024",
+      "note": "complete Matrix, String; todo: Tree, Heap"
+    },
+    {
+      "day": "Day18",
+      "dayNum": 18,
+      "rawDate": "6/17/2024",
+      "section": "2024",
+      "note": "complete Tree, Heap; 完成 blind 75"
+    },
+    {
+      "day": "Day19",
+      "dayNum": 19,
+      "rawDate": "6/18/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete LinkedList"
+    },
+    {
+      "day": "Day20",
+      "dayNum": 20,
+      "rawDate": "6/19/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Queue & Stack & 系统学习 linkedList"
+    },
+    {
+      "day": "Day21",
+      "dayNum": 21,
+      "rawDate": "6/20/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Hash"
+    },
+    {
+      "day": "Day22",
+      "dayNum": 22,
+      "rawDate": "6/21/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Two pointer"
+    },
+    {
+      "day": "Day23",
+      "dayNum": 23,
+      "rawDate": "6/24/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Two pointer"
+    },
+    {
+      "day": "Day24",
+      "dayNum": 24,
+      "rawDate": "6/25/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Two pointer"
+    },
+    {
+      "day": "Day25",
+      "dayNum": 25,
+      "rawDate": "6/26/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Prefix sum, 学习 Uber OA"
+    },
+    {
+      "day": "Day26",
+      "dayNum": 26,
+      "rawDate": "6/28/2024",
+      "section": "2024",
+      "note": "开始第二 section: complete Trie, 学习 Uber OA"
+    },
+    {
+      "day": "Day27",
+      "dayNum": 27,
+      "rawDate": "7/01/2024",
+      "section": "2024",
+      "note": "开始第二 section: 学习 Uber OA"
+    },
+    {
+      "day": "Day28",
+      "dayNum": 28,
+      "rawDate": "7/11/2024",
+      "section": "2024",
+      "note": "开始第二 section: 学习 Citadel OA & 开始复习 BFS"
+    },
+    {
+      "day": "Day29",
+      "dayNum": 29,
+      "rawDate": "7/12/2024",
+      "section": "2024",
+      "note": "第三 section: 学习 BFS"
+    },
+    {
+      "day": "Day30",
+      "dayNum": 30,
+      "rawDate": "7/13/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 BFS"
+    },
+    {
+      "day": "Day31",
+      "dayNum": 31,
+      "rawDate": "7/14/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 DFS"
+    },
+    {
+      "day": "Day32",
+      "dayNum": 32,
+      "rawDate": "7/18/2024",
+      "section": "2024",
+      "note": "第三 section: 开始 TWO POINTER"
+    },
+    {
+      "day": "Day33",
+      "dayNum": 33,
+      "rawDate": "7/19/2024",
+      "section": "2024",
+      "note": "第三 section: 马上完成 TWO POINTER; 开始看看 sliding window"
+    },
+    {
+      "day": "Day34",
+      "dayNum": 34,
+      "rawDate": "7/24/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 TWO POINTER; sliding window 好难撒"
+    },
+    {
+      "day": "Day35",
+      "dayNum": 35,
+      "rawDate": "7/25/2024",
+      "section": "2024",
+      "note": "第三 section: 复习 DFS + 每个题写逻辑"
+    },
+    {
+      "day": "Day36",
+      "dayNum": 36,
+      "rawDate": "7/28/2024",
+      "section": "2024",
+      "note": "第三 section: 复习 DFS + 每个题写逻辑"
+    },
+    {
+      "day": "Day37",
+      "dayNum": 37,
+      "rawDate": "7/30/2024",
+      "section": "2024",
+      "note": "第三 section: 复习 DFS + 每个题写逻辑"
+    },
+    {
+      "day": "Day38",
+      "dayNum": 38,
+      "rawDate": "7/31/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 DFS + 每个题写逻辑"
+    },
+    {
+      "day": "Day39",
+      "dayNum": 39,
+      "rawDate": "8/1/2024",
+      "section": "2024",
+      "note": "第三 section: 复习 prefix sum + 每个题写逻辑"
+    },
+    {
+      "day": "Day40",
+      "dayNum": 40,
+      "rawDate": "8/5/2024",
+      "section": "2024",
+      "note": "第三 section: 完全完成 BFS + DFS"
+    },
+    {
+      "day": "Day40",
+      "dayNum": 40,
+      "rawDate": "8/5/2024",
+      "section": "2024",
+      "note": "第三 section: 正在复习 array 并且把它分类"
+    },
+    {
+      "day": "Day41",
+      "dayNum": 41,
+      "rawDate": "8/6/2024",
+      "section": "2024",
+      "note": "第三 section: 正在复习 array 并且把它分类"
+    },
+    {
+      "day": "Day42",
+      "dayNum": 42,
+      "rawDate": "8/8/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 array 并且把它分类"
+    },
+    {
+      "day": "Day43",
+      "dayNum": 43,
+      "rawDate": "8/11/2024",
+      "section": "2024",
+      "note": "第三 section: 把 two pointer 加到 array category 中, 但是 two pointer 之后做, 先做 data structure"
+    },
+    {
+      "day": "Day44",
+      "dayNum": 44,
+      "rawDate": "8/11/2024",
+      "section": "2024",
+      "note": "第三 section: 写完 two pointer & sliding window 完成 Arrays!!!!!!!!!!!!!!!!"
+    },
+    {
+      "day": "Day45",
+      "dayNum": 45,
+      "rawDate": "8/27/2024",
+      "section": "2024",
+      "note": "第三 section: 好久没写了, 复习一下 backtrack"
+    },
+    {
+      "day": "Day46",
+      "dayNum": 46,
+      "rawDate": "8/28/2024",
+      "section": "2024",
+      "note": "第三 section: 增加一点 backtrack 的题"
+    },
+    {
+      "day": "Day47",
+      "dayNum": 47,
+      "rawDate": "8/29/2024",
+      "section": "2024",
+      "note": "第三 section: 重新复习 Array/BinarySearch"
+    },
+    {
+      "day": "Day48",
+      "dayNum": 48,
+      "rawDate": "8/30/2024",
+      "section": "2024",
+      "note": "第三 section: BinarySearch 查漏补缺"
+    },
+    {
+      "day": "Day49",
+      "dayNum": 49,
+      "rawDate": "8/31/2024",
+      "section": "2024",
+      "note": "第三 section: 重新复习 Prefix Sum + BFS 一个 hard"
+    },
+    {
+      "day": "Day50",
+      "dayNum": 50,
+      "rawDate": "9/1/2024",
+      "section": "2024",
+      "note": "第三 section: 重新复习 ARRAY, subsequent, subarray 要复习"
+    },
+    {
+      "day": "Day51",
+      "dayNum": 51,
+      "rawDate": "9/3/2024",
+      "section": "2024",
+      "note": "第三 section: 要学好**SUB**类型"
+    },
+    {
+      "day": "Day52",
+      "dayNum": 52,
+      "rawDate": "9/6/2024",
+      "section": "2024",
+      "note": "第三 section: 重新复习 Two Pointer, 然后复习 sub 就完成 Array 部分了"
+    },
+    {
+      "day": "Day53",
+      "dayNum": 53,
+      "rawDate": "9/7/2024",
+      "section": "2024",
+      "note": "第三 section: 跟着 zhiyuan 瞎几把刷, 搞得我头疼"
+    },
+    {
+      "day": "Day54",
+      "dayNum": 54,
+      "rawDate": "9/8/2024",
+      "section": "2024",
+      "note": "第三 section: 小练"
+    },
+    {
+      "day": "Day55",
+      "dayNum": 55,
+      "rawDate": "9/9/2024",
+      "section": "2024",
+      "note": "第三 section: 小练"
+    },
+    {
+      "day": "Day56",
+      "dayNum": 56,
+      "rawDate": "9/11/2024",
+      "section": "2024",
+      "note": "第三 section: 清理 Array"
+    },
+    {
+      "day": "Day57",
+      "dayNum": 57,
+      "rawDate": "9/12/2024",
+      "section": "2024",
+      "note": "第三 section: 清理 Array"
+    },
+    {
+      "day": "Day58",
+      "dayNum": 58,
+      "rawDate": "9/13/2024",
+      "section": "2024",
+      "note": "第三 section: 明天就能做完 sub 了 🎉🎉🎉🎉🎉🎉"
+    },
+    {
+      "day": "Day59",
+      "dayNum": 59,
+      "rawDate": "9/17/2024",
+      "section": "2024",
+      "note": "第三 section: 结束 sub, 开始做 data structure 部分, 做完就可以开始第四 section 了"
+    },
+    {
+      "day": "Day60",
+      "dayNum": 60,
+      "rawDate": "9/18/2024",
+      "section": "2024",
+      "note": "第三 section: 进行 data structure 的 linked list 部分"
+    },
+    {
+      "day": "Day61",
+      "dayNum": 61,
+      "rawDate": "9/19/2024",
+      "section": "2024",
+      "note": "第三 section: 完成当日打卡"
+    },
+    {
+      "day": "Day62",
+      "dayNum": 62,
+      "rawDate": "9/20/2024",
+      "section": "2024",
+      "note": "S1 section: 学习前端 (Promise, CSS box, ...)"
+    },
+    {
+      "day": "Day63",
+      "dayNum": 63,
+      "rawDate": "9/25/2024",
+      "section": "2024",
+      "note": "特殊 section: 刷 Databricks"
+    },
+    {
+      "day": "Day64",
+      "dayNum": 64,
+      "rawDate": "9/26/2024",
+      "section": "2024",
+      "note": "第三 section: 进行 data structure 的 linked list 部分"
+    },
+    {
+      "day": "Day65",
+      "dayNum": 65,
+      "rawDate": "9/27/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 LinkedList, 进行 Map"
+    },
+    {
+      "day": "Day66",
+      "dayNum": 66,
+      "rawDate": "9/30/2024",
+      "section": "2024",
+      "note": "第三 section: 没完成 map, 重刷了一下 binary search, 明天刷 prefix sum, 复习完 array 再弄 structure 部分"
+    },
+    {
+      "day": "Day67",
+      "dayNum": 67,
+      "rawDate": "10/02/2024",
+      "section": "2024",
+      "note": "第三 section: 复习了 TwoPointer, 画出了几个比较经典的题. 复习完 array, 再弄 prefix sum, 然后 structure 部分"
+    },
+    {
+      "day": "Day68",
+      "dayNum": 68,
+      "rawDate": "10/03/2024",
+      "section": "2024",
+      "note": "特殊 section: 刷 Meta"
+    },
+    {
+      "day": "Day69",
+      "dayNum": 69,
+      "rawDate": "10/04/2024",
+      "section": "2024",
+      "note": "特殊 section: 刷 Meta"
+    },
+    {
+      "day": "Day70",
+      "dayNum": 70,
+      "rawDate": "10/05/2024",
+      "section": "2024",
+      "note": "特殊 section: 刷 Meta"
+    },
+    {
+      "day": "Day71",
+      "dayNum": 71,
+      "rawDate": "10/06/2024",
+      "section": "2024",
+      "note": "第三 section: 完成 Two Pointer & Sub 相关, 剩下三个题有点难 明天吧, 然后继续 Meta"
+    },
+    {
+      "day": "Day72",
+      "dayNum": 72,
+      "rawDate": "10/08/2024",
+      "section": "2024",
+      "note": "第三 section: 做 Prefix Sum"
+    },
+    {
+      "day": "Day73",
+      "dayNum": 73,
+      "rawDate": "10/09/2024",
+      "section": "2024",
+      "note": "第三 section: 做完 prefix Sum; 刷 Meta 真题"
+    },
+    {
+      "day": "Day74",
+      "dayNum": 74,
+      "rawDate": "10/10/2024",
+      "section": "2024",
+      "note": "meta 考完了"
+    },
+    {
+      "day": "Day75",
+      "dayNum": 75,
+      "rawDate": "10/13/2024",
+      "section": "2024",
+      "note": "第三 section: 刷 design 部分"
+    },
+    {
+      "day": "Day76",
+      "dayNum": 76,
+      "rawDate": "10/18/2024",
+      "section": "2024",
+      "note": "第四 section: 完成 BFS"
+    },
+    {
+      "day": "Day76.2",
+      "dayNum": 76.2,
+      "rawDate": "10/18/2024",
+      "section": "2024",
+      "note": "第四 section: 完成一半 DFS"
+    },
+    {
+      "day": "Day76.3",
+      "dayNum": 76.3,
+      "rawDate": "10/18/2024",
+      "section": "2024",
+      "note": "第四 section: 完成 DFS"
+    },
+    {
+      "day": "Day77",
+      "dayNum": 77,
+      "rawDate": "10/19/2024",
+      "section": "2024",
+      "note": "第四 section: 完成 Two Pointer"
+    },
+    {
+      "day": "Day78",
+      "dayNum": 78,
+      "rawDate": "10/24/2024",
+      "section": "2024",
+      "note": "第四 section: 完成复习 BFS 希望之后不会被 BFS 卡住"
+    },
+    {
+      "day": "Day79",
+      "dayNum": 79,
+      "rawDate": "10/25/2024",
+      "section": "2024",
+      "note": "第四 section: 复习 Two Pointer"
+    },
+    {
+      "day": "Day80",
+      "dayNum": 80,
+      "rawDate": "10/27/2024",
+      "section": "2024",
+      "note": "第四 section: 完成 DFS, Binary Search. Two pointer 还有题没有整理完 下次要开始写 Prefix Sum, LinkedList"
+    },
+    {
+      "day": "Day81",
+      "dayNum": 81,
+      "rawDate": "10/28/2024",
+      "section": "2024",
+      "note": "第四 section: 热身 BFS, DFS 各一道, 开始 Prefix Sum. Two pointer 还有题没有整理完 下次要开始写 Prefix Sum, LinkedList"
+    },
+    {
+      "day": "Day82",
+      "dayNum": 82,
+      "rawDate": "10/29/2024",
+      "section": "2024",
+      "note": "第四 section: 热身 BFS, DFS 各一道, 完成 Prefix Sum. 还没整理完 Two pointer. 之后 LinkedList"
+    },
+    {
+      "day": "Day83",
+      "dayNum": 83,
+      "rawDate": "10/30/2024",
+      "section": "2024",
+      "note": "第四 section: 热身. 还没写完 Two pointer, 最后这三组有点难熬"
+    },
+    {
+      "day": "Day84",
+      "dayNum": 84,
+      "rawDate": "11/01/2024",
+      "section": "2024",
+      "note": "第四 section: 热身. 写完 Two pointer & prefix sum. 还剩下 linkedlist 和 datastructure, 我决定回头复习了"
+    },
+    {
+      "day": "Day85",
+      "dayNum": 85,
+      "rawDate": "11/02/2024",
+      "section": "2024",
+      "note": "第五 section: 复习完成 DFS 基础部分"
+    },
+    {
+      "day": "Day86",
+      "dayNum": 86,
+      "rawDate": "11/03/2024",
+      "section": "2024",
+      "note": "第五 section: 复习完成 DFS ALL, 复习 BFS"
+    },
+    {
+      "day": "Day87",
+      "dayNum": 87,
+      "rawDate": "11/04/2024",
+      "section": "2024",
+      "note": "第五 section: 复习完成 BFS ALL, 刷点题"
+    },
+    {
+      "day": "Day88",
+      "dayNum": 88,
+      "rawDate": "11/05/2024",
+      "section": "2024",
+      "note": "第四 section: 开始 Linked list, 差一点儿了. 刷完这个我就去 datastructure."
+    },
+    {
+      "day": "Day89",
+      "dayNum": 89,
+      "rawDate": "11/06/2024",
+      "section": "2024",
+      "note": "复习 BFS, DFS highlight 题. 心力憔悴 今天不想写了, 就这样吧. 之后再复习一下今天标注好的 BFS & DFS, 大概 20 题吧"
+    },
+    {
+      "day": "Day90",
+      "dayNum": 90,
+      "rawDate": "11/07/2024",
+      "section": "2024",
+      "note": "复习 Binary Search, 重新整理逻辑. binary search 的题刷的有点少"
+    },
+    {
+      "day": "Day91",
+      "dayNum": 91,
+      "rawDate": "11/08/2024",
+      "section": "2024",
+      "note": "刷了一下 Stack & Tree. 我觉得基础应该差不多了吧! 明天复习 Two Pointer & LinkedList. 后天 Binary Search 吧. 不知道为什么有点想哭, 现在都还没找到工作. 希望有好运"
+    },
+    {
+      "day": "Day92",
+      "dayNum": 92,
+      "rawDate": "11/09/2024",
+      "section": "2024",
+      "note": "第五 section: 完成 Two Pointer & Sliding Window, 之后只需要刷高阶题 ✅"
+    },
+    {
+      "day": "Day93",
+      "dayNum": 93,
+      "rawDate": "11/10/2024",
+      "section": "2024",
+      "note": "第五 section: 完成 Prefix Sum, 之后只需要刷高阶题 ✅"
+    },
+    {
+      "day": "Day93.5",
+      "dayNum": 93.5,
+      "rawDate": "11/10/2024",
+      "section": "2024",
+      "note": "复习了很多 meta"
+    },
+    {
+      "day": "Day94",
+      "dayNum": 94,
+      "rawDate": "11/11/2024",
+      "section": "2024",
+      "note": "心态崩了 学你麻痹的不学了"
+    },
+    {
+      "day": "Day95",
+      "dayNum": 95,
+      "rawDate": "11/13/2024",
+      "section": "2024",
+      "note": "热身随便刷题"
+    },
+    {
+      "day": "Day96",
+      "dayNum": 96,
+      "rawDate": "11/21/2024",
+      "section": "2024",
+      "note": "随便刷刷题吧, 已经没动力了, 小目标先刷够 100 天"
+    },
+    {
+      "day": "Day97",
+      "dayNum": 97,
+      "rawDate": "11/22/2024",
+      "section": "2024",
+      "note": "周五了, 加油吧, 慢慢刷题了现在."
+    },
+    {
+      "day": "Day98",
+      "dayNum": 98,
+      "rawDate": "11/23/2024",
+      "section": "2024",
+      "note": "学习 union find"
+    },
+    {
+      "day": "Day99",
+      "dayNum": 99,
+      "rawDate": "11/24/2024",
+      "section": "2024",
+      "note": "一道 recursion, 还挺奇怪的"
+    },
+    {
+      "day": "Day100",
+      "dayNum": 100,
+      "rawDate": "11/25/2024",
+      "section": "2024",
+      "note": "对于比较难的 BFS, 用 union find 确实会简单一点, 个人还是喜欢 BFS 比较好 debug 吧"
+    },
+    {
+      "day": "Day101",
+      "dayNum": 101,
+      "rawDate": "12/01/2024",
+      "section": "2024",
+      "note": "十二月好运 🍀, 学到 82 法则, 四两拨千斤 有意思"
+    },
+    {
+      "day": "Day102",
+      "dayNum": 102,
+      "rawDate": "01/11/2025",
+      "section": "2025",
+      "note": "祝福 2025 年事事顺心, consistency"
+    },
+    {
+      "day": "Day103",
+      "dayNum": 103,
+      "rawDate": "01/24/2025",
+      "section": "2025",
+      "note": "刷题咱也没怂过, 不服就干"
+    },
+    {
+      "day": "Day104",
+      "dayNum": 104,
+      "rawDate": "01/27/2025",
+      "section": "2025",
+      "note": "刷 Binary search + prefix sum"
+    },
+    {
+      "day": "Day105",
+      "dayNum": 105,
+      "rawDate": "02/04/2025",
+      "section": "2025",
+      "note": "刷 BFS, Binary search + prefix sum"
+    },
+    {
+      "day": "Day106",
+      "dayNum": 106,
+      "rawDate": "02/06/2025",
+      "section": "2025",
+      "note": "刷 Binary search"
+    },
+    {
+      "day": "Day107",
+      "dayNum": 107,
+      "rawDate": "02/07/2025",
+      "section": "2025",
+      "note": "刷 Binary search"
+    },
+    {
+      "day": "Day108",
+      "dayNum": 108,
+      "rawDate": "02/09/2025",
+      "section": "2025",
+      "note": "刷 Two Pointer"
+    },
+    {
+      "day": "Day109",
+      "dayNum": 109,
+      "rawDate": "02/11/2025",
+      "section": "2025",
+      "note": "刷 Goldman Sachs"
+    },
+    {
+      "day": "Day110",
+      "dayNum": 110,
+      "rawDate": "02/12/2025",
+      "section": "2025",
+      "note": "刷 Goldman Sachs"
+    },
+    {
+      "day": "Day111",
+      "dayNum": 111,
+      "rawDate": "02/15/2025",
+      "section": "2025",
+      "note": "随意刷"
+    },
+    {
+      "day": "Day112",
+      "dayNum": 112,
+      "rawDate": "02/23/2025",
+      "section": "2025",
+      "note": "休息了几天, 现在恢复!!"
+    },
+    {
+      "day": "Day113",
+      "dayNum": 113,
+      "rawDate": "17/05/2025",
+      "section": "2025",
+      "note": "重新开始! 这个月把大部分都刷了吧"
+    },
+    {
+      "day": "Day114",
+      "dayNum": 114,
+      "rawDate": "18/05/2025",
+      "section": "2025",
+      "note": "BFS 结束, 明天 DFS"
+    },
+    {
+      "day": "Day115",
+      "dayNum": 115,
+      "rawDate": "19/05/2025",
+      "section": "2025",
+      "note": "写了一部分 DFS, 现在写起来多多少少还有点吃力. 再继续努力!"
+    },
+    {
+      "day": "Day116",
+      "dayNum": 116,
+      "rawDate": "20/05/2025",
+      "section": "2025",
+      "note": "完成 DFS, 有点难 卡住了"
+    },
+    {
+      "day": "Day117",
+      "dayNum": 117,
+      "rawDate": "21/05/2025",
+      "section": "2025",
+      "note": "完成 DFS, (其实没完成, 偷懒一下 preorder inorder postorder 部分)"
+    },
+    {
+      "day": "Day117",
+      "dayNum": 117,
+      "rawDate": "21/05/2025",
+      "section": "2025",
+      "note": "入门复习了一下 binary search, **保留 DFS 剩下部分之后做**"
+    },
+    {
+      "day": "Day118",
+      "dayNum": 118,
+      "rawDate": "22/05/2025",
+      "section": "2025",
+      "note": "回头看看 & 完成 preorder"
+    },
+    {
+      "day": "Day119",
+      "dayNum": 119,
+      "rawDate": "23/05/2025",
+      "section": "2025",
+      "note": "完成 binary search"
+    },
+    {
+      "day": "Day120",
+      "dayNum": 120,
+      "rawDate": "24/05/2025",
+      "section": "2025",
+      "note": "prefix sum"
+    },
+    {
+      "day": "Day121",
+      "dayNum": 121,
+      "rawDate": "25/05/2025",
+      "section": "2025",
+      "note": "prefix sum & two pointers"
+    },
+    {
+      "day": "Day122",
+      "dayNum": 122,
+      "rawDate": "26/05/2025",
+      "section": "2025",
+      "note": "two pointers, 剩下 sliding window 和部分 two pointer"
+    },
+    {
+      "day": "Day123",
+      "dayNum": 123,
+      "rawDate": "15/06/2025",
+      "section": "2025",
+      "note": "BFS, Perfix"
+    },
+    {
+      "day": "Day124",
+      "dayNum": 124,
+      "rawDate": "16/06/2025",
+      "section": "2025",
+      "note": "Perfix, DFS"
+    },
+    {
+      "day": "Day125",
+      "dayNum": 125,
+      "rawDate": "23/07/2025",
+      "section": "2025",
+      "note": "LinkedList"
+    },
+    {
+      "day": "Day126",
+      "dayNum": 126,
+      "rawDate": "25/07/2025",
+      "section": "2025",
+      "note": "Binary Search & Sliding window"
+    },
+    {
+      "day": "Day127",
+      "dayNum": 127,
+      "rawDate": "29/07/2025",
+      "section": "2025",
+      "note": "面试考了DP & linkedlist"
+    },
+    {
+      "day": "Day128",
+      "dayNum": 128,
+      "rawDate": "01/08/2025",
+      "section": "2025",
+      "note": "复习完成 Two Pointer & Sliding Window"
+    }
+  ],
+  "milestones": [
+    {
+      "afterDay": "Day62",
+      "text": "第三 Section 临时中断 --- 现在要刷公司真题",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day67",
+      "text": "第三 Section 临时中断 --- 现在要刷公司真题",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day73",
+      "text": "第三 Section 马上写完了, 还剩下 Data Structure 部分. 之后要复习**记得复习 Two Pointer & Sliding Window & Prefix Sum**",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day75",
+      "text": "提前开始第四 section, 复习 & 加强 BFS, DFS, Two Pointer, Binary Search, Sliding Window, Prefix Sum",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day92",
+      "text": "恭喜 Two Pointer & Sliding Window 能力更上一层楼, 下次刷高阶就完事儿了 ✅✅",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day93",
+      "text": "恭喜 Prefix Sum 能力更上一层楼, 下次刷高阶就完事儿了 ✅✅",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day94",
+      "text": "下次看看这些吧 DFS: 129, 269, 270, 536, 529, 827, 863, 1778, 1233, 814, 721, 490, 114",
+      "section": "2024"
+    },
+    {
+      "afterDay": "Day100",
+      "text": "恭喜自己达到一百天, 路还长 吃点苦不是坏事儿~",
+      "section": "2024"
+    }
+  ]
+}

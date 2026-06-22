@@ -1,0 +1,330 @@
+{
+  "en-US": [
+    {
+      "_id": "1",
+      "StartDate": "Sep 2025",
+      "EndDate": "Jun 2026",
+      "Title": "Platform Software Engineer",
+      "Company": "ProtonBase",
+      "Location": "Hangzhou, China",
+      "Description": "Cloud-native data warehouse platform — Kubernetes-based multi-tenant infrastructure with disaggregated storage and compute.",
+      "Brief": [
+        [
+          "Built multi-tenant, cloud-native data warehouse platform on Kubernetes with a disaggregated storage-compute architecture",
+          [
+            "Custom Kubernetes operators managing a four-layer resource model.",
+            "Datacloud — tenant isolation boundary.",
+            "Catalog — shared storage layer.",
+            "Warebase — compute cluster.",
+            "SuperNode — individual node."
+          ]
+        ],
+        [
+          "Optimized Point-In-Time Recovery from scheduled batch processing to continuous monitoring with a flow-controlled concurrent pipeline",
+          [
+            "Reduced backup time by 70%.",
+            "Reduced WAL backlog by 500%."
+          ]
+        ]
+      ],
+      "Image": "./protonbase.png",
+      "Link": "https://protonbase.com"
+    },
+    {
+      "_id": "2",
+      "StartDate": "Jan 2024",
+      "EndDate": "Jul 2025",
+      "Title": "Full-Stack Developer, Team Lead",
+      "Company": "Cornell University DIAPER Lab",
+      "Location": "Ithaca, NY",
+      "Description": "Daily Infroamtion About Poop Enhances Research, exploring infant gastrointestinal health from the physical, biochemical, and microbial properties of stool.",
+      "Brief": [
+        [
+          "Now available on Web, Google Play, Apple TestFlight platforms and launched in NYC hospitals.",
+          [
+            "Web App For Participants: Gather stool image and infant's daily meta data through survey.",
+            "Mobile App For Researchers: Present infants' metadata from surveys and virtualization for microbiomes and micronutrients."
+          ]
+        ],
+        [
+          "Collaborated across multi-disciplinary teams of 15+ SWEs to deliver 30+ major features in 20 sprints.",
+          [
+            "Weekly-sprint meeting to discuss and assign tasks, code review, and pair programming.",
+            "Implemented Agile methodology to improve team collaboration and productivity.",
+            "Created 3 Confluence documentation sets to clarify design architecture, reduced 5 hours for each new hire onboarding."
+          ]
+        ],
+        [
+          "Front-End",
+          [
+            "Developed mobile app with 60+ widgets by Flutter to collect infant's daily surveys and stool images.",
+            "Engineered web app with 5 visual types by React, TypeScript to present infants' microbiomes and participants' surveys.",
+            "Transitioned from Multi-Page Application (MPA) to Single-Page Application (SPA) as a Progressive Web App (PWA) with Vite."
+          ]
+        ],
+        [
+          "Back-End",
+          [
+            "Architected and developed new back-end structure with 45 APIs by integrating 6 NuGet packages with unique specs",
+            "Introduced generic functions, refined 40+ API services structure, added JWT token to increase security compliance by 100% in front-end React and back-end Flask.",
+            "Overhauled over 10,000+ lines of code, updated Flask from v1.0.2 to v3.0.3, Flutter from v2.3.0 to v3.24.1 etc."
+          ]
+        ],
+        [
+          "DevOps",
+          [
+            "Built CI/CD pipeline to automate apps launching with Docker, K8s and Jenkins to increase deployment frequency.",
+            "Leveraged lightweight kubernetes K3S in AWS EC2 instance to deploy Docker images, and configured ArgoCD to monitor and apply updates to Kubernetes deployments by pulling Docker images from Nexus."
+          ]
+        ]
+      ],
+      "Image": "./Cornell_University_Logo.png",
+      "Link": "https://dashboard.diaper-project.com"
+    },
+    {
+      "_id": "3",
+      "StartDate": "Oct 2022",
+      "EndDate": "Dec 2023",
+      "Title": "Co-founder & Full-Stack Developer",
+      "Company": "EduRoute Inc.",
+      "Location": "Davis, CA",
+      "Description": "An EdTech startup making education easy",
+      "Brief": [
+        [
+          "EduRoute",
+          [
+            "EduRoute aim to generate optimized class schedules and degree plans based on each student's unique needs and goals.",
+            "Designed & developed Progressive Web App (PWA) using React in TypeScript.",
+            "Contributed code to the Typesense Search Nuget Package v0.25.0 on GitHub.",
+            "Implemented the Typescript Search to achieve typo-tolerance, semantic and hybrid search cross 3 data collections."
+          ]
+        ],
+        [
+          "SchedGo",
+          [
+            "✨SchedGo is an AI-powered web & mobile academic planner that generates optimized class schedules & degree plans based on each student's unique needs and goals.",
+            "🚀The class scheduler has been used and loved by 2,000+ students across 4 colleges in California.",
+            "Now available on Web, Google Play, Apple TestFlight platforms.",
+            "Led and developed web app in C# Dotnet and TypeScript React for college degree plan generator product with a team of 5 designers and developers",
+            "Developed containerized microservices using modern .NET in C#",
+            "Implemented the Typescript Search to achieve typo-tolerance, semantic and hybrid search across 3 data collections",
+            "Designed and implemented referral system, google map navigation system to end-to-end"
+          ]
+        ],
+        [
+          "Accomplishments",
+          [
+            "Generated 2,000+ Monthly Active Users (MAUs) and saved 10,000+ hours for students every term",
+            "Won 1st Prize & People's Choice Award totaling $30,000 at 23rd UC Davis Big Bang Business Competition"
+          ]
+        ]
+      ],
+      "Image": "./Schedgo.png",
+      "Link": "https://eduroute.ai/"
+    },
+    {
+      "_id": "4",
+      "StartDate": "May 2023",
+      "EndDate": "Jun 2023",
+      "Title": "Team Leader: 2D RPG Game Development",
+      "Company": "Gaming Design Course in UC Davis",
+      "Description": "",
+      "Location": "Davis, CA",
+      "Brief": [
+        [
+          "Led a team in the development of an engaging RPG game with top-down and side-on scenes and 6 features in C# Unity",
+          []
+        ],
+        [
+          "Documented the substance synthesis feature and enemies' intelligence behavior during battle implementation",
+          []
+        ]
+      ]
+    },
+    {
+      "_id": "5",
+      "StartDate": "Aug.2023",
+      "EndDate": "Dec.2023",
+      "Title": "Shopping website front-end",
+      "Company": "Personal Project",
+      "Description": "",
+      "Location": "Davis, CA",
+      "Brief": [
+        [
+          "Implemented dynamic route matching, programmatic navigation, redirect to connect all static pages, Element-Ui, loadash, vee-validate, Vuex to manage 18 webpages with API calls in Vue2 and JavaScript",
+          []
+        ],
+        [
+          "Recreated Axios interceptors for user identification, added UUID token from server in request header",
+          []
+        ]
+      ]
+    }
+  ],
+  "zh-CN": [
+    {
+      "_id": "1",
+      "StartDate": "2025年9月",
+      "EndDate": "2026年6月",
+      "Title": "平台软件工程师",
+      "Company": "ProtonBase",
+      "Location": "中国杭州",
+      "Description": "云原生数据仓库平台 —— 基于 Kubernetes 的多租户基础设施, 存储与计算解耦架构。",
+      "Brief": [
+        [
+          "基于 Kubernetes 与 存储-计算解耦架构, 构建多租户、云原生的数据仓库平台",
+          [
+            "通过自研 Kubernetes Operator 管理四层资源模型。",
+            "Datacloud —— 租户隔离边界。",
+            "Catalog —— 共享存储层。",
+            "Warebase —— 计算集群。",
+            "SuperNode —— 单节点。"
+          ]
+        ],
+        [
+          "将 PITR 时间点恢复从定时批处理迁移到带流控的并发管道连续监控",
+          [
+            "备份耗时降低 70%。",
+            "WAL 积压减少 500%。"
+          ]
+        ]
+      ],
+      "Image": "./protonbase.png",
+      "Link": "https://protonbase.com"
+    },
+    {
+      "_id": "2",
+      "StartDate": "2024年1月",
+      "EndDate": "2025年7月",
+      "Title": "全栈开发工程师, 团队负责人",
+      "Company": "康奈尔大学 DIAPER 实验室",
+      "Location": "纽约州伊萨卡",
+      "Description": "日常粪便信息增强研究, 从粪便的物理、生化和微生物特性探究婴儿的肠胃健康。",
+      "Brief": [
+        [
+          "现已上线网页端、Google Play、Apple TestFlight 平台, 并在纽约市医院投入使用。",
+          [
+            "网页应用(参与者端)：通过问卷收集粪便图像与婴儿的日常元数据。",
+            "移动应用(研究员端)：展示问卷采集的婴儿数据, 并可视化微生物组和微量营养素。"
+          ]
+        ],
+        [
+          "跨学科团队协作(15+位软件工程师), 在20次冲刺中交付30+主要功能。",
+          [
+            "每周开展冲刺会议, 进行任务分配、代码审查与结对编程。",
+            "实施敏捷开发方法, 提高团队协作与生产效率。",
+            "撰写3份 Confluence 文档, 明确架构设计, 使新成员每人节省5小时上手时间。"
+          ]
+        ],
+        [
+          "前端开发",
+          [
+            "使用 Flutter 构建含60+组件的移动应用, 用于收集婴儿日常问卷与粪便图像。",
+            "采用 React 和 TypeScript 构建网页应用, 展示婴儿微生物与问卷数据, 共含5种可视化形式。",
+            "将网站从多页面应用(MPA)转为单页面应用(SPA), 并通过 Vite 构建为渐进式网页应用(PWA)。"
+          ]
+        ],
+        [
+          "后端开发",
+          [
+            "设计并开发新后端结构, 整合6个具有特定功能的 NuGet 套件, 构建45个 API。",
+            "引入泛型函数, 优化40+ API 服务结构, 前后端引入 JWT token 提高安全性 100%。",
+            "重构超过10,000行代码, 将 Flask 从 v1.0.2 升级到 v3.0.3, Flutter 从 v2.3.0 升级到 v3.24.1 等。"
+          ]
+        ],
+        [
+          "DevOps 运维",
+          [
+            "使用 Docker、K8s、Jenkins 构建 CI/CD 流程, 自动化发布, 提升部署频率。",
+            "使用轻量级 Kubernetes K3S 部署在 AWS EC2 实例上, 配置 ArgoCD 实现镜像更新自动化部署(通过 Nexus 拉取 Docker 镜像)。"
+          ]
+        ]
+      ],
+      "Image": "./Cornell_University_Logo.png",
+      "Link": "https://dashboard.diaper-project.com"
+    },
+    {
+      "_id": "3",
+      "StartDate": "2022年10月",
+      "EndDate": "2023年12月",
+      "Title": "联合创始人 & 全栈开发工程师",
+      "Company": "EduRoute Inc.",
+      "Location": "加州戴维斯",
+      "Description": "一个让教育更轻松的 EdTech 初创公司",
+      "Brief": [
+        [
+          "EduRoute",
+          [
+            "EduRoute 旨在根据每位学生的目标和需求, 生成最优的课程安排与学位规划。",
+            "使用 TypeScript 和 React 开发渐进式网页应用(PWA)。",
+            "为 Typesense Search Nuget Package v0.25.0 贡献代码。",
+            "实现具有容错性、语义与混合搜索的 TypeScript 搜索功能, 跨越3个数据集合。"
+          ]
+        ],
+        [
+          "SchedGo",
+          [
+            "✨SchedGo 是一款基于 AI 的网页与移动端学术规划工具, 可根据学生目标生成最优课表与学位计划。",
+            "🚀课表生成器已在加州4所大学中被2000+名学生使用与喜爱。",
+            "现已上线网页、Google Play、Apple TestFlight 平台。",
+            "与5位设计师与开发者一同使用 C# Dotnet 和 TypeScript React 开发网页端课程计划生成器。",
+            "使用现代 .NET 开发容器化微服务。",
+            "实现 TypeScript 搜索功能, 实现容错性、语义与混合搜索。",
+            "端到端开发推荐系统、谷歌地图导航系统。"
+          ]
+        ],
+        [
+          "成果与奖项",
+          [
+            "每学期为学生节省 10,000+ 小时, 总月活跃用户超 2000",
+            "在第23届 UC Davis Big Bang 商业竞赛中荣获一等奖与人气奖, 总奖金 $30,000"
+          ]
+        ]
+      ],
+      "Image": "./Schedgo.png",
+      "Link": "https://eduroute.ai/"
+    },
+    {
+      "_id": "4",
+      "StartDate": "2023年5月",
+      "EndDate": "2023年6月",
+      "Title": "团队负责人: 2D RPG 游戏开发",
+      "Company": "UC Davis 游戏设计课程",
+      "Description": "",
+      "Location": "加州戴维斯",
+      "Image": "",
+      "Link": "",
+      "Brief": [
+        [
+          "带领团队使用 C# 与 Unity 开发 RPG 游戏, 包含俯视视角与横版战斗场景, 包含6项功能",
+          []
+        ],
+        [
+          "撰写合成系统和敌人战斗 AI 行为的功能文档",
+          []
+        ]
+      ]
+    },
+    {
+      "_id": "5",
+      "StartDate": "2023年8月",
+      "EndDate": "2023年12月",
+      "Title": "购物网站前端开发",
+      "Company": "个人项目",
+      "Description": "",
+      "Location": "加州戴维斯",
+      "Image": "",
+      "Link": "",
+      "Brief": [
+        [
+          "在 Vue2 与 JavaScript 中使用 Element-UI、lodash、vee-validate、Vuex, 实现18个网页页面的 API 动态路由、编程式导航、重定向等功能",
+          []
+        ],
+        [
+          "重写 Axios 拦截器用于用户识别, 向请求头中添加服务器返回的 UUID token",
+          []
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "en-US": {
+    "adderess": "New York, USA",
+    "chips": [
+      "Seeking SWE Positions",
+      "CS MEng @ Cornell University"
+    ],
+    "generalInformation": "General information",
+    "line1": "Hello, welcome to my nest",
+    "parapraph": "Feel free to browse around and I will share some learning experience and interview experience as a new coder in the future"
+  },
+  "zh-CN": {
+    "adderess": "纽约, 美国",
+    "chips": [
+      "寻求软件工程师职位",
+      "康奈尔大学计算机科学工程硕士"
+    ],
+    "generalInformation": "General information",
+    "line1": "你好，欢迎来到我的小窝",
+    "parapraph": "我是一个还在努力找工作的软件工程师, 之后我会在这里更新成为自己的博客, 为了学习更多好玩的前端知识, 这里全部都自己写的, 请多多关照"
+  }
+}

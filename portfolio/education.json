@@ -1,0 +1,138 @@
+{
+  "en-US": [
+    {
+      "_id": "1",
+      "StartDate": "Jan 2024",
+      "EndDate": "Dec 2024",
+      "School": "Cornell University",
+      "Major": "Master of Engineering, Computer Science",
+      "Expertise": [
+        "Programming Languages",
+        "Database",
+        "Computer Networks",
+        "Computer Graphics",
+        "Entrepreneurship Management"
+      ],
+      "Grade": "3.71/4.00",
+      "Location": "Ithaca, NY",
+      "Image": "./Cornell_University_Logo.png",
+      "Moto": "Breaking the rules of conventional wisdom.",
+      "Description": "Where I honed my software engineering skills and discovered my passion — challenging conventional wisdom."
+    },
+    {
+      "_id": "2",
+      "StartDate": "Sep 2021",
+      "EndDate": "Jun 2023",
+      "School": "University of California, Davis",
+      "Major": "Bachelor of Science, Computer Science",
+      "Expertise": [
+        "Data Structures",
+        "Algorithms",
+        "Gaming Design",
+        "Artificial Intelligence",
+        "Machine Learning"
+      ],
+      "Location": "Davis, CA",
+      "Grade": "3.88/4.00",
+      "Image": "./UCDavis_logo.png",
+      "Moto": "Greater Together for the Greater Good.",
+      "Description": "Driven by curiosity, I discovered a new field and developed a solid foundation in computer science."
+    },
+    {
+      "_id": "3",
+      "StartDate": "Jun 2019",
+      "EndDate": "Jun 2021",
+      "School": "City College of San Francisco",
+      "Major": "Associate, Computer Science",
+      "Expertise": [
+        "Teaching Assistant"
+      ],
+      "Location": "San Francisco, CA",
+      "Grade": "3.97/4.00",
+      "Image": "./CCSF_Logo.png",
+      "Moto": "The Truth Shall Make You Free.",
+      "Description": "I found motivation through studying — it's never boring with clear goals."
+    },
+    {
+      "_id": "4",
+      "StartDate": "Jan 2018",
+      "EndDate": "Jan 2019",
+      "School": "Berkeley City College",
+      "Major": "Mathematics",
+      "Expertise": [],
+      "Location": "Associate, Berkeley, CA",
+      "Grade": "3.50/4.00",
+      "Image": "./Berkeley_city_College_logo.png",
+      "Moto": "Transforms lives.",
+      "Description": "The moment my life started to change."
+    }
+  ],
+  "zh-CN": [
+    {
+      "_id": "1",
+      "StartDate": "2024年1月",
+      "EndDate": "2024年12月",
+      "School": "康奈尔大学",
+      "Major": "工程硕士,计算机科学",
+      "Expertise": [
+        "编程语言",
+        "数据库",
+        "计算机网络",
+        "计算机图形学",
+        "创业管理"
+      ],
+      "Grade": "3.71/4.00",
+      "Location": "纽约州伊萨卡",
+      "Image": "./Cornell_University_Logo.png",
+      "Moto": "Breaking the rules of conventional wisdom.",
+      "Description": "Where I honed my software engineering skills and discovered my passion — challenging conventional wisdom."
+    },
+    {
+      "_id": "2",
+      "StartDate": "2021年9月",
+      "EndDate": "2023年6月",
+      "School": "加州大学戴维斯分校",
+      "Major": "理学学士,计算机科学",
+      "Expertise": [
+        "数据结构",
+        "算法",
+        "游戏设计",
+        "人工智能",
+        "机器学习"
+      ],
+      "Location": "加州戴维斯",
+      "Grade": "3.88/4.00",
+      "Image": "./UCDavis_logo.png",
+      "Moto": "Greater Together for the Greater Good.",
+      "Description": "Driven by curiosity, I discovered a new field and developed a solid foundation in computer science."
+    },
+    {
+      "_id": "3",
+      "StartDate": "2019年6月",
+      "EndDate": "2021年6月",
+      "School": "旧金山市立学院",
+      "Major": "副学士,计算机科学",
+      "Expertise": [
+        "助教"
+      ],
+      "Location": "加州旧金山",
+      "Grade": "3.97/4.00",
+      "Image": "./CCSF_Logo.png",
+      "Moto": "The Truth Shall Make You Free",
+      "Description": "I found motivation through studying — it's never boring with clear goals."
+    },
+    {
+      "_id": "4",
+      "StartDate": "2018年1月",
+      "EndDate": "2019年1月",
+      "School": "伯克利市立学院",
+      "Major": "数学",
+      "Expertise": [],
+      "Location": "副学士,加州伯克利",
+      "Grade": "3.50/4.00",
+      "Image": "./Berkeley_city_College_logo.png",
+      "Moto": "Transforms lives.",
+      "Description": "The moment my life started to change."
+    }
+  ]
+}

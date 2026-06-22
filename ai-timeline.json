@@ -1,0 +1,181 @@
+{
+  "generatedBy": ".design/gen-ai-timeline.mjs",
+  "source": "AI_README.md",
+  "note": "Daily AI-study log. rawDate kept verbatim (D/M/YYYY).",
+  "count": 23,
+  "entries": [
+    {
+      "day": "Day1",
+      "dayNum": 1,
+      "rawDate": "18/11/2025",
+      "section": "AI",
+      "note": "Paper - A Few Useful Things to Know About Machine Learning"
+    },
+    {
+      "day": "Day2",
+      "dayNum": 2,
+      "rawDate": "19/11/2025",
+      "section": "AI",
+      "note": "Paper - A Few Useful Things to Know About Machine Learning"
+    },
+    {
+      "day": "Day3",
+      "dayNum": 3,
+      "rawDate": "20/11/2025",
+      "section": "AI",
+      "note": "Paper - Attention Is All You Need"
+    },
+    {
+      "day": "Day4",
+      "dayNum": 4,
+      "rawDate": "23/11/2025",
+      "section": "AI",
+      "note": "Paper - Attention Is All You Need"
+    },
+    {
+      "day": "Day5",
+      "dayNum": 5,
+      "rawDate": "24/11/2025",
+      "section": "AI",
+      "note": "Paper - Attention Is All You Need"
+    },
+    {
+      "day": "Day6",
+      "dayNum": 6,
+      "rawDate": "27/11/2025",
+      "section": "AI",
+      "note": "Paper - Attention Is All You Need"
+    },
+    {
+      "day": "Day7",
+      "dayNum": 7,
+      "rawDate": "29/11/2025",
+      "section": "AI",
+      "note": "Paper - Attention Is All You Need"
+    },
+    {
+      "day": "Day8",
+      "dayNum": 8,
+      "rawDate": "30/11/2025",
+      "section": "AI",
+      "note": "Paper - Stanford 329P - Supervision"
+    },
+    {
+      "day": "Day9",
+      "dayNum": 9,
+      "rawDate": "27/11/2025",
+      "section": "AI",
+      "note": "Paper - Stanford 329P - Supervision"
+    },
+    {
+      "day": "Day10",
+      "dayNum": 10,
+      "rawDate": "02/12/2025",
+      "section": "AI",
+      "note": "Course - Stanford 329P - Data Transformation"
+    },
+    {
+      "day": "Day11",
+      "dayNum": 11,
+      "rawDate": "03/12/2025",
+      "section": "AI",
+      "note": "感觉学的有点快了, 需要复习 + 整理一下, 一句话总结一下吧, 现在需要吸收"
+    },
+    {
+      "day": "Day12",
+      "dayNum": 12,
+      "rawDate": "05/12/2025",
+      "section": "AI",
+      "note": "Review - 学了扭头就忘, 再看看再看看"
+    },
+    {
+      "day": "Day13",
+      "dayNum": 13,
+      "rawDate": "06/12/2025",
+      "section": "AI",
+      "note": "Review - 复习基础 + Fundamentals"
+    },
+    {
+      "day": "Day14",
+      "dayNum": 14,
+      "rawDate": "07/12/2025",
+      "section": "AI",
+      "note": "Review - 复习基础 + DL"
+    },
+    {
+      "day": "Day15",
+      "dayNum": 15,
+      "rawDate": "08/12/2025",
+      "section": "AI",
+      "note": "Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧"
+    },
+    {
+      "day": "Day16",
+      "dayNum": 16,
+      "rawDate": "14/12/2025",
+      "section": "AI",
+      "note": "Review - 复习基础 + Paper - A Few Useful Things to Know About Machine Learning, 有一些信息是重复的, 整合到其他笔记吧,"
+    },
+    {
+      "day": "Day17",
+      "dayNum": 17,
+      "rawDate": "15/12/2025",
+      "section": "AI",
+      "note": "Course - Stanford 221 - Linear Regression & CNN"
+    },
+    {
+      "day": "Day18",
+      "dayNum": 18,
+      "rawDate": "16/12/2025",
+      "section": "AI",
+      "note": "Course - Stanford 221 - Pain is necessary, but suffering is optional"
+    },
+    {
+      "day": "Day19",
+      "dayNum": 19,
+      "rawDate": "21/12/2025",
+      "section": "AI",
+      "note": "Course - Stanford 221 - COMPLETED & Reviewing all notes, todo: Stanford 221 & 读懂 Attention is all you need, 然后做项目"
+    },
+    {
+      "day": "Day20",
+      "dayNum": 20,
+      "rawDate": "22/12/2025",
+      "section": "AI",
+      "note": "Course - Reviewed Fundamentals. 有点枯燥, train 一个 NLP model 玩玩"
+    },
+    {
+      "day": "Day21",
+      "dayNum": 21,
+      "rawDate": "5/1/2025",
+      "section": "AI",
+      "note": "新年快乐 - 继续夯实数学 & 开始看 Agent"
+    },
+    {
+      "day": "Day22",
+      "dayNum": 22,
+      "rawDate": "10/1/2025",
+      "section": "AI",
+      "note": "继续夯实数学 & Agent AI"
+    },
+    {
+      "day": "Day23",
+      "dayNum": 23,
+      "rawDate": "11/1/2025",
+      "section": "AI",
+      "note": "CoT Chain of Thought"
+    }
+  ],
+  "milestones": [
+    {
+      "afterDay": "Day6",
+      "text": "这个paper涵盖的东西太多了, CNN, RNN, Transformer, 还有 self-attention, 以及各种技巧. 看了这一篇好像浑身都被拳打脚踢了一遍, 但是感觉像是从产品角度讲了这个模型的设计思路, 以及为什么要这样设计. 之后还要多看看其他的论文, 把这些模型的细节搞清楚. 不过现在深挖有点过分, 容易迷失在细节里, 先把整体的框架搞清楚比较重要. 目前建立了一点intuition, 我还是先学一下基础吧.",
+      "section": "AI"
+    },
+    {
+      "afterDay": "Day13",
+      "text": "我发现现在的笔记已经够啃了, 等啃完了我觉得就算是入门AI了.",
+      "section": "AI"
+    }
+  ]
+}
